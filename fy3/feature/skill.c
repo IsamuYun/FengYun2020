@@ -184,30 +184,41 @@ varargs void decrease_skill(string skill, int amount, int weak_mode)
 }
 void research_skill(string skill, int amount)
 {
-        int spi;
-	int weak_mode;
-        if( !find_object(SKILL_D(skill))
-        &&      file_size(SKILL_D(skill)+".c") < 0 )
-                error("F_SKILL: No such skill (" + skill + ")\n");
+    int spi;
+	//int weak_mode;
+    if ( !find_object(SKILL_D(skill))
+        && file_size(SKILL_D(skill)+".c") < 0 ) {
+        error("F_SKILL: No such skill (" + skill + ")\n");
+	}
 
-                if( !mapp(skills) ) skills = ([]);
-        // Give learning penalty to those learning too much skills.
-        spi = this_object()->query_spi();
-        if( sizeof(learned) > spi )
-                amount -= sizeof(learned) - spi;
+    if ( !mapp(skills) ) {
+		skills = ([]);
+	}
+    // Give learning penalty to those learning too much skills.
+    spi = this_object()->query_spi();
+    if ( sizeof(learned) > spi ) {
+        amount -= sizeof(learned) - spi;
+	}
 
-        if( amount <= 0 ) amount = 0;
+    if ( amount <= 0 ) {
+		amount = 0;
+	}
 
-        if( !mapp(learned) ) learned = ([ skill : amount ]);
-        else (int)learned[skill] += amount;
-        if(learned[skill] > 2* (skills[skill] + 1) * (skills[skill] + 1) )
+    if ( !mapp(learned) ) {
+		learned = ([ skill : amount ]);
+	}
+    else {
+		(int)learned[skill] += amount;
+	}
+    
+	if (learned[skill] > 2 * (skills[skill] + 1) * (skills[skill] + 1) )
         {
-                skills[skill]= skills[skill]+1;
-                learned[skill] = 0;
+            skills[skill] = skills[skill] + 1;
+            learned[skill] = 0;
                 
-                    	this_object()->add("score",-skills[skill]*10);	
+            this_object()->add("score", -skills[skill]);	
                 
-                tell_object(this_object(), HIC "你的「" + to_chinese(skill) + "」进步了！\n" NOR);
-                SKILL_D(skill)->skill_improved(this_object());
-        }
+            tell_object(this_object(), HIC "你的「" + to_chinese(skill) + "」进步了！\n" NOR);
+            SKILL_D(skill)->skill_improved(this_object());
+    }
 }

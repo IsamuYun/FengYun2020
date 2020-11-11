@@ -22,7 +22,7 @@ mapping *action = ({
                 "damage_type":  "瘀伤"
         ]),
 });
-/*
+
 mixed hit_ob(object me, object victim, int damage_bonus, int factor)
 {
         mixed foo;
@@ -30,21 +30,21 @@ mixed hit_ob(object me, object victim, int damage_bonus, int factor)
 
         foo = ::hit_ob(me, victim, damage_bonus, factor);
         if( intp(foo) && (damage_bonus + foo > 0) ) {
-                if( random(2*(me->query_skill("yiqiforce"))) > (damage_bonus + foo))
- {
+                if( random(2 * (me->query_skill("yiqiforce"))) > (damage_bonus + foo))
+                {      
                         victim->receive_wound("kee", (damage_bonus + foo));
                         victim->receive_wound("gin", (damage_bonus + foo));
                         victim->receive_wound("sen", (damage_bonus + foo));
 			force = victim->query("force");
-			victim->set("force", force-random(10)-1);
-			victim->set("max_force", 0);
-                        return
-"$N的混元一气功摧毁了$n的真元！！！！\n";
+			victim->set("force", force - random(force) - 1);
+			//victim->set("max_force", 0);
+                        return "$N的混元一气功摧毁了$n的真元！！！！\n";
                 }
         }
         return foo;
 }
-*/
+
+/*
 mixed hit_ob(object me, object victim, int damage_bonus, int factor)
 {
         if(!userp(me) && userp(victim) && me->query("id")=="dadi")
@@ -54,6 +54,7 @@ mixed hit_ob(object me, object victim, int damage_bonus, int factor)
 
     return 0;
 }
+*/
 
 void kill_him(object me, object victim)
 {
@@ -74,12 +75,19 @@ int valid_learn(object me) { return 1; }
 
 int practice_skill(object me)
 {
-        return 
-notify_fail("混元一气功只能用学的。\n");
+        if ( (int)me->query("force") < 30 ) {
+	        return notify_fail("你的内力或气不够，没有办法练习混元一气功。\n");
+        }
+
+	me->add("force", -30);
+
+	write("你按著所学练了一遍混元一气功。\n");
+
+	return 1;
 }
 
  
-int effective_level() { return 50;}
+int effective_level() { return 100; }
 
 string *absorb_msg = ({
         "$n身体虚转，双手微划，无坚不摧的混元一气功澎湃而出。\n",
@@ -112,6 +120,7 @@ string query_parry_msg(object weapon)
         else
                 return unarmed_parry_msg[random(sizeof(unarmed_parry_msg))];
 }
+
 int bounce_ratio()
 {
 	return 40;
@@ -119,11 +128,11 @@ int bounce_ratio()
 
 int learn_bonus()
 {
-	return -5000;
+	return 100;
 }
 int practice_bonus()
 {
-	return -5000;
+	return 50;
 }
 int black_white_ness()
 {
@@ -140,11 +149,13 @@ string perform_action_file(string action)
 }
 void skill_improved(object me)
 {
+        /*
         if( (int)me->query_skill("incarnation", 1)  < random(331) ) {
                 tell_object(me,
                         HIR "\n你突然全身发麻！走火入魔了！！....\n\n" NOR);
 		me->skill_death_penalty();
 		me->delete_skill("yiqiforce");
 		me->unconcious();
-        } 
+        }
+        */
 }

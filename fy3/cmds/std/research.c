@@ -17,7 +17,9 @@ int main(object me, string arg)
         if ( !(int)my_skill = me->query_skill(skill, 1) )
                 return notify_fail("你对此项技能一无所知，如何搞研究？\n");
                                                                                 
-        if( !SKILL_D(skill)->valid_learn(me) ) return 0;
+        if ( !SKILL_D(skill)->valid_learn(me) ) {
+                return 0;
+        }
 //      if( !SKILL_D(skill)->valid_research(me) ) return 0;
         
 
@@ -37,10 +39,10 @@ int main(object me, string arg)
         {
 		return notify_fail("你的等级太低了，研究不了如此高深的技能。\n");
         }
-        amount = (my_skill - 75) * SKILL_D(skill)->black_white_ness() / 100;
+        amount = my_skill * SKILL_D(skill)->black_white_ness() / 100;
         amount += SKILL_D(skill)->learn_bonus() + (int)me->query_int() + me->query("level") * 2;
-        //amount = pot/10*(amount/100 + random(amount/100));
-	amount = pot * (amount + random(amount));
+        amount = pot + (amount + random(amount));
+	//amount = pot * (amount + random(amount));
 	me->add("learned_points", pot);
         me->research_skill(skill, amount);
         write("你对" + to_chinese(skill) + "作了一番彻底的研究！\n");
