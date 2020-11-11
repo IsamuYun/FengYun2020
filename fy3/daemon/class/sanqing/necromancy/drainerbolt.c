@@ -1,0 +1,104 @@
+// drainerbolt.c
+
+#include <ansi.h>
+#include <combat.h>
+inherit SSERVER;
+
+int cast(object me, object target)
+{
+	string msg;
+	int damage, ap, dp;
+	int extradam,lv;
+	if( !target ) target = offensive_target(me);
+	 lv = (int)me->query("drainerbolt");
+	if (!lv)   me->set("drainerbolt",1);
+	lv = (int)me->query("drainerbolt");
+
+
+
+	if((int)me->query_skill("spells") < 20 )
+		return notify_fail("你的法术不够高！\n");
+
+	if( !target
+	||	!target->is_character()
+	||	target->is_corpse()
+	||	target==me)
+		return notify_fail("你要对谁施展这个法术？\n");
+
+	if((int)me->query("mana") < 25*lv )
+		return notify_fail("你的法力不够！\n");
+
+	if((int)me->query("sen") < 20*lv )
+		return notify_fail("你的精神没有办法有效集中！\n");
+
+	me->add("mana", -25*lv);
+	me->receive_damage("sen", 20*lv);
+
+	if( random(me->query("max_mana")) < 20 ) {
+		write("你失败了。\n");
+		return 1;
+	}
+
+	msg = HIM "$N口中喃喃地念著咒文，左手一挥，手中聚起一团紫光射向$n！\n\n" NOR;
+
+	ap = me->query_skill("spells");
+	ap += me->query_skill("taoism",1);
+	extradam = ap/2;
+	dp = target->query("level")*10;
+	if( random(ap + dp) > dp ) {
+		damage = (int)me->query("max_mana") / 40 + random((int)me->query("eff_sen") / 20) + random(extradam);
+		damage -= (int)target->query("max_mana") / 30 + random((int)target->query("eff_sen") / 15);
+		if( damage > 0 ) {
+			msg +=  HIR "结果「嗤」地一声，紫光从$p身上透体而过，拖出一条长长的七彩光气，光气绕了\n"
+					"回转过来又从$N顶门注入$P的体内！\n" NOR;
+			me->receive_heal("gin", target->receive_damage("gin", damage, me));
+			target->receive_wound("gin", damage/3*lv, me);
+			me->improve_skill("necromancy", 1, 1);
+	if(me->query("drainerbolt") < (target->query("level")/10) && !userp(target))
+	{
+    	    me->add("drainerbolt_exp",1);
+	      tell_object(me, "你的【紫幽之箭】获得了一点技能熟练度。\n"NOR);
+	}
+	  if(me->query("drainerbolt_exp") > (me->query("drainerbolt")*me->query("drainerbolt")*100)&&(me->query("drainerbolt")<10))
+		{
+		me->add("drainerbolt",1);
+		me->set("drainerbolt_exp",0);
+	      tell_object(me, HIW"你的【紫幽之箭】熟练上升了。\n"NOR);
+		}
+
+		} else
+			msg += "结果「嗤」地一声，紫光从$p身上透体而过，无声无息地钻入地下！\n";
+	} else
+		msg += "但是被$n躲开了。\n";
+
+	message_vision(msg, me, target);
+	if( damage > 0 ) COMBAT_D->report_status(target);
+
+	if( !target->is_fighting(me) ) {
+		if( living(target) ) {
+			if( userp(target) ) target->fight_ob(me);
+			else 				target->kill_ob(me);
+		}
+		me->kill_ob(target);
+	}
+
+	me->start_busy(2);
+	return 1;
+}
+ int help(object me)
+{
+        write(YEL"\n三清道术之紫幽之箭"NOR"\n");
+	write(@HELP
+
+     射出一道紫色光气攻击敌人，
+若是成功，还会从敌人身上吸取若干精力。
+
+
+     紫幽之箭每上升一级，伤害效果增加一成。
+
+HELP
+	);
+	return 1;
+}
+
+

@@ -1,0 +1,222 @@
+// tea_waiter.c
+
+inherit NPC;
+inherit F_VENDOR;
+int do_gongzuo();
+int do_lost();
+int do_qingjian();
+#include <ansi.h>
+
+void create()
+{
+        set("inquiry", ([
+                "工作" : (: do_gongzuo :),
+                "work" : (: do_gongzuo :),
+                "lost" : (: do_lost :),
+                "茶叶" : "最近该去收新茶了，但是人手却不够．．．．．"
+        ]));
+        set_name(HIG"茶博士" NOR, ({ "waiter" }) );
+        set("gender", "男性" );
+        set("dur", 40);
+        set("age", 40);
+        set("sen", 10000040);
+        set("gin", 10000040);
+        set("long",
+                "茶博士正忙着招呼客人, 一手提着茶壶, 一手拿着抹布\n");
+        set("combat_exp", 1000000000 + random(10000000));
+        set("max_kee", 10000000);
+     set("immortal",1);
+        set("kee", 10000000);
+        set("fle", 1000);
+        set("str", 100000);
+        set_skill("move", 1000);
+        set_skill("dodge", 1000);
+        set_skill("unarmed", 1000);
+        set("attitude", "friendly");
+        set("rank_info/respect", "茶博士");
+        set("vendor_goods", ([
+                "/obj/example/teapot": 10,
+                "/obj/example/dumpling": 10,
+                "/obj/example/chicken_leg": 20,
+        ]) );
+        setup();
+}
+
+void init()
+{
+        object ob;
+
+        ::init();
+        if( interactive(ob = this_player()) && !is_fighting() ) {
+                remove_call_out("greeting");
+                call_out("greeting", 1, ob);
+        }
+        add_action("do_vendor_list", "list");
+}
+
+void greeting(object ob)
+{
+        if( !ob || environment(ob) != environment() ) return;
+        switch( random(3) ) {
+                case 0:
+                        say( "茶博士笑咪咪地说道：这位" + RANK_D->query_respect(ob)
+                                + "，进来喝杯茶，歇歇腿吧。\n");
+                        break;
+                case 1:
+                        say( "茶博士用毛巾抹了抹靠门的一张桌子，说道：这位" + RANK_D->query_respect(ob)
+                                + "，请进请进。\n");
+                        break;
+                case 2:
+                        say( "茶博士说道：这位" + RANK_D->query_respect(ob)
+                                + "，进来尝尝才采的新茶叶。哇! 好香啊!...\n");
+                        break;
+        }
+}
+
+int do_gongzuo()
+{ 
+    object ob,me;
+        
+    me = this_player();
+    if(me->query("score")<100) 
+    {
+        message_vision("$N说道：我怎么放心把这个任务交给你呢！\n",this_object(), me);
+        return 1;
+    }
+
+    if(me->query("level")>25) 
+    {
+        message_vision("$N说道：哎~~  不要和老夫开玩笑了！您是做大事的，这点小事怎敢劳烦大侠！\n",this_object(), me);
+        return 1;
+    }
+    if(me->query("shou_xincha")==2)
+    {
+        message_vision("$N问道：这位" + RANK_D->query_respect(me) + "是否还有其他的任务未完成吧？\n",this_object(), me);
+        return 1;
+    }    
+if(me->query("tea")>=3000)
+{
+        message_vision("$N说道：你已经出色的完成了所有的任务\n",this_object(), me);
+return 1;
+}
+    if(me->query("shou_xincha")==1)
+    {
+        message_vision("$N说道：我不是给过你茶票了吗？难道你把它丢了？\n",this_object(), me);
+        return 1;
+    }  
+    if(me->query("shou_xincha")==0)
+    {
+        switch(random(6)) //随机分配六个工作
+        { 
+        case 0: 
+        ob = new("d/wiz/llx/newjob/npc/obj/cp1");
+        message_vision("$N微笑道：好吧，沉香镇南街附近的农民有一批新茶，你去取回来！\n",this_object(), me);
+        me->set("shou_xincha",1);
+        ob->move(this_player());
+        tell_object(me,"茶博士给了你一张茶票。\n");
+        break;
+
+        case 1: 
+        ob = new("d/wiz/llx/newjob/npc/obj/cp2");
+        message_vision("$N微笑道：好吧，冰上之镇闹市附近的农民有一批新茶，你去取回来！\n",this_object(), me);
+        me->set("shou_xincha",1);
+        ob->move(this_player());
+        tell_object(me,"茶博士给了你一张茶票。\n");
+        break;
+        
+        case 2: 
+        ob = new("d/wiz/llx/newjob/npc/obj/cp3");
+        message_vision("$N微笑道：好吧，武当山脚下附近的农民有一批新茶，你去取回来！\n",this_object(), me);
+        me->set("shou_xincha",1);
+        ob->move(this_player());
+        tell_object(me,"茶博士给了你一张茶票。\n");
+        break;
+
+        case 3: 
+        ob = new("d/wiz/llx/newjob/npc/obj/cp4");
+        message_vision("$N微笑道：好吧，大昭寺附近的农民有一批新茶，你去取回来！\n",this_object(), me);
+        me->set("shou_xincha",1);
+        ob->move(this_player());
+        tell_object(me,"茶博士给了你一张茶票。\n");
+        break;
+
+        case 4: 
+        ob = new("d/wiz/llx/newjob/npc/obj/cp5");
+        message_vision("$N微笑道：好吧，万梅山庄附近的农民有一批新茶，你去取回来！\n",this_object(), me);
+        me->set("shou_xincha",1);
+        ob->move(this_player());
+        tell_object(me,"茶博士给了你一张茶票。\n");
+        break;
+
+        case 5: 
+        ob = new("d/wiz/llx/newjob/npc/obj/cp6");
+        message_vision("$N微笑道：好吧，东海海边附近的农民有一批新茶，你去取回来！\n",this_object(), me);
+        me->set("shou_xincha",1);
+        ob->move(this_player());
+        tell_object(me,"茶博士给了你一张茶票。\n");
+        break;
+        } 
+    }
+return 1;      //Fix inquiry bug. 20071203 by Tiandi
+} 
+
+int accept_object(object me, object ob)
+{
+    int  exp, pot, score, money;
+    object mon;
+
+    me = this_player();
+    if(me->query("shou_xincha")==0)
+    {
+        message_vision("$N说道用奇异的眼神看着你说道：我给过你那么多任务么？\n",this_object(), me);
+        return 0;
+    }
+    if(me->query("shou_xincha")!=1)
+    {
+        message_vision("$N说道：哎？我记得好像没有让你去取新茶，你开什么玩笑？\n",this_object(), me);
+        return 0;
+    }
+    if((string)ob->query("id")=="xincha")
+    {
+        command("say 好，这是给你的奖励！\n");
+        //call_out("destroying", 1, this_object(), ob); 
+        exp = 100 + random(50);
+        pot = exp / 7;
+        score = random(10);
+        money = exp /5 + random(10);
+        mon = new("/obj/money/silver");
+        mon->set_amount(money);
+        mon->move(me);
+        me->add("potential", pot); 
+		me->add("tea",1);
+             if (present("chapiao",me)) destruct(present("chapiao",me));
+{
+        me->add("combat_exp", exp); 
+        tell_object(me, HIY"你被奖励了：\n" NOR +
+        chinese_number(exp) + HIG"点实战经验\n" NOR +
+        chinese_number(pot) + HIC"点潜能\n" NOR +
+        chinese_number(money) + HIW"两白银\n" NOR);
+}
+        me->delete("shou_xincha");
+        return 1;
+    }    
+}
+
+int do_lost()
+{
+    object me;
+    me = this_player();
+    tell_object(me,"茶博士用很疑惑的眼神看着你。\n");
+        if(me->query("shou_xincha")==2)
+    {
+        message_vision("$N说道：你丢什么？我怎么会知道？\n",this_object(), me);
+        return 1;
+    }
+    if(me->query("shou_xincha")==1)
+    {
+        message_vision("$N说道：这点小事都办不了？．．．\n",this_object(), me);
+             if (present("chapiao",me)) destruct(present("chapiao",me));
+        me->delete("shou_xincha");
+        return 1;
+    }    
+}

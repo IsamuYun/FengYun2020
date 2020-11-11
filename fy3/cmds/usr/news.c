@@ -1,0 +1,290 @@
+#include <ansi.h>;
+inherit BULLETIN_BOARD;
+int do_post(string arg);
+
+void create()
+{
+    set_name("ĞÂÎÅÅÆ", ({ "news_board"}) );
+        set("board_id", "news_b");    
+    set("long","ÏëÇå³şÁËĞ´£¬Ğ´ÁË¾Í»áÉúĞ§¶øÇÒ²»ÄÜÉ¾£¬Ô­ code À´×Ôxgchen±àĞ´\n\n");         
+        setup();
+        set("capacity", 1000);
+}
+
+int check_news(object me)
+{
+        int num,i,last_time_read;
+        mapping *notes, last_read_time;
+        string myid,msg="";
+        
+        notes = query("notes");
+        last_read_time = me->query("board_last_read");
+        myid = query("board_id");
+        
+        if( !pointerp(notes) || !sizeof(notes) ) return 1;
+
+        if(userp(me))
+        {
+                i=sizeof(notes)-me->query("LastReadNews");
+                
+                if(i < 6 && i > 0) // Ğ¡ÓÚ6ÌõĞÂÎÅ²ÅÏÔÊ¾±êÌâ£¬²»È»»áFLOOD
+                {
+                        msg = "\n\n    ©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥ "HIW"¿ìÀÖ·çÔÆ2×îĞÂÏûÏ¢"NOR" ©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥    \n";
+                        
+                        if( !mapp(last_read_time) || undefinedp(last_read_time[myid]) )
+                                num = 1;
+                                
+                        else
+                                for(num = 1; num<=sizeof(notes); num++)
+                                        if( notes[num-1]["time"] > last_read_time[myid] ) break;
+                                        
+                        if (mapp(last_read_time)) last_time_read = last_read_time[myid];
+                        for(i=sizeof(notes)-1 ; i>num-2 ; i--)
+                        {
+                                msg += sprintf("<%3d>"NOR,i+1);
+                                msg += sprintf("     %-=36s %18s (%s)\n",
+                                        notes[i]["title"], notes[i]["author"],
+                                        CHINESE_D->chinese_time(5, ctime(notes[i]["time"])));
+                        }
+                        
+                        msg += "    ©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥    \n\n";
+                        
+                        me->start_more(msg);
+                }
+                
+                i=sizeof(notes)-me->query("LastReadNews");
+      if (i<0) i=0;
+                write("\n´ÓÄúÉÏ´ÎÔÄ¶Áµ½ÏÖÔÚ"+((i==0)? "Ã»ÓĞÈÎºÎ":"¹²ÓĞ"+HIY+chinese_number(i)+NOR"Ìõ")+"ĞÂÎÅ¡£\n\n");
+                if(i>10) 
+  //             me->start_call_out(bind((: call_other, __FILE__, "auto_notice", me :), me), 10 + random(10));
+write("\nÄã¿ÉÒÔ Help news À´²é¿´¿ìÀÖ·çÔÆ2ĞÂÎÅÏµÍ³µÄÊ¹ÓÃ·½·¨¡£\n"); // ÌáĞÑ²»ÖªµÀÓĞNEWSÏµÍ³µÄÍæ¼ÒÊ¹ÓÃnews
+        }
+}
+int main(object me, string arg)
+{
+        int num,i,last_time_read;
+        mapping *notes, last_read_time;
+        string myid,msg;
+
+        last_read_time = me->query("board_last_read");
+        myid = query("board_i");
+        notes = query("notes");
+        i=sizeof(notes)-me->query("LastReadNews");
+        if( !pointerp(notes) || !sizeof(notes) )
+                return notify_fail("¡¸¿ìÀÖ·çÔÆ2¡¹Ä¿Ç°Ã»ÓĞÈÎºÎĞÂÎÅ¡£\n");
+                
+        if( !arg ) 
+      {
+      if (i<0) i=0;
+                if(i>10) write("Äã¿ÉÒÔ Help news À´²é¿´¿ìÀÖ·çÔÆ2ĞÂÎÅÏµÍ³µÄÊ¹ÓÃ·½·¨¡£\n"); 
+                        return notify_fail(
+                                "¡¸¿ìÀÖ·çÔÆ2¡¹Ä¿Ç°¹²ÓĞ"+HIW+chinese_number(sizeof(notes))+NOR"ÌõĞÂÎÅ"+((i==0)? "¡£":"£¬ÄúÓĞ"+HIY+chinese_number(i)+NOR"ÌõĞÂÎÅÉĞÎ´ÔÄ¶Á¡£")+"\n"); }
+                                
+if(arg=="jia")
+{
+return do_post("¿ìÀÖ·çÔÆ2");
+}
+                if( arg=="all") // ÏÔÊ¾ËùÓĞĞÂÎÅ
+                {
+                        msg = "\n\n    ©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥ "HIW"¿ìÀÖ·çÔÆ2ĞÂÎÅÒ»ÀÀ"NOR" ©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥    \n";
+                        notes = query("notes");
+                        
+                        if (mapp(last_read_time)) last_time_read = last_read_time[myid];
+                        for(i=sizeof(notes)-1 ; i>-1 ; i--)
+                        {
+                                msg += sprintf("%s<%3d>" NOR,
+                                notes[i]["time"] > last_time_read ? HIY: "", i+1);
+                                msg += sprintf("     %-=36s %18s (%s)\n",
+                                        notes[i]["title"], notes[i]["author"],
+                                        CHINESE_D->chinese_time(5, ctime(notes[num]["time"])));
+                        }
+                        msg += "\n";
+                        me->start_more(msg);
+                        return 1;
+                        
+                }
+                else
+                if ( arg=="new" )  // ÏÔÊ¾×îĞÂĞÂÎÅ
+                {
+                        if( !mapp(last_read_time) || undefinedp(last_read_time[myid]) )
+                                num = 1;
+                        else
+                                for(num = 1; num<=sizeof(notes); num++)
+                                        if( notes[num-1]["time"] > last_read_time[myid] ) break;
+                                        
+                } else if( !sscanf(arg, "%d", num) )
+                
+        return notify_fail("Äãµ½µ×Òª¿´µÚ¼¸ÌõĞÂÎÅÑ½£¿\n");
+        
+        if( num < 1 || num > sizeof(notes) )
+                return notify_fail("¿´Çå³şµã£¬ºÃÏñÃ»ÓĞÕâÌõĞÂÎÅÒ®¡£\n");
+                
+        num--;
+     me->start_more( sprintf("\n\n%s\n
+[47;34m  ×÷Õß [44;37m %-70s
+[47;34m  ±êÌâ [44;37m %-70s
+[47;34m  Ê±¼ä [44;37m %-70s[m  [36m\n------------------------------------------------------------------------------[m\n\n\n",
+               BBLU HIY"¿ìÀÖ"HIR"·çÔÆ"HIG"µÚ"+chinese_number(num + 1)+"ÌõĞÂÎÅ"NOR, 
+notes[num]["author"],notes[num]["title"],ctime(notes[num]["time"]))
++ notes[num]["msg"]+
+        HIY"\n\n\t\t\t¿ìÀÖ·çÔÆ2"NOR"\n-------------------------------------------------------------------------------\n\n", );
+
+        if( !mapp(last_read_time) )
+                me->set("board_last_read", ([ myid: notes[num]["time"] ]) );
+        else 
+                if( undefinedp(last_read_time[myid]) || notes[num]["time"] > last_read_time[myid] )
+                        last_read_time[myid] = notes[num]["time"];
+
+        if(me->query("LastReadNews") < num + 1)
+                me->set("LastReadNews",num+1);
+
+        return 1;
+}
+
+void init()
+{
+        object me=this_player();
+// Ö»¸øapprentice¼¶±ğÒÔÉÏµÄÎ×Ê¦ĞŞ¸ÄĞÂÎÅ
+       if (wizardp(me) &&  wiz_level(me) > wiz_level("(apprentice)") )
+        {
+                add_action("do_post", "jia");
+             //   add_action("do_discard", "qu");
+      } 
+}
+
+int do_post(string arg)
+{
+        mapping note;
+
+        if(!arg) return notify_fail("ĞÂÎÅÒª¸ö¼ÓÌâÄ¿¡£\n");
+
+        note = allocate_mapping(4);
+        note["title"] = arg;
+      note["author"] = this_player()->query("name")+"("+this_player()->query("id")+")";
+        note["id"] = this_player()->query("id"); 
+        note["qianminglong"] = this_player()->query("qianminglong"); 
+        this_player()->edit( (: done_post, this_player(), note :) );
+        return 1;
+}
+
+void done_post(object me, mapping note, string text)
+{
+        mapping *notes;
+
+        note["time"] = time();
+        note["msg"] = text;
+        notes = query("notes");
+        if( !pointerp(notes) || !sizeof(notes) )
+                notes = ({ note });
+        else
+                notes += ({ note });
+
+        if( sizeof(notes) > query("capacity"))
+                notes = notes[query("capacity")/2 .. query("capacity")];
+
+        set("notes", notes);
+        save();
+        restore();
+// Ê¹ÓÃchannelÏÔÊ¾ÌáÊ¾ÓĞÁË×îĞÂĞÂÎÅ
+        CHANNEL_D->do_channel(me, "fy", BLINK HIR"\n\n¡¸¿ìÀÖ·çÔÆ2¡¹ÓĞÁË×îĞÂĞÂÎÅ£¬ÇëÓÃ(news new)²é¿´¡£\n" NOR);
+
+        tell_object(me, "ĞÂÎÅ·¢±íÍê±Ï¡£\n");
+
+        return;
+}
+/*
+void auto_notice(object me)
+{
+        int num;
+        mapping *notes;
+        string msg;
+        int last_read_time;
+
+        if (! objectp(me))
+                return;
+
+        last_read_time = me->query("last_read_news");
+        notes = query("notes");
+
+        if (! pointerp(notes) || ! sizeof(notes))
+                return;
+
+        num = sizeof(notes) - 1;
+        if (notes[num]["time"] <= last_read_time)
+                return;
+
+        // some news need read, start next call out
+        me->start_call_out(bind((: call_other, __FILE__, "auto_notice", me :), me), 30 + random(30));
+
+        if (! living(me) || me->query_temp("block_msg/all"))
+                return;
+
+        while (num-- > 0)
+        {
+                if (notes[num]["time"] <= last_read_time)
+                {
+                        num++;
+                        break;
+                }
+
+                // contine to find next
+        }
+
+        if (num < 0) num = 0;
+
+        switch (random(5))
+        {
+        case 0:
+                msg = HIM "Ò»ÕóÑÌÎí¹ıºó£¬ĞÂÎÅ¾«Áé³öÏÖÔÚÄãµÄÃæÇ°£¬ÊÖÀï"
+                      "Äó×ÅÒ»ÕÅÆÆÆÆÀÃÀÃµÄÖ½Í·£¬¶ÔÄãĞû¶ÁÆğÀ´¡£\n" NOR;
+                break;
+        case 1:
+                msg = HIM "µØÉÏÍ»È»¿ªÁËÒ»¸öÁÑ·ì£¬Ã°³öÒ»¸ö¹í¹íËîËîµÄĞÂ"
+                      "ÎÅ¾«Áé£¬¶Ô×ÅÄã¾Íà©à©²»ĞİµÄÂŞàÂÆğÀ´¡£\n" NOR;
+                break;
+        case 2:
+                msg = HIM "ÄãºöÈ»Ìı¼ûÓĞÈËº°Äã£¬Äã»ØÍ·Ò»¿´£¬Ô­À´ÊÇĞÂÎÅ"
+                      "¾«ÁéÂúÍ·´óº¹µÄÅÜÁË¹ıÀ´£¬\n" NOR;
+                break;
+        case 3:
+                msg = HIM "Äã¸Õ´òÁËÒ»¸ö¹şÇ·£¬ºöÈ»Ç°ÃæÃ°³öÒ»¹ÉÑÌÎí£¬É¢"
+                      "È¥ÒÔºóÖ»¼ûÒ»¸öĞÂÎÅ¾«ÁéÀÁÑóÑóµÄ¿´×ÅÄã£¬¿ÚÖĞÄîÄîÓĞ´Ê¡£\n" NOR;
+                break;
+        default:
+                msg = HIM "¡°Å¾À²¡±Ò»Éù£¬ĞÂÎÅ¾«ÁéÀÇ±·²»¿°µÄË¤ÔÚµØÉÏ£¬"
+                      "ÄãÁ¬Ã¦½«Ëû·öÆğ¡£\n" NOR;
+                break;
+        }
+
+        msg += HIG "ĞÂÎÅ¾«Áé¸æËßÄãÀ´×ÔÉñ½çµÄ×îĞÂÏûÏ¢£º\n" NOR;
+        tell_object(me, msg);
+     me->start_more( sprintf("\n\n%s\n
+[47;34m  ×÷Õß [44;37m %-70s
+[47;34m  ±êÌâ [44;37m %-70s
+[47;34m  Ê±¼ä [44;37m %-70s[m  [36m\n------------------------------------------------------------------------------[m\n\n\n",
+               BBLU HIY"Ò»ÊÀ"HIR"·çÔÆ"HIG"µÚ"+chinese_number(num + 1)+"ÌõĞÂÎÅ"NOR, 
+notes[num]["author"],notes[num]["title"],ctime(notes[num]["time"]))
++ notes[num]["msg"]+
+        HIY"\n\n\t\t\t¿ìÀÖ·çÔÆ2"NOR"\n-------------------------------------------------------------------------------\n\n", );
+
+        // Keep track which post we were reading last time.
+        if (notes[num]["time"] > (int)last_read_time)
+                me->set("last_read_news", notes[num]["time"]);
+        tell_object(me, HIM "ĞÂÎÅ¾«ÁéËµÍêºó£¬ÏûÊ§ÔÚÒ»ÕóÑÌÎíÖ®ÖĞ¡£\n" NOR);
+}
+
+*/
+int help(object me)
+{
+    write(@HELP
+¡¸¿ìÀÖ·çÔÆ2¡¹ĞÂÎÅÏµÍ³Ö¸Áî 
+
+Ö¸Áî¸ñÊ½ :
+news                    ²é¿´¹²ÓĞµÄºÍ×îĞÂ·¢²¼µÄĞÂÎÅ¡£
+news all                ¿ìÀÖ·çÔÆ2ĞÂÎÅÒ»ÀÀ¡£ 
+news new                ÔÄ¶Á×îĞÂµÄĞÂÎÅ¡£ 
+news <ĞÂÎÅ±àºÅ>         ²é¿´´Ë±àºÅĞÂÎÅµÄÏêÏ¸ÄÚÈİ¡£ 
+HELP
+    );
+    return 1;
+}

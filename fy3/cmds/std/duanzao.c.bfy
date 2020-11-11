@@ -1,0 +1,421 @@
+// duanzao.c by Tiandi 20071211
+#include <ansi.h>
+
+int main(object me, string arg)
+{
+        int lv,tili,tili_cost,stamp,clv,exp,bdamage;
+        string name,ctype,newfile,filename,id,timestamp,cname;
+        object ob1,ob2,ob;
+        id = me->query("id");
+        lv = (int)me->query("lifeweapon");
+        exp = me->query("lifeweapon_exp");
+        if (lv < 1)
+        return notify_fail("你还不会这项生活技能。\n");
+
+        name = me->query("name");
+        tili = (int)me->query("lifetili");
+
+        if( me->is_busy() )
+                    return notify_fail("你上一个动作还没有完成！\n");
+        if(! environment(me)->query("making") )
+                    return notify_fail("锻造物品必须在铁匠铺才可以进行。\n");
+        if( me->is_fighting() )
+                    return notify_fail("战斗中锻造？你厉害！\n");
+        if(!arg || sscanf(arg,"%s %d",ctype,clv) != 2)
+                     return notify_fail("请输入正确的格式，详细请看help duanzao。\n");
+        if ( clv > lv/10+1)
+                    return notify_fail("你想要锻造这个级别的武器，还得再磨练磨练。\n");
+        if ( clv > 10 || clv<1)
+                    return notify_fail("锻造武器的等级只有1-10。\n");
+        tili_cost = 50*clv;
+		tili_cost = tili_cost /10*(10-me->query("save_for_weapon"));
+        if( me->query("lifetili") < tili_cost )
+                    return notify_fail("活力不够。\n");
+        ob1 = present("duan book",me);
+        if (!ob1) return notify_fail("缺少武器锻造用的制作指南书。\n");
+        if(!ob1->query("for_create_weapon")) return notify_fail("你想鱼目混珠？\n");
+        if(ob1->query("for_create_weapon") < (int)clv)
+                    return notify_fail("这本制造指南书还不足以锻造出如此高级的武器。\n");
+        ob2 = present("old iron",me);
+        if (!ob2) return notify_fail("缺少武器锻造用的生铁。\n");
+         if(!ob2->query("for_create_weapon")) return notify_fail("你想鱼目混珠？\n");
+        if(ob2->query("for_create_weapon") < (int)clv)
+                    return notify_fail("这块材料还不足以锻造出如此高级的武器。\n");
+         if(ob1->query("mtype")!= ctype)
+                   return notify_fail("这本制作书不能锻造出这类武器。\n");
+        seteuid(ROOT_UID);
+        me->set("lifetili",tili-tili_cost);
+        switch( ctype ) {
+                    case "blade":
+                               newfile = read_file("/obj/weapons/duanblade.c");
+                              switch (clv) {
+                                       case 1:
+                                      newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的月牙刀。\n");
+                                        exp = exp + 1;
+                                        cname = "月牙刀";
+                                        break;
+                                        case 2:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的白苗刀。苗疆常用的兵器，极细极尖锐。\n");
+                                        cname = HIW"白苗刀"NOR;
+                                        exp = exp + 2;
+                                        break;
+                                        case 3:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的夜月魔刀。精钢制成的刀，刀背泛出月夜魔之色。\n");
+                                        cname = MAG"夜月魔刀"NOR;
+                                        exp = exp + 3;
+                                        break;
+                                        case 4:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成形如柳叶的细弯刀。\n");
+                                        cname =HIG"柳叶刀"NOR;
+                                        exp = exp + 4;
+                                        break;
+                                        case 5:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的泣血刀。刀身隐隐约约鬼哭狼嚎，一片血迹。\n");
+                                        cname = RED"泣血刀"NOR;
+                                        exp = exp + 5;
+                                        break;
+                                        case 6:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的如觉刀。刀光八面，却看上去仿似刚睡醒的婴儿般柔弱。\n");
+                                        cname = YEL"如觉刀"NOR;
+                                        exp = exp + 6;
+                                        break;
+                                        case 7:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的青龙堰月刀。此是三国时关公所用心爱配刀，传说刀柄乃青龙所化，\n刀身如半月，锋利无比，在百万军中取上将首级如探囊取物。关公死，刀柄不知去向，唯余此刀身\n");
+                                        cname = CYN"青龙堰月刀"NOR;
+                                        exp = exp + 7;
+                                        break;
+                                        case 8:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的晓月斩风。迅如晓风，一刀斩月。\n");
+                                        cname = HIY"晓月斩风"NOR;
+                                        exp = exp + 8;
+                                        break;
+                                        case 9:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的火云怒刃。传说中乃是火神用过的兵器，因此而闻名千里。\n");
+                                        cname = HIR"火云怒刃"NOR;
+                                        exp = exp + 9;
+                                        break;
+                                        case 10:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的邪神霸刀。刀中之霸，持刀着有如邪神一般令人有一种君临天下的感觉。\n");
+                                        cname =HIC "邪神霸刀"NOR;
+                                        exp = exp + 10;
+                                        break;
+                                        default:
+                                        break;
+                                        }
+                               break;
+                    case "sword":
+                               newfile = read_file("/obj/weapons/duansword.c");
+                               switch (clv) {
+                                        case 1:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的明剑。\n");
+                                        exp = exp + 1;
+                                        cname = "明剑";
+                                        break;
+                                        case 2:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的紫玉剑。铁制的短剑，色如紫玉。\n");
+                                        cname = HIW"紫玉剑"NOR;
+                                        exp = exp + 2;
+                                        break;
+                                        case 3:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的潇湘剑。平江潇湘，剑剑如霜。\n");
+                                        cname = MAG"潇湘剑"NOR;
+                                        exp = exp + 3;
+                                        break;
+                                        case 4:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的无花碎剑。剑体九曲如花，片片皆碎，手握无花却有花。\n");
+                                        cname =HIG"无花碎剑"NOR;
+                                        exp = exp + 4;
+                                        break;
+                                        case 5:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的红云剑。以红玉石制成,剑身如火,刚硬无比,难得的奇珍之物。\n");
+                                        cname = RED"红云剑"NOR;
+                                        exp = exp + 5;
+                                        break;
+                                        case 6:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的冷月。夜清冷，月露眉尖，笑引幽冥路。\n");
+                                        cname = YEL"冷月"NOR;
+                                        exp = exp + 6;
+                                        break;
+                                        case 7:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的藏风。风凄凉，叶落无声，直指苍天中。\n");
+                                        cname = CYN"藏风"NOR;
+                                        exp = exp + 7;
+                                        break;
+                                        case 8:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的五月开天。挥舞时候天昏地暗，火蛇狂舞，飞沙走石，龙腾海啸。\n");
+                                        cname = HIY"五月开天"NOR;
+                                        exp = exp + 8;
+                                        break;
+                                        case 9:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的落雪有痕。踏雪无痕，却落雪有痕，曾在千里之外取敌首级无数。\n");
+                                        cname = HIR"落雪有痕"NOR;
+                                        exp = exp + 9;
+                                        break;
+                                        case 10:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的鳞水碧波。此剑薄如鳞片，仿似一片鱼鳞倒映在水中，\n碧波荡漾之中，令人无法识破此剑究竟虚实如何。\n");
+                                        cname =HIC "鳞水碧波"NOR;
+                                        exp = exp + 10;
+                                        break;
+                                        default:
+                                        break;
+                                        }
+                               break;
+					  case "staff":
+                               newfile = read_file("/obj/weapons/duanstaff.c");
+                               switch (clv) {
+                                        case 1:
+                                        newfile = replace_string( newfile, "描述","一根由" + name + "锻造而成的八角禅杖。\n");
+                                        exp = exp + 1;
+                                        cname = "八角禅杖";
+                                        break;
+                                        case 2:
+                                        newfile = replace_string( newfile, "描述","一根由" + name + "锻造而成的黏虚禅杖。沉重无比。\n");
+                                        cname = HIW"黏虚禅杖"NOR;
+                                        exp = exp + 2;
+                                        break;
+                                        case 3:
+                                        newfile = replace_string( newfile, "描述","一根由" + name + "锻造而成的丞相杖。据说携带之人有朝一日会成为丞相。\n");
+                                        cname = MAG"丞相杖"NOR;
+                                        exp = exp + 3;
+                                        break;
+                                        case 4:
+                                        newfile = replace_string( newfile, "描述","一根由" + name + "锻造而成的天月禅杖。印度神僧天月大师使用的禅杖。\n");
+                                        cname =HIG"天月禅杖"NOR;
+                                        exp = exp + 4;
+                                        break;
+                                        case 5:
+                                        newfile = replace_string( newfile, "描述","一根由" + name + "锻造而成的无风杖。以寒铁神石锻造而成，是上成的兵器之一。\n");
+                                        cname = RED"无风杖"NOR;
+                                        exp = exp + 5;
+                                        break;
+                                        case 6:
+                                        newfile = replace_string( newfile, "描述","一根由" + name + "锻造而成的算命。神相布衣，法杖算命。\n");
+                                        cname = YEL"算命"NOR;
+                                        exp = exp + 6;
+                                        break;
+                                        case 7:
+                                        newfile = replace_string( newfile, "描述","一根由" + name + "锻造而成的化光。一杖偏馨而立，隐隐会有白芒闪现而出。\n");
+                                        cname = CYN"化光"NOR;
+                                        exp = exp + 7;
+                                        break;
+                                        case 8:
+                                        newfile = replace_string( newfile, "描述","一根由" + name + "锻造而成的漫天风雪。挥舞时候顿时满天风雪，气候变化无常。\n");
+                                        cname = HIY"漫天风雪"NOR;
+                                        exp = exp + 8;
+                                        break;
+                                        case 9:
+                                        newfile = replace_string( newfile, "描述","一根由" + name + "锻造而成的无花无心。由传说中的神铁经过常年冶炼而成。可以和使用者的心意相同。\n");
+                                        cname = HIR"无花无心"NOR;
+                                        exp = exp + 9;
+                                        break;
+                                        case 10:
+                                        newfile = replace_string( newfile, "描述","一根由" + name + "锻造而成的乾坤。八卦乾坤，生生死死，一杖定生死，故名乾坤。\n");
+                                        cname =HIC "乾坤无量"NOR;
+                                        exp = exp + 10;
+                                        break;
+                                        default:
+                                        break;
+                                        }
+                               break;
+					  case "hammer":
+                               newfile = read_file("/obj/weapons/duanhammer.c");
+                               switch (clv) {
+                                        case 1:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的铜芯锤。\n");
+                                        exp = exp + 1;
+                                        cname = "铜芯锤";
+                                        break;
+                                        case 2:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的巨人锤。体积硕大无比,十分沉重。\n");
+                                        cname = HIW"巨人锤"NOR;
+                                        exp = exp + 2;
+                                        break;
+                                        case 3:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的金刚铁锤。由上等钢材制作而成。\n");
+                                        cname = MAG"金刚铁锤"NOR;
+                                        exp = exp + 3;
+                                        break;
+                                        case 4:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的开山锤。古人用此物作为开山铺路之用。\n");
+                                        cname =HIG"开山锤"NOR;
+                                        exp = exp + 4;
+                                        break;
+                                        case 5:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的浑圆球。奇形怪状,说它是锤子不如说它是个球。\n");
+                                        cname = RED"浑圆球"NOR;
+                                        exp = exp + 5;
+                                        break;
+                                        case 6:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的虎风锤。使用起来许许如风,像虎啸一般。\n");
+                                        cname = YEL"虎风锤"NOR;
+                                        exp = exp + 6;
+                                        break;
+                                        case 7:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的轰隆隆。轰隆隆.....。\n");
+                                        cname = CYN"轰隆隆"NOR;
+                                        exp = exp + 7;
+                                        break;
+                                        case 8:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的开天辟地。使用时会发出开天辟地般的响声，使人震耳欲聋。\n");
+                                        cname = HIY"开天辟地"NOR;
+                                        exp = exp + 8;
+                                        break;
+                                        case 9:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的黄天蓝石。传说中的神石所铸,究竟是真是假至今无人可辨。\n");
+                                        cname = HIR"黄天蓝石"NOR;
+                                        exp = exp + 9;
+                                        break;
+                                        case 10:
+                                        newfile = replace_string( newfile, "描述","一把由" + name + "锻造而成的千里锤音。一锤敲下,千里之外皆能闻其声而远之。\n");
+                                        cname =HIC "千里锤音"NOR;
+                                        exp = exp + 10;
+                                        break;
+                                        default:
+                                        break;
+                                        }
+                               break;
+					case "ring":
+                               newfile = read_file("/obj/weapons/duanring.c");
+                               switch (clv) {
+                                        case 1:
+                                        newfile = replace_string( newfile, "描述","一双由" + name + "锻造而成的铁爪拳套。\n");
+                                        exp = exp + 1;
+                                        cname = "铁爪拳套";
+                                        break;
+                                        case 2:
+                                        newfile = replace_string( newfile, "描述","一双由" + name + "锻造而成的虎爪拳套。模仿虎爪制作而成。\n");
+                                        cname = HIW"虎爪拳套"NOR;
+                                        exp = exp + 2;
+                                        break;
+                                        case 3:
+                                        newfile = replace_string( newfile, "描述","一双由" + name + "锻造而成的钢铁拳套。从手腕到手指，皆能很好的保护。\n");
+                                        cname = MAG"钢铁拳套"NOR;
+                                        exp = exp + 3;
+                                        break;
+                                        case 4:
+                                        newfile = replace_string( newfile, "描述","一双由" + name + "锻造而成的翔龙刃。使用中会呈现龙像。\n");
+                                        cname =HIG"翔龙刃"NOR;
+                                        exp = exp + 4;
+                                        break;
+                                        case 5:
+                                        newfile = replace_string( newfile, "描述","一双由" + name + "锻造而成的鬼手。来自幽冥之界的物品，发着森森的鬼气。\n");
+                                        cname = RED"鬼手"NOR;
+                                        exp = exp + 5;
+                                        break;
+                                        case 6:
+                                        newfile = replace_string( newfile, "描述","一双由" + name + "锻造而成的霹雳拳套。雷部神器，据说使用时能打出霹雳。\n");
+                                        cname = YEL"霹雳拳套"NOR;
+                                        exp = exp + 6;
+                                        break;
+                                        case 7:
+                                        newfile = replace_string( newfile, "描述","一双由" + name + "锻造而成的凤凰刃。九头凤凰，一拳定天下。\n");
+                                        cname = CYN"凤凰刃"NOR;
+                                        exp = exp + 7;
+                                        break;
+                                        case 8:
+                                        newfile = replace_string( newfile, "描述","一双由" + name + "锻造而成的阎王索命。使用时会发出阎王般的吼声，使敌手胆战心惊。\n");
+                                        cname = HIY"阎王索命"NOR;
+                                        exp = exp + 8;
+                                        break;
+                                        case 9:
+                                        newfile = replace_string( newfile, "描述","一双由" + name + "锻造而成的碎石开山。坚固无比，能碎石断山。\n");
+                                        cname = HIR"碎石断山"NOR;
+                                        exp = exp + 9;
+                                        break;
+                                        case 10:
+                                        newfile = replace_string( newfile, "描述","一双由" + name + "锻造而成的缘定江山。有缘人得之，能定天下江山。\n");
+                                        cname =HIC "缘定江山"NOR;
+                                        exp = exp + 10;
+                                        break;
+                                        default:
+                                        break;
+                                        }
+                               break;
+                    default:
+                               return notify_fail("这种武器你还不会锻造。\n");
+                    }
+        timestamp = sprintf("%c%c%c%c%c%c%d",
+        'a'+random(20),'a'+random(20),'a'+random(20),'a'+random(20),'a'+random(20),
+        'z',time());
+       stamp=time();
+       newfile = replace_string( newfile, "自制的", cname);
+        newfile = replace_string( newfile, "order", ctype);
+         newfile = replace_string( newfile, "fengyun", id);
+         newfile = replace_string( newfile, "STAMP",timestamp);
+
+      //  filename =  DATA_DIR+ "self/" +timestamp + ".c";
+	  //  filename改成玩家目录下的，避免以后read时候缓慢
+		filename = DATA_DIR+"user/" + id[0..0] + "/" + id + "/" +timestamp + ".c";
+        if( !write_file(filename, newfile,1))
+                    return 0;
+        ob = new(filename);
+        if(ob2->query("equipped")) {ob2->unequip(); me->reset_action();}
+        ob2->move(environment(me));
+        bdamage = 100*(clv-1)+30+ random(100);
+        ob->set("weight",ob2->query_weight());
+        ob->set("rigidity",ob2->query("rigidity"));
+        ob->set("weapon_prop/damage",bdamage);
+        ob->set("base_damage",bdamage);
+        ob->set("limited_lv",clv*10);
+        ob->set("value",clv*10000);
+		ob->set("abradability",500);
+		if(!random(10))
+			ob->add("abradability",clv*50);
+		if(!random(10))
+			ob->set("weapon_prop/strength",random(clv*5)+1);
+		if(!random(10))
+			ob->set("weapon_prop/courage",random(clv*5)+1);
+		if(!random(10))
+			ob->set("weapon_prop/intelligence",random(clv*5)+1);
+		if(!random(10))
+			ob->set("weapon_prop/spirituality",random(clv*5)+1);
+		if(!random(10))
+			ob->set("weapon_prop/composure",random(clv*5)+1);
+		if(!random(10))
+			ob->set("weapon_prop/personality",random(clv*5)+1);
+		if(!random(10))
+			ob->set("weapon_prop/constitution",random(clv*5)+1);
+		if(!random(10))
+			ob->set("weapon_prop/karma",random(clv*5)+1);
+		if(!random(10))
+			ob->set("weapon_prop/agility",random(clv*5)+1);
+		if(!random(10))
+			ob->set("weapon_prop/durability",random(clv*5)+1);
+		if(!random(10))
+			ob->set("weapon_prop/flexibility",random(clv*5)+1);
+		if(!random(10))
+			ob->set("weapon_prop/tolerance",random(clv*5)+1);
+        ob->save();
+        ob->restore();
+        if(ob->move(me)){
+        me->add("created_weapon",1);
+        me->start_busy(1);
+        write("你将身上的"+ob2->name()+"扔进了打铁炉中，按照"+ob1->name()+"中所讲述的方法进行锻造，一阵折腾之后一"+ob->query("unit")+
+        ob->name()+"横空出世了。\n");
+        me->set("lifeweapon_exp",exp);
+        destruct(ob2);
+        destruct(ob1);
+		seteuid(getuid());
+        return 1;
+        }
+}
+
+int help(object me)
+{
+write(@HELP
+指令格式 : duanzao 类别 武器等级
+
+这个指令让你利用你的生活技能锻造出各类武器
+前提是你必须具有锻造需要的材料，而且锻造的
+等级要高于武器等级。
+目前开放的可以锻造类别有
+	剑    sword
+	刀    blade
+	杖    staff
+	拳套  ring
+	锤    hammer
+
+HELP
+    );
+return 1;
+}

@@ -1,0 +1,119 @@
+// banker.c
+
+#include <ansi.h>
+
+inherit NPC;
+inherit F_BANKOWNER;
+int askfor();
+
+void create()
+{
+        set_name("南宫十二郎", ({ "shier" }) );
+        set("title", RED "钱庄大少" NOR);
+        set("gender", "男性" );
+    set("reward_npc", 1);
+    set("difficulty", 50); 
+
+        set("age", 22);
+        set("richness",5000000);
+        set("str", 22);
+        set("cor", 30);
+        set("cps", 30);
+        set("int", 26);
+        set("per", 23);
+        set("con", 24);
+        set("spi", 30);
+        set("kar", 25);
+        set("no_arrest",1);
+        set("long",
+                
+                "中原南宫世家，家财万贯，产业不可胜数，南宫十二郎乃钱庄大少\n");
+
+        set("combat_exp", 1000000);
+        set("attitude", "friendly");
+
+        set("max_atman", 1000);
+        set("atman", 1000);
+        set("atman_factor", 3);
+        set("max_force", 1000);
+        set("force", 1000);
+        set("force_factor", 3);
+        set("max_mana", 1000);
+        set("mana", 1000);
+	set("mana_factor", 3);
+
+        set("chat_chance", 3 );
+        set("chat_msg", ({
+                (: exert_function, "powerfade" :),
+        }) );
+
+        set("chat_chance_combat", 40);
+        set("chat_msg_combat", ({
+                (: exert_function, "powerup" :),
+                (: exert_function, "recover" :),
+        }) );
+
+        set_skill("unarmed", 100);
+        set_skill("dodge", 100);
+        set_skill("force", 100);
+        set_skill("celestrike", 100);
+        set_skill("celestial", 100);
+        set_skill("chaos-steps", 100);
+
+        map_skill("force", "celestial");
+        map_skill("unarmed", "celestrike");
+        map_skill("dodge", "chaos-steps");
+        
+        set("inquiry", ([
+                "抢劫" : "唉！这群山西匪真厉害！来无影，去无踪！\n",
+                "rob" : "唉！这群山西匪真厉害！来无影，去无踪！\n",
+	    "新手套装" : (: askfor :),
+
+        ]) );
+
+        setup();
+        
+        carry_object("/obj/cloth")->wear();
+
+     //   add_money("gold", 10);
+}
+
+void init()
+{
+        ::init();
+        add_action("do_convert", "convert");
+        add_action("do_deposit", "deposit");
+        add_action("do_balance", "balance");
+        add_action("do_withdraw", "withdraw");
+        add_action("do_loan","loan");
+}
+int askfor()
+{
+	object ob,me,obj;
+	me = this_player();
+	ob = this_object();
+
+	if (me->query("marks/newbie"))
+		{
+		message_vision("$n疑惑着对着$N说道：你不是已经拿过新手套装了？\n",me,ob);
+		return 1;
+		}
+	if (!me->query_temp("askfornewbie"))
+		{
+		message_vision("$n疑惑着对着$N说道：你想做什么？\n",me,ob);
+		return 1;
+		}
+	else 	if (me->query_temp("askfornewbie")>1 && me->query_temp("askfornewbie") < 3)
+                   {
+		me->set_temp("askfornewbie",3);
+		message_vision(me->query("name")+"对着南宫十二郎问道：十三先生说已经托十二哥把天机老人的一百两银子还了，是否真有此事？\n
+南宫十三郎对着"+me->query("name")+"点了点头。\n南宫十二郎回答"+me->query("name")+"：这一百两银子，前些日子我确实代十三还了，怎么有什么问题吗？\n
+好像看来是天机老人忘记了吧，赶紧回去问问天机老人吧。\n",me);
+		return 1;
+	}else
+	message_vision("$n疑惑着对着$N说道：你还在这里做什么？\n",me,ob);
+	return 1;
+}
+
+
+

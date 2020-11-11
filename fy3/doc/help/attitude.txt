@@ -1,0 +1,32 @@
+		 [1;33m
+		  NPC µÄÕ½¶·ÐÐÎª
+[0m
+ËùÓÐµÄ NPC ¿ÉÒÔÉè¶¨Ò»¸ö attitude µÄ property£¬ÐÍÌ¬Îª×Ö´®£¬ÒâÒåÈçÏÂ:
+
+[35m"friendly"
+    ÓÑÉÆµÄ NPC¡£
+    Ò»°ãÉÆÁ¼ÀÏ°ÙÐÕ¶¼ÊôÕâÀà¡£
+    É±ËÀ attitude Îª freindly µÄÈËÉ±Æø * 2¡£
+    É±ËÀµÐÈË²»»áÔö¼Ó×Ô¼ºµÄÉ±Æø¡£
+
+[36m"peaceful"
+    ÎÂºÍµÄ NPC¡£
+    Ò»°ãÉÌµêÖ÷ÈË¡¢¹«»áÀÏ´ó¶¼ÊôÕâÀà¡£
+    É±ËÀµÐÈË²»»áÔö¼Ó×Ô¼ºµÄÉ±Æø¡£
+
+[37m"heroism"
+    Ó¢ÐÛÖ÷ÒåµÄ NPC¡£
+    Ò»°ãÐ¡ÓÐÃûÆø¡¢Éí¸ºÎä¹¦µÄÈË¶¼ÊôÕâÀà¡£
+    ²»ÅÂ±»ÈËÎ§Å¹¡£
+
+[33m"aggressive"
+    ÉúÐÔºÃ¶·µÄµÄ NPC¡£
+    Ö÷¶¯¹¥»÷£¬Ã¿´ÎÉ±ËÀµÐÈË£¬×Ô¼ºÉ±ÆøµÄÔö¼ÓÖµÊÇÆäËû attitude µÄÁ½±¶¡£
+
+[31m"killer"
+    ÊÈÉ±³ÉÐÔµÄ NPC¡£
+    Ö÷¶¯¹¥»÷£¬Ã¿´ÎÉ±ËÀµÐÈË£¬×Ô¼ºµÄÉ±Æø * 2¡£
+    ÓÀÔ¶ÓÃ kill Ä£Ê½Õ½¶·£¬²¢ÇÒ»áÉ±ËÀÈÎºÎ»èµ¹ÔÚËû(Ëý)ÃæÇ°µÄÈË¡£
+
+		 [1;33m³¤ËïÎÞÇé£ÀÖ£ÖÝ·çÔÆ
+[0m

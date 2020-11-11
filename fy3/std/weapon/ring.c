@@ -1,0 +1,18 @@
+// ring.c by tiandi定义为指环拳套
+
+#include <weapon.h>
+
+#ifdef AS_FEATURE
+#include <dbase.h>
+#else
+inherit EQUIP;
+#endif
+
+varargs void init_ring(int damage, int flag)
+{
+	if( clonep(this_object()) ) return;
+	set("weapon_prop/damage", damage);
+	set("flag", (int)flag | EDGED);
+	set("skill_type", "unarmed");
+}
+

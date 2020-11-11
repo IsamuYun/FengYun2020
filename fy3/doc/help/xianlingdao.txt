@@ -1,0 +1,45 @@
+仙灵岛水月宫
+
+地点:迷茫风雨路往东南方向
+
+宫主：赵灵儿
+
+ 赵灵儿目前在风云里共学过十三种技能：
+
+ 1   纵跃闪躲之术 (dodge)                     - 如梦似幻 280/    0
+ 2   内功心法 (force)                         - 返璞归真 330/    0
+ 3   基本硬功 (iron-cloth)                    - 深不可测 240/    0
+ 4   读书识字 (literate)                      - 染指江山 380/    0
+ 5 ＊莲花幻步 (lotus-steps)                   - 返璞归真 300/    0
+ 6   法术 (magic)                             - 返璞归真 330/    0
+ 7 ＊水月神舞 (moon-dance)                    - 返璞归真 600/    0
+ 8 ＊水月仙法 (moon-magic)                    - 返璞归真 600/    0
+ 9   基本轻功 (move)                          - 返璞归真 300/    0
+10   拆招卸力之法 (parry)                     - 如梦似幻 280/    0
+11   咒术 (spells)                            - 返璞归真 330/    0
+12   扑击格斗之技 (unarmed)                   - 返璞归真 320/    0
+13   基础鞭术 (whip)                          - 深不可测 240/    0
+
+[技能]
+1、"moon-magic":"水月仙法" (2.3)
+可以enable force, magic
+exert cure  疗伤
+exert iceheart 解毒
+conjure jingang 金刚咒
+conjure summon 召唤武神 (需要moon-magic和five-summon的技能级别之和达到500)
+
+2、"moon-dance":"水月神舞" (5.8)
+可以enable whip, parry, force, iron-cloth
+perform tendance 月神十舞
+
+[解秘]
+1、在海边的港口 ask 张四哥 about 去仙灵岛 。
+
+2、仙灵岛上有一些神象，mobai他们可以提高一些技能。(这对新手非常有利)
+
+3、拜赵灵儿为师需要 内功，魔法，法术这3样技能达到320.
+
+4、给赵灵儿圣灵珠、凤灵珠、土灵珠、水灵珠、雷灵珠、火灵珠，都会得到丰厚的奖励。
+
+
+

@@ -1,0 +1,165 @@
+Event backend in use: epoll
+==== LPC Predefines ====
+#define FLUFFOS 
+#define HAS_DEBUG_LEVEL 
+#define HAS_ED 
+#define HAS_PRINTF 
+#define MAX_FLOAT 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+#define MAX_INT 9223372036854775807
+#define MIN_FLOAT 0.000000
+#define MIN_INT -9223372036854775808
+#define MUDOS 
+#define MUD_NAME "fy3"
+#define SIZEOFINT 8
+#define __ARCH__ "Linux"
+#define __ARGUMENTS_IN_TRACEBACK__ 
+#define __ARRAY_STATS__ 
+#define __AUTO_SETEUID__ 
+#define __CACHE_STATS__ 
+#define __CALLOUT_HANDLES__ 
+#define __CFG_COMPILER_STACK_SIZE__ 600
+#define __CFG_EVALUATOR_STACK_SIZE__ 65536
+#define __CFG_LIVING_HASH_SIZE__ 256
+#define __CFG_MAX_CALL_DEPTH__ 150
+#define __CFG_MAX_GLOBAL_VARIABLES__ 65536
+#define __CFG_MAX_LOCAL_VARIABLES__ 50
+#define __CLASS_STATS__ 
+#define __COMMAND_BUF_SIZE__ 2000
+#define __COMPILER__ "g++"
+#define __CUSTOM_CRYPT__ 
+#define __CXXFLAGS__ "-march=native -Wall -Wextra -Wformat -Werror=format-security -Wno-char-subscripts -Wno-sign-compare -Wno-return-type -Wno-unused-parameter -Wno-missing-field-initializers -Wno-overloaded-virtual -Wno-non-virtual-dtor -fdiagnostics-show-option -fmessage-length=0 -funsigned-char -fwrapv -O3 -funroll-loops -DNDEBUG -g -D_GNU_SOURCE -fno-omit-frame-pointer -iquote. -flto -fPIE   -I/usr/include "
+#define __DEBUG_MACRO__ 
+#define __DEFAULT_PRAGMAS__ PRAGMA_WARNINGS + PRAGMA_SAVE_TYPES + PRAGMA_ERROR_CONTEXT + PRAGMA_OPTIMIZE + PRAGMA_SAVE_BINARY
+#define __ED_INDENT_SPACES__ 4
+#define __ED_TAB_WIDTH__ 8
+#define __GET_CHAR_IS_BUFFERED__ 
+#define __HAS_CONSOLE__ 
+#define __LARGEST_PRINTABLE_STRING__ 8192
+#define __LARGE_STRING_SIZE__ 1000
+#define __LOCALS_IN_TRACEBACK__ 
+#define __MAX_SAVE_SVALUE_DEPTH__ 100
+#define __MUDLIB_ERROR_HANDLER__ 
+#define __NDEBUG__ 1
+#define __OLD_ED__ 
+#define __OPTIMIZATION__ "-O3 -funroll-loops"
+#define __PACKAGE_ASYNC__ 
+#define __PACKAGE_COMPRESS__ 
+#define __PACKAGE_CONTRIB__ 
+#define __PACKAGE_CORE__ 
+#define __PACKAGE_DEVELOP__ 
+#define __PACKAGE_EXTERNAL__ 
+#define __PACKAGE_MATH__ 
+#define __PACKAGE_MATRIX__ 
+#define __PACKAGE_MUDLIB_STATS__ 
+#define __PACKAGE_OPS__ 
+#define __PACKAGE_PCRE__ 
+#define __PACKAGE_SHA1__ 
+#define __PACKAGE_SOCKETS__ 
+#define __PACKAGE_TRIM__ 
+#define __PACKAGE_UIDS__ 
+#define __PORT__ 5555
+#define __RANDOMIZED_RESETS__ 
+#define __RECEIVE_SNOOP__ 
+#define __REF_RESERVED_WORD__ 
+#define __RESTRICTED_ED__ 
+#define __SANE_EXPLODE_STRING__ 
+#define __SANE_SORTING__ 
+#define __SAVE_EXTENSION__ ".o"
+#define __SAVE_GZ_EXTENSION__ ".o.gz"
+#define __SMALL_STRING_SIZE__ 100
+#define __STRING_STATS__ 
+#define __STRUCT_CLASS__ 
+#define __STRUCT_STRUCT__ 
+#define __SUPPRESS_ARGUMENT_WARNINGS__ 
+#define __THIS_PLAYER_IN_CALL_OUT__ 
+#define __TRACE__ 
+#define __TRAP_CRASHES__ 
+#define __USE_32BIT_ADDRESSES__ 
+#define __VERSION__ "FluffOS v2017.2019112002 (unknown-nongit)"
+#define __WARN_OLD_RANGE_BEHAVIOR__ 
+========================
+/adm/simul_efun/path.c line 48: Warning: Unused local variable 't2' before the end of line
+/adm/simul_efun/path.c line 48: Warning: Unused local variable 't3' before the end of line
+/adm/simul_efun/path.c line 48: Warning: Unused local variable 't4' before the end of line
+/include/ansi.h line 12: Warning: redefinition of #define BLK before #define RED ESC+"[31
+/include/ansi.h line 13: Warning: redefinition of #define RED before #define GRN ESC+"[32
+/include/ansi.h line 14: Warning: redefinition of #define GRN before #define YEL ESC+"[33
+/include/ansi.h line 15: Warning: redefinition of #define YEL before #define BLU ESC+"[34
+/include/ansi.h line 16: Warning: redefinition of #define BLU before #define MAG ESC+"[35
+/include/ansi.h line 17: Warning: redefinition of #define MAG before #define CYN ESC+"[36
+/include/ansi.h line 18: Warning: redefinition of #define CYN before #define WHT ESC+"[37
+/include/ansi.h line 19: Warning: redefinition of #define WHT before  
+/include/ansi.h line 23: Warning: redefinition of #define HIR before #define HIG ESC+"[1;
+/include/ansi.h line 24: Warning: redefinition of #define HIG before #define HIY ESC+"[1;
+/include/ansi.h line 25: Warning: redefinition of #define HIY before #define HIB ESC+"[1;
+/include/ansi.h line 26: Warning: redefinition of #define HIB before #define HIM ESC+"[1;
+/include/ansi.h line 27: Warning: redefinition of #define HIM before #define HIC ESC+"[1;
+/include/ansi.h line 28: Warning: redefinition of #define HIC before #define HIW ESC+"[1;
+/include/ansi.h line 29: Warning: redefinition of #define HIW before the end of line
+/include/ansi.h line 33: Warning: redefinition of #define HBRED before #define HBGRN ESC+"[
+/include/ansi.h line 34: Warning: redefinition of #define HBGRN before #define HBYEL ESC+"[
+/include/ansi.h line 35: Warning: redefinition of #define HBYEL before #define HBBLU ESC+"[
+/include/ansi.h line 36: Warning: redefinition of #define HBBLU before #define HBMAG ESC+"[
+/include/ansi.h line 37: Warning: redefinition of #define HBMAG before #define HBCYN ESC+"[
+/include/ansi.h line 38: Warning: redefinition of #define HBCYN before #define HBWHT ESC+"[
+/include/ansi.h line 39: Warning: redefinition of #define HBWHT before  
+/include/ansi.h line 43: Warning: redefinition of #define BBLK before #define BRED ESC+"[4
+/include/ansi.h line 44: Warning: redefinition of #define BRED before #define BGRN ESC+"[4
+/include/ansi.h line 45: Warning: redefinition of #define BGRN before #define BYEL ESC+"[4
+/include/ansi.h line 46: Warning: redefinition of #define BYEL before #define BBLU ESC+"[4
+/include/ansi.h line 47: Warning: redefinition of #define BBLU before #define BMAG ESC+"[4
+/include/ansi.h line 48: Warning: redefinition of #define BMAG before #define BCYN ESC+"[4
+/include/ansi.h line 49: Warning: redefinition of #define BCYN before // #define BWHT ESC+
+/include/ansi.h line 52: Warning: redefinition of #define NOR before  
+/include/ansi.h line 58: Warning: redefinition of #define BOLD before #define CLR ESC+"[2J
+/include/ansi.h line 59: Warning: redefinition of #define CLR before #define HOME ESC+"[H
+/include/ansi.h line 60: Warning: redefinition of #define HOME before #define REF CLR+HOME
+/include/ansi.h line 61: Warning: redefinition of #define REF before #define BIGTOP ESC+"
+/include/ansi.h line 62: Warning: redefinition of #define BIGTOP before #define BIGBOT ESC+"
+/include/ansi.h line 63: Warning: redefinition of #define BIGBOT before #define SAVEC ESC+"[
+/include/ansi.h line 64: Warning: redefinition of #define SAVEC before #define REST ESC+"[u
+/include/ansi.h line 65: Warning: redefinition of #define REST before //#define REVINDEX E
+/include/ansi.h line 67: Warning: redefinition of #define SINGW before #define DBL ESC+"#6"
+/include/ansi.h line 68: Warning: redefinition of #define DBL before #define FRTOP ESC+"[
+/include/ansi.h line 69: Warning: redefinition of #define FRTOP before #define FRBOT ESC+"[
+/include/ansi.h line 70: Warning: redefinition of #define FRBOT before #define UNFR ESC+"[r
+/include/ansi.h line 71: Warning: redefinition of #define UNFR before #define BLINK ESC+"[
+/include/ansi.h line 72: Warning: redefinition of #define BLINK before #define U ESC+"[4m" 
+/include/ansi.h line 73: Warning: redefinition of #define U before #define REV ESC+"[7m
+/include/ansi.h line 74: Warning: redefinition of #define REV before #define HIREV ESC+"[
+/include/ansi.h line 75: Warning: redefinition of #define HIREV before  
+/adm/simul_efun/message.c line 74: Warning: Unused local variable 't' before the end of line
+/adm/obj/master.c line 7: Warning: Unknown #pragma, ignored. before object connect()
+
+Loading preload files ...
+/adm/daemons/securityd...
+/adm/daemons/msgd...
+/adm/daemons/virtuald...
+/adm/daemons/memoryd...
+/adm/daemons/cmd_d...
+/adm/daemons/chinesed...
+/adm/daemons/emoted...
+/adm/daemons/aliasd...
+/adm/daemons/fingerd...
+/adm/daemons/channeld...
+/adm/daemons/natured...
+/adm/daemons/weapond...
+/adm/daemons/ftpd...
+/adm/daemons/network/dns_master...
+/adm/daemons/questd...
+/adm/daemons/whod...
+/adm/daemons/cron...
+/adm/daemons/logind...
+/adm/daemons/voted...
+/adm/daemons/storyd...
+/obj/void...
+Accepting connections on 0.0.0.0:5555.
+Initializations complete.
+
+u/chuenyu/dustyroad3.c: cannot replace a program with function references, ignored.
+
+执行时段错误：*Array index out of bounds.
+
+程式：/adm/daemons/cron.c 第 67 行
+物件: /adm/daemons/cron
+呼叫来自：/adm/daemons/cron.c 的 init_cron() 第 67 行，物件： /adm/daemons/cron

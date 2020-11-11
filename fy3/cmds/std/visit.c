@@ -1,0 +1,130 @@
+// by tiandi 拜访
+
+#include <ansi.h>
+inherit F_CLEAN_UP;
+
+int main(object me, string arg)
+{
+        string dest, msg;
+        object ob,*inv,gift,gold;
+	mapping quest;
+	int exp,pot,reb,score,ti,doubletime,doubletype;	
+	
+
+        seteuid(getuid());
+
+        if( !arg || sscanf(arg, "%s",dest)!=1 )
+                return notify_fail("你要拜访谁？\n");
+
+        if( !objectp(ob = present(dest, environment(me))) )
+                return notify_fail("你看清楚点:这里没有这个人耶。\n");
+
+        if( !ob->is_character() ) {
+                message_vision("$N对着$n道：那个。。。你好。。。\n", me, ob);
+                return 1;
+        }
+
+        if( !ob->query("can_speak") ) {
+                message_vision("$N向$n道：那个。。。你好。。。好久不见。。。但是$p显然听不懂人话。\n", me, ob);
+                return 1;
+        }
+
+        if( userp(ob) ) return 1;
+        if( !living(ob) ) {
+                message_vision("但是很显然的，$n现在的状况不适合接待$N。\n",
+                        me, ob);
+                return 1;
+        }
+	if (quest =  me->query("tiequest"))
+	{
+		if (ob->query("name") == quest["quest"] && quest["quest_type"] == "拜访")
+		{
+	 	 message_vision("$N双手作揖对着$n恭恭敬敬地道："+ RANK_D->query_respect(ob)+"，受阿铁之托，前来拜访，最近身体可好？\n",me,ob);
+		 message_vision("$n客气的回答$N：这位"+ RANK_D->query_respect(me)+"，谢谢你来看我，麻烦转告阿铁一切都好。\n",me,ob);
+		        if ((int) me->query("tiequest_time") < time() )
+   			     {
+   			     tell_object(me,"很遗憾，虽然你完成了拜访任务，但是却超过了规定的时间。\n");
+				return 1;
+			}
+			        else
+   			     {
+     			   tell_object(me,"恭喜你！你又完成了一个忠义任务！\n");
+	reb = me->query("reborned");
+    exp = me->query("level");
+	doubletime = me->query("doubletime");
+	doubletype = (int)me->query("doubletype");
+	ti = me->query_temp("tiejobtemp");
+	exp = 100*exp;
+	exp = exp + exp/10*ti;
+	exp = exp + exp/5*reb;
+	//write(exp+"/20000*"+ti);
+	if (doubletime - time() > 0)
+		exp = exp*(doubletype+1);
+	exp = exp / 2;
+	pot = exp / 7 * 4;
+	score = reb+1;  
+
+	me->add("combat_exp",exp);
+	me->add("potential",pot);
+    me->add("score",score);
+  	tell_object(me,HIW"你被奖励了：\n" +
+	chinese_number(exp) + "点实战经验\n"+
+	chinese_number(pot) + "点潜能\n"+
+	chinese_number(score)+"点评价\n" NOR);
+	if (ti==10)
+		{
+		if ( me->query("level")>89)
+				gift=new("/d/wiz/fyup/obj/hongbao5");
+		else if ( me->query("level")>79)
+				gift=new("/d/wiz/fyup/obj/hongbao4");
+		else if ( me->query("level")>69)
+				gift=new("/d/wiz/fyup/obj/hongbao3");
+		else if ( me->query("level")>59)
+				gift=new("/d/wiz/fyup/obj/hongbao2");
+		else if ( me->query("level")>49)
+				gift=new("/d/wiz/fyup/obj/hongbao1");	
+		else gift=new("/d/wiz/fyup/obj/hongbao");
+		gift->move(me);
+		score = 60 + random(40);
+		score = score + score/5*reb;
+		gold=new("/obj/money/gold");
+	    gold->set_amount(exp/100);
+	    gold->move(me);
+		me->add("score",score);
+		me->add("combat_exp",exp);
+		me->add("potential",pot);
+  		tell_object(me,HIY"你被额外奖励了：\n" +
+		chinese_number(exp) + "点实战经验\n"+
+		chinese_number(pot) + "点潜能\n"+
+		chinese_number(exp/100) + "两黄金\n"+
+		chinese_number(score)+"点评价\n" NOR);
+		tell_object(me,HIY"你的包裹好像重了一点。\n"NOR);
+		}
+	ti ++;
+	if (!ti) ti = 1;
+	if (ti >10) ti = 1;
+	me->set_temp("tiejobtemp", ti );
+          me->add("tiejob", 1 );
+	me->set("tiequest",0);
+	return 1;
+     				   }
+			}
+	}
+ 	message_vision("$N双手作揖对着$n恭恭敬敬地道："+ RANK_D->query_respect(ob)+"，最近身体可好？\n",me,ob);
+	message_vision("$n疑惑得看着$N喃喃地问道：这位"+ RANK_D->query_respect(me)+"，我们很熟吗？\n",me,ob);
+	return 1;			
+}
+
+int help(object me)
+{
+   write( @HELP
+指令格式: visit <id>
+
+这个指令可以让你完成拜访NPC的功能。
+用于大多数任务。
+
+HELP
+   );
+   return 1;
+}
+

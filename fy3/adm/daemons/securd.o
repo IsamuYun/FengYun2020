@@ -1,0 +1,4 @@
+#/adm/daemons/securityd.c
+dbase (["trusted_read":(["":({"Root","(admin)",}),]),"exclude_read":(["":({"(player)",}),]),"trusted_write":(["":({"Root","(admin)",}),]),"channel_id":"°²È«¾«Áé","exclude_write":(["":({"(player)",}),]),"wiz_status":(["fengsh":"(admin)","tiandi":"(admin)",]),])
+wiz_levels ({"(player)","(immortal)","(apprentice)","(wizard)","(arch)","(admin)",})
+exclude_write (["":({"(player)",}),])

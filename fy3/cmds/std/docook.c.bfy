@@ -1,0 +1,149 @@
+// docook.c written by Tiandi
+#include <ansi.h>
+
+inherit F_CLEAN_UP;
+int main(object me)
+{
+        object obj, env;
+        string name;
+        int i,tili,lv,tili_cost,exp;
+
+        exp = (int)me->query("lifecook_exp") ;
+        if (!exp) exp =0;
+        lv = (int)me->query("lifecook");
+        if (lv < 1)
+           return notify_fail("什麽？\n");
+        name = me->query("name");
+        tili = (int)me->query("lifetili");
+        tili_cost = 120 - lv;
+		tili_cost = tili_cost /10*(10-me->query("save_for_cook"));
+        if( me->is_busy() )
+           return notify_fail("你上一个动作还没有完成！\n");
+        if( environment(me)->query("no_cook") )
+           return notify_fail("这里无法进行烹饪。\n");
+        if( me->is_fighting() )
+           return notify_fail("战斗中烹饪？想死啊！\n");
+        if( me->query("lifetili") < tili_cost )
+           return notify_fail("活力不够。\n");
+        me->set("lifetili",tili - tili_cost );
+           message_vision("$N卷起两侧袖子，拿出一袋面粉摆在面前，准备烹饪！\n", me);
+
+        call_out( "do_docook",5, me, lv,exp,name);
+        me->start_busy(5);
+        return 1;
+}
+
+private void do_docook(object me,int lv,int exp,string name)
+{
+        object obj;
+		int jj;
+		jj = random((lv+1))%10;
+		message_vision("$N眼神一明"+jj+"\n", me);
+        switch( jj ) {
+        case 0:
+        message_vision("$N随手把面粉放入水中捏了起来，不过捏了半天也没有什么发现。\n", me);
+        break;
+        case 1:
+        obj=new("/obj/food/cj");
+        obj->set("long","一只由"+ name +"亲手烹饪的大饼。\n");
+        obj->move(me);
+        message_vision("$N左手一抓，从旁边拽过一个干净的空盆，右手用面勺舀了大概有一斤面放入盆中。\n左手同时从另一边用水勺舀起半勺水，缓缓的注入面中，两只手做着不同的动作。\n", me);
+        message_vision(HIG"$N经过一番努力后，做出了一个大饼。\n"NOR, me);
+        me->set("lifecook_exp",exp+1);
+        break;
+        case 2:
+        obj=new("/obj/food/cj2");
+        obj->set("long","一只由"+ name +"亲手烹饪的麻饼，上面撒了少许的芝麻。\n");
+        obj->move(me);
+        message_vision("$N左手一抓，从旁边拽过一个干净的空盆，右手用面勺舀了大概有一斤面放入盆中。\n左手同时从另一边用水勺舀起半勺水，缓缓的注入面中，两只手做着不同的动作。\n", me);
+        message_vision(HIG"$N经过一番努力后，做出了一个麻饼。\n"NOR, me);
+        me->set("lifecook_exp",exp+1);
+        break;
+        case 3:
+        obj=new("/obj/food/cj3");
+        obj->set("long","一只由"+ name +"亲手烹饪的香油酥，应该味道不错吧。\n");
+        obj->move(me);
+        message_vision("$N左手一抓，从旁边拽过一个干净的空盆，右手用面勺舀了大概有一斤面放入盆中。\n左手同时从另一边用水勺舀起半勺水，缓缓的注入面中，两只手做着不同的动作。\n", me);
+        message_vision(HIG"$N经过一番努力后，做出了一个香油酥。\n"NOR, me);
+        me->set("lifecook_exp",exp+2);
+        break;
+        case 4:
+        obj=new("/obj/food/cj4");
+        obj->set("long","一只由"+ name +"亲手烹饪的金翠角，必须得赶快吃了，否则就凉了。\n");
+        obj->move(me);
+        message_vision("$N左手一抓，从旁边拽过一个干净的空盆，右手用面勺舀了大概有一斤面放入盆中。\n左手同时从另一边用水勺舀起半勺水，缓缓的注入面中，两只手做着不同的动作。\n", me);
+        message_vision(HIG"$N经过一番努力后，做出了一个金翠角。\n"NOR, me);
+        me->set("lifecook_exp",exp+2);
+        break;
+        case 5:
+        obj=new("/obj/food/cj5");
+        obj->set("long","一只由"+ name +"亲手烹饪的金香圈，香浓的味道传了好远。\n");
+        obj->move(me);
+        message_vision("$N右手一挥，，一双筷子不知道从什么地方跳入他左手之中，\n筷子在油锅中的面中央一撑，神乎奇技般的变成了一个圆形的圈，形如手镯一般，在筷子的作用下，不断翻转着。\n", me);
+        message_vision(HIG"$N经过一番努力后，做出了一个金香圈。\n"NOR, me);
+        me->set("lifecook_exp",exp+3);
+        break;
+        case 6:
+        obj=new("/obj/food/cj6");
+        obj->set("long","一只由"+ name +"亲手烹饪的麦芽黄，样子像麦芽地里的小麦芽。\n");
+        obj->move(me);
+        message_vision("$N右手一挥，，一双筷子不知道从什么地方跳入他左手之中，\n筷子在油锅中的面中央一撑，神乎奇技般的变成了一个圆形的圈，形如手镯一般，在筷子的作用下，不断翻转着。\n", me);
+        message_vision(HIG"$N经过一番努力后，做出了一个麦芽黄。\n"NOR, me);
+        me->set("lifecook_exp",exp+3);
+        break;
+        case 7:
+        obj=new("/obj/food/cj7");
+        obj->set("long","一只由"+ name +"亲手烹饪的成仙卷，谣传吃了可以得道成仙。\n");
+        obj->move(me);
+        message_vision("$N右手一挥，，一双筷子不知道从什么地方跳入他左手之中，\n筷子在油锅中的面中央一撑，神乎奇技般的变成了一个圆形的圈，形如手镯一般，在筷子的作用下，不断翻转着。\n", me);
+        message_vision(HIG"$N经过一番努力后，做出了一个成仙卷。\n"NOR, me);
+        me->set("lifecook_exp",exp+4);
+        break;
+        case 8:
+        obj=new("/obj/food/cj8");
+        obj->set("long","一只由"+ name +"亲手烹饪的云丝卷，层层相扣，千丝万缕。\n");
+        obj->move(me);
+        message_vision("$N右手一挥，，一双筷子不知道从什么地方跳入他左手之中，\n筷子在油锅中的面中央一撑，神乎奇技般的变成了一个圆形的圈，形如手镯一般，在筷子的作用下，不断翻转着。\n", me);
+        message_vision(HIG"$N经过一番努力后，做出了一个云丝卷。\n"NOR, me);
+        me->set("lifecook_exp",exp+4);
+        break;
+        case 9:
+        obj=new("/obj/food/cj9");
+        obj->set("long","一只由"+ name +"亲手烹饪的山参鸡段，不但让你胃口大开，还有一定的药用价值。\n");
+        obj->move(me);
+        message_vision("$N心无杂念，精神已经完全停留在手中的面粉上，手如刀，状如雪，手腕仿佛在空中飞舞一般，面\n粉被切成片缓缓向下坠落。仔细看来，每一片都是连着的。刀光不停闪烁着。\n", me);
+        message_vision(HIG"$N经过一番努力后，做出了一盘山参鸡段。\n"NOR, me);
+        me->set("lifecook_exp",exp+5);
+        break;
+        default:
+        message_vision("$N左手一抓，从旁边拽过一个干净的空盆，右手用面勺舀了大概有一斤面放入盆中。\n左手同时从另一边用水勺舀起半勺水，缓缓的注入面中，两只手做着不同的动作。\n", me);
+        break;
+        }
+        exp = (int)me->query("lifecook_exp") ;
+		if (lv == 20)
+		{
+	        me->set("lifedoctor_exp",0);
+		}
+        if (exp > lv*lv*16) {
+           me->set("lifecook_exp",0);
+           me->set("lifecook",lv+1);
+           write(HIW"你的烹饪技巧进步了！\n"NOR);
+	if (me->query("lifecook")==20)
+			message("system",HIC "\n【快乐风云】谜题任务："+me->query("name")+"由于在烹饪技巧上的成就，获得了"HIY"【一代名厨】"HIC"的称号。\n" NOR,users());
+			me->add("score",10000);
+			write(HIW"你的评价增加了一万点！\n"NOR);
+        }
+        me->start_busy(5);
+}
+
+int help(object me)
+{
+        write(@HELP
+指令格式 : docook 
+
+这个指令可以让你利用自己的烹饪技巧做一些食物.
+
+HELP
+    );
+return 1;
+}

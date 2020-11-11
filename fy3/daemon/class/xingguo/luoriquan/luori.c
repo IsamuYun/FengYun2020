@@ -1,0 +1,92 @@
+// tie@fengyun
+#include <ansi.h>
+#include <combat.h>
+inherit SSERVER;
+int perform(object me, object target)
+{
+	string msg;
+	int extra,lv,tmp1,tmp2,hit;
+	object weapon;
+	lv = me->query("luori");
+	if (!me->query("luori"))
+		me->set("luori",1);
+	lv = me->query("luori");
+	if(me->is_busy())
+		return notify_fail("你现在没空！！\n");
+	extra = me->query_skill("luoriquan",1);
+	if ( extra < 200) return notify_fail("你的落日神拳还不够纯熟！\n");
+	if( !target ) target = offensive_target(me);
+	if( !target
+	||	!target->is_character()
+	||	!me->is_fighting(target) )
+		return notify_fail("［落日］只能对战斗中的对手使用。\n");
+	if (me->query("force")< lv*50)
+		return notify_fail("你的内力不够。\n");
+	hit = me->query_skill("literate",1);
+	tmp1 = me->query_temp("apply/attack")/2;
+	tmp2 = me->query_temp("apply/damage")/2;
+	me->add_temp("apply/attack",-tmp1+hit);
+	me->add_temp("apply/damage",-tmp2+extra);
+
+	weapon = me->query_temp("weapon");
+	msg = HIR  "$N仰天发出一声长笑，使出落日神拳中的［落日］，\n" NOR;
+	msg += HIR   "就似灿烂无比的夕阳，顿时间天地亦为之变色！\n" NOR;
+	          message_vision(msg,me,target);
+        msg =  HIC  "\n   长 \n" NOR;
+	COMBAT_D->do_attack(me,target, me->query_temp("weapon"),TYPE_REGULAR,msg);
+	if (lv > 2)
+	{
+		msg = HIY  "\n         河\n" NOR;
+        COMBAT_D->do_attack(me,target, me->query_temp("weapon"),TYPE_REGULAR,msg);
+	}
+    if (lv > 4)
+    {
+		msg = HIW  "\n                  落\n" NOR;
+        COMBAT_D->do_attack(me,target, me->query_temp("weapon"),TYPE_REGULAR,msg);
+
+    }  
+	if (lv > 6)
+	{
+		msg = HIR  "\n                           日\n" NOR;
+        COMBAT_D->do_attack(me,target, me->query_temp("weapon"),TYPE_REGULAR,msg);
+	}
+	if (lv > 8)
+	{
+        msg = HIB "\n                                    圆\n" NOR;
+        COMBAT_D->do_attack(me,target, me->query_temp("weapon"),TYPE_REGULAR,msg);
+	}
+		{
+	 	 me->add("luori_exp",1);
+	      tell_object(me, "你的【落日】获得了一点技能熟练度。\n"NOR);
+		}
+	  if((me->query("luori_exp") > (me->query("luori")*me->query("luori")*100))&&(me->query("luori")< 10))
+		{
+		me->add("luori",1);
+		me->set("luori_exp",0);
+
+	      tell_object(me, HIW"你的【落日】等级上升了。\n"NOR);
+		}				
+	me->start_busy(4);
+        me->add_temp("apply/attack",-hit+tmp1);
+		me->add_temp("apply/damage",-extra+tmp2);
+
+	return 1;
+}
+int help(object me)
+{
+        write(YEL"\n落日神拳之落日："NOR"\n");
+	write(@HELP
+
+      曾为楚留香的独闯绝学，当日香帅与禅师谈经三天三夜并赠此技。
+	  此招虽无强大的伤害，但也曾经华丽一时。
+	
+	  落日神拳等级每提升一级，提升物理攻击一点。
+      读书识字等级每提升一级，提升物理命中一点。
+      落日等级每提升两级，增加此招的招式。
+     
+
+HELP
+	);
+	return 1;
+}
+

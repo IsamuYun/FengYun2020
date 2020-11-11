@@ -1,0 +1,83 @@
+inherit ROOM;
+
+void create()
+{
+        set("short", "好再来客栈");
+        set("long", @LONG
+最近各地都开起了客栈和驿站的联锁服务，沉香也造起了这家客栈。
+专供各地人士使用，详情请看牌。（ｓｉｇｎ）
+LONG
+        );
+        set("exits", ([ /* sizeof() == 4 */
+  "north" : __DIR__"cxe1",
+]));
+        set("objects", ([
+        __DIR__"npc/waiter" : 1,
+                        ]) );
+		set("item_desc", ([
+                "sign": @TEXT
+
+方便各路人士，小店推出驿站服务，当然需要收取一点手续费咯。
+去关外(goguanwai)   一两黄金      
+去风云城(gofengyun)   一两黄金
+
+TEXT
+        ]) );
+
+        set("coor/x",10);
+	set("coor/y",-10);
+	set("coor/z",0);
+	setup();
+     
+}
+void init()
+{	
+	add_action("go_guanwai","goguanwai");
+	add_action("go_fy","gofengyun");
+}
+int go_guanwai()
+{
+	object me,gold;
+	int lv;
+	me = this_player();
+	gold = present("silver_money", me);
+	lv = me->query("level");
+	if (lv>9 )
+	{
+		if (!gold)
+			return notify_fail("去关外需要支付十两白银!\n");
+		if (gold->query_amount() < 10)
+			return notify_fail("去关外需要支付十两白银!\n");
+		message_vision("$N交给了店小二十两白银，坐进了马车中。\n只听店小二对着车夫说道:关外。车夫得令后回头冲着$N大喊：客官坐稳了！\n马车开始朝关外出发了。\n......\n......\n......\n......\n数日后，马车终于到了关外了。车夫喊道：客官，可以下车了！\n",me);
+		gold->add_amount(-10);
+	}
+	else 
+	{
+		message_vision("$N坐进了马车中。\n只听店小二对着车夫说道:关外。车夫得令后回头冲着$N大喊：客官坐稳了！\n马车开始朝关外出发了。\n......\n......\n......\n......\n数日后，马车终于到了关外了。车夫喊道：客官，可以下车了！\n",me);
+	}
+	me ->move("/u/guanwai/inn");
+	return 1;
+}
+int go_fy()
+{
+	object me,gold;
+	int lv;
+	me = this_player();
+	gold = present("silver_money", me);
+	lv = me->query("level");
+	if (lv>9 )
+	{
+		if (!gold)
+			return notify_fail("去沉香需要支付十两白银!\n");
+		if (gold->query_amount() < 10)
+			return notify_fail("去沉香需要支付十两白银!\n");
+		message_vision("$N交给了店小二十两白银，坐进了马车中。\n只听店小二对着车夫说道:风云城。车夫得令后回头冲着$N大喊：客官坐稳了！\n马车开始朝风云城出发了。\n......\n......\n......\n......\n数日后，马车终于到了风云城了。车夫喊道：客官，可以下车了！\n",me);
+		gold->add_amount(-10);
+	}
+	else 
+	{
+		message_vision("$N坐进了马车中。\n只听店小二对着车夫说道:风云城。车夫得令后回头冲着$N大喊：客官坐稳了！\n马车开始朝风云城出发了。\n......\n......\n......\n......\n数日后，马车终于到了风云城了。车夫喊道：客官，可以下车了！\n",me);
+	}
+	me ->move("/d/fy/fqkhotel");
+	return 1;
+}

@@ -1,0 +1,201 @@
+#include <ansi.h>
+
+inherit NPC;
+int check_legal_name(string arg);
+int check_legal_id(string arg);
+string ask_me(); //定义ask_me
+int do_gu(string arg); 
+int do_dapi(string arg); 
+int do_cuihuo(string arg); 
+void reward(object me); 
+
+void create()
+{
+        set_name("张铁匠", ({ "zhang" }) );
+        set("gender", "男性" );
+        set("age", 52);
+        set("long","张铁匠一身打铁功夫名不虚传，他打出的铁器经久耐用．\n");
+        	  set_temp("kf_tufei",56);
+        set("pursuer", 1);
+		set("combat_exp", 5);
+        set("attitude", "friendly");
+		set("inquiry", ([ 
+			"工作" : (: ask_me :), 
+			"job" : (: ask_me :), 
+		]));
+
+		setup();
+        carry_object("/obj/cloth")->wear();
+
+}
+
+void init()
+{	
+        object ob;
+        ::init();
+        if( interactive(ob = this_player()) && !is_fighting() ) {
+                remove_call_out("greeting");
+                call_out("greeting", 1, ob);
+        }
+
+add_action("do_gu", "gu"); 
+add_action("do_dapi", "dapi"); 
+add_action("do_cuihuo", "cuihuo"); 
+
+}
+
+void greeting(object ob)
+{
+        if( !ob || environment(ob) != environment() ) return;
+        switch( random(5) ) {
+                case 0:
+                        say( "张铁匠粗声粗气地说道：这位" + RANK_D->query_respect(ob)
+                                + "，老人家我体力不行了，请自己用旁边的炉子锻造吧。\n");
+                        break;
+                case 1:
+                        say( "张铁匠满脸汗水说道：这位" + RANK_D->query_respect(ob)
+                                + "，我太忙了，帮不了你。\n");
+                        break;
+        }
+}
+
+string ask_me() 
+{ 
+object me = this_player(); 
+
+if (!me->query("longstory"))
+{
+	me->set("longstory",1);
+	write( YEL"这位朋友刚踏入江湖吧，慢慢来，有得你学了，让我来告诉你来基础常识。\n"
+	+ "人物成长的同时，你可以选择升级(upgrade)，这样你做某些事情的时候获得的报酬可能就会与之前不同了。\n"
+		+ "每次升级有五点能力点让你自由分配(distribute)，具体分配在哪个属性上就看个人爱好了。\n"
+		+ "另外在江湖里混也是要消耗金钱的，所以没有钱是不行的，然而钱不是这么容易来的。\n"
+		+ "初期你可以在我这里打工，沉香好像有个鱼池可以钓鱼，钓到的鱼是可以卖的哦！\n"NOR);
+}
+
+if (this_object()->is_busy()) //检查场景是否busy
+return "我现在很忙，你等会吧？"; 
+if (me->query("level") > 5 ) //检查lv
+return "让您老干这个未免屈尊了吧？"; 
+
+
+if (me->query("kee") < 50) //检查气
+return "你还是歇会儿吧！要是出了人命我可承担不起。"; 
+
+
+if (me->query_temp("smith/gu")) //检查标记
+return "让你鼓风箱，你怎么还磨蹭(gu)？"; 
+
+if (me->query_temp("smith/dapi")) 
+return "叫你打的坯你打了没有(dapi)？"; 
+
+
+switch(random(3))//随机分配三个工作
+{ 
+case 0: 
+me->set_temp("smith/gu", 1); 
+return "好！你帮我鼓一会儿风箱(gu)。"; 
+
+case 1: 
+me->set_temp("smith/dapi", 1); 
+return "这样吧，你帮我打一下坯吧(dapi)！"; 
+
+case 2:
+me->set_temp("smith/cuihuo", 1); 
+return "去帮我把这些刚出炉的淬一下火(cuihuo)。"; 
+} 
+} 
+
+int do_gu(string arg) 
+{ 
+object me = this_player(); 
+
+if (me->is_busy()) 
+return notify_fail("你现在正忙。\n"); 
+
+if (! me->query_temp("smith/gu")) 
+{ 
+message_vision("$n刚偷偷的拉起鼓风机，鼓了几阵风。" 
+"就听见$N对$n大喝道：滚开，乱搞什么。\n", 
+this_object(), me); 
+return 1; 
+} 
+
+message_vision("$n拉起鼓风机拼命鼓了起来，$N看了点了点头。\n", 
+this_object(), me); 
+reward(me); 
+return 1; 
+} 
+
+int do_dapi(string arg) 
+{ 
+object me = this_player(); 
+
+if (me->is_busy()) 
+return notify_fail("你现在正忙。\n"); 
+
+if (! me->query_temp("smith/dapi")) 
+{ 
+message_vision("$n拿起几块生铁，在手里掂了掂。" 
+"就听见$N对$n大喝道：放下，乱搞什么。\n", 
+this_object(), me); 
+return 1; 
+} 
+
+message_vision("$n拿着锤子对刚出炉的火热的生铁用力敲打着，" 
+"$N“嗯”了一声，看上去有些满意。\n", 
+this_object(), me); 
+reward(me); 
+return 1; 
+} 
+
+int do_cuihuo(string arg) 
+{ 
+object me = this_player(); 
+
+if (me->is_busy()) 
+return notify_fail("你现在正忙。\n"); 
+
+if (! me->query_temp("smith/cuihuo")) 
+{ 
+message_vision("$n刚抄起一个打造好的坯子，" 
+"就听见$N对$n大喝道：放下，别给我搞坏了。\n", 
+this_object(),me);
+return 1; 
+} 
+
+message_vision("$N用铁钳抄起一块火红的坯子，伸进了水" 
+"池，“哧”的一声轻烟四冒。\n", 
+me); 
+reward(me); 
+return 1; 
+} 
+
+void reward(object me) //工作结束，分配奖赏，移除标记
+{ 
+object coin; 
+int lv,exp;
+lv= me->query("level");
+me->delete_temp("smith/gu"); 
+me->delete_temp("smith/dapi"); 
+me->delete_temp("smith/cuihuo"); 
+
+
+this_object()->start_busy(2);
+message_vision("$N对$n道：这是给你的工钱。\n", 
+this_object(), me); 
+if (me->query("level") < 6) 
+{
+	exp = 10*lv + random(20);
+	coin = new("/obj/money/coin"); 
+coin->set_amount(exp *2); 
+coin->move(this_player()); 
+me->add("combat_exp", exp); 
+me->add("potential", exp/7); 
+write("你获得了\n"+chinese_number(exp)+"点经验。\n");
+write(chinese_number(exp/7)+"点潜能。\n");
+write(chinese_number(exp*2)+"文钱。\n");
+} 
+me->receive_damage("kee", 30); 
+me->start_busy(4); 
+} 

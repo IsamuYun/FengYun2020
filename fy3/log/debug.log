@@ -1,0 +1,43 @@
+Can't find "mudos", ignoring old binaries.
+Try invoking the driver using the full pathname.
+System Error: init_addr_server: connect: No connection could be made because the target machine actively refused it.
+
+
+Loading preloaded files ...
+Initializations complete.
+
+Accepting connections on port 6667.
+
+执行时段错误：*Array index out of bounds.
+
+程式：std/char/npc.c 第 111 行
+物件: /d/taishan/npc/pettrainer4#956
+呼叫来自：std/char.c 的 heart_beat() 第 129 行，物件： d/taishan/npc/pettrainer4#956 ("王虎")
+呼叫来自：std/char/npc.c 的 chat() 第 111 行，物件： d/taishan/npc/pettrainer4#956 ("王虎")
+Heart beat in d/taishan/npc/pettrainer4#956 turned off.
+
+执行时段错误：*Array index out of bounds.
+
+程式：std/char/npc.c 第 111 行
+物件: /d/taishan/npc/pettrainer4#1887
+呼叫来自：std/char.c 的 heart_beat() 第 129 行，物件： d/taishan/npc/pettrainer4#1887 ("王虎")
+呼叫来自：std/char/npc.c 的 chat() 第 111 行，物件： d/taishan/npc/pettrainer4#1887 ("王虎")
+Heart beat in d/taishan/npc/pettrainer4#1887 turned off.
+
+执行时段错误：*Array index out of bounds.
+
+程式：adm/daemons/cron.c 第 67 行
+物件: /adm/daemons/cron
+呼叫来自：adm/daemons/cron.c 的 init_cron() 第 67 行，物件： adm/daemons/cron
+
+执行时段错误：*call_other() couldn't find object
+
+程式：cmds/std/go.c 第 133 行
+物件: /cmds/std/go
+呼叫来自：std/char.c 的 heart_beat() 第 129 行，物件： d/fy/npc/song#2067 ("孤松先生")
+呼叫来自：std/char/npc.c 的 chat() 第 114 行，物件： d/fy/npc/song#2067 ("孤松先生")
+呼叫来自：<function> 的 <function>() 第 0 行，物件： d/fy/npc/song#2067 ("孤松先生")
+呼叫来自：std/char/npc.c 的 random_move() 第 128 行，物件： d/fy/npc/song#2067 ("孤松先生")
+呼叫来自：feature/command.c 的 command_hook() 第 41 行，物件： d/fy/npc/song#2067 ("孤松先生")
+呼叫来自：cmds/std/go.c 的 main() 第 133 行，物件： cmds/std/go
+Heart beat in d/fy/npc/song#2067 turned off.

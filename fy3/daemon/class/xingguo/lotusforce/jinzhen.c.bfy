@@ -1,0 +1,65 @@
+// lifeheal.c
+
+#include <ansi.h>
+
+int exert(object me, object target, int amount)
+{
+	int lv,lv2;
+	lv = me->query("jinzhen");
+	if (!lv)
+		me->set("jinzhen",1);
+	lv = (int)me->query("jinzhen");
+	lv2 = me->query_skill("lotusforce",1);
+	if( !me->is_fighting())
+		return notify_fail("金针渡穴只能在战斗中使用！\n");
+
+	if( (int)me->query("force") - (int)me->query("max_force") < 150*lv )
+		return notify_fail("你的真气不够。\n");
+
+	if (!target)
+		target = me;
+	if (target == me)
+		message_vision(HIB "$N右手渐渐泛出白色的气花，左手拿出一根金针，往自己身上一扎。\n"
+		"一股暖流从周身而过，$N脸色看起来红润多了。\n" NOR,	me);
+	else
+		message_vision(	HIB "$N右手渐渐泛出白色的气花，左手拿出一根金针，往$N身上一扎。\n"
+		"一股暖流从周身而过，$N脸色看起来红润多了。\n" NOR,	me,target);
+
+	target->add("kee", lv2*10+lv*500 );
+	if (target->query("kee")> target->query("eff_kee"))
+		target->query("eff_kee",target->query("kee"));
+	if (target->query("eff_kee")> target->query("max_kee"))
+		target->query("eff_kee",target->query("max_kee"));
+	if (target->query("kee")> target->query("eff_kee"))
+		target->query("kee",target->query("eff_kee"));
+
+	me->add("force", -150*lv);
+	me->set("force_factor", 0);
+		me->add("jinzhen_exp",1);
+	    tell_object(me, "你的【金针渡穴】获得了一点技能熟练度。\n"NOR);
+	    if(me->query("jinzhen_exp") > (me->query("jinzhen")*me->query("jinzhen")*100)&&(me->query("jinzhen")<10))
+		{
+		me->add("jinzhen",1);
+		me->set("jinzhen_exp",0);
+	      tell_object(me, HIW"你的【金针渡穴】熟练上升了。\n"NOR);
+		}
+	return 1;
+}
+ int help(object me)
+{
+        write(YEL"\n莲花心法之金针渡穴："NOR"\n");
+	write(@HELP
+	   此招只能在战斗中使用。
+HELP
+	);
+	  write("\t当前状态：恢复气血伤害"+(int)(me->query_skill("force")/2*me->query("jinzhen")+me->query_skill("lotusforce",1)/10)+"点\n");
+	write(@HELP
+
+      莲花心法等级每上升十级，疗伤的功效增加1点。
+      金针渡穴等级每上升一级，疗伤的功效增加一倍。
+
+HELP
+	);
+	return 1;
+}
+

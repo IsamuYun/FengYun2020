@@ -1,0 +1,72 @@
+// tie@fengyun
+
+#include <ansi.h>
+#include <combat.h>
+inherit SSERVER;
+int perform(object me, object target)
+{
+	string msg;
+	int hit,damage,lv,orforce,extra;
+	object weapon;
+	lv = (int)me->query("siqijinlong");
+	if (!lv)
+		me->set("siqijinlong",1);
+	lv = (int)me->query("siqijinlong");
+	if (me->query("level")< 40)
+		return notify_fail("你的人物等级不够。\n");
+	if( !target ) target = offensive_target(me);
+	if( !target
+	||	!target->is_character()
+	||	!me->is_fighting(target) )
+		return notify_fail("［四起金龙］只能对战斗中的对手使用。\n");
+	weapon = me->query_temp("weapon");
+	orforce = (int) me->query("force");
+	if (orforce < lv*50)
+		return notify_fail("你的内力不足。\n");
+	me->add("force", -lv*50);
+	hit = me->query_skill("literate",1/2);
+    damage = me->query_skill("cloudstaff",1);
+	extra = me->query_skill("buddhism") / 10;
+	me->add_temp("apply/attack", hit);	
+	me->add_temp("apply/damage", damage+extra+lv*100);
+	msg = HIR  "$N低呼佛号，内力聚于双臂，舞动手中的"+ weapon->name() +"［四起金龙］第一势 ##龙现于野##，闪电般的扑向$n！" NOR;
+	COMBAT_D->do_attack(me,target, weapon, TYPE_REGULAR,msg);
+        msg = HIG  "$N微探双臂，凭空一点,手中的"+ weapon->name() +"对准$n使出［四起金龙］的第二势  ##龙翔于天##  ！" NOR;
+	COMBAT_D->do_attack(me,target, weapon, TYPE_REGULAR,msg);
+        msg = HIC  "$N一声长啸，猛然探出手中的"+ weapon->name() +"使出［四起金龙］第三势 ##龙游于渊## ！ 幻出条条金磷飞龙，闪电般的扑向$n！" NOR;
+	COMBAT_D->do_attack(me,target, weapon, TYPE_REGULAR,msg);
+        msg = HIY  "$N把手中的"+ weapon->name() +"舞动如飞，向$n使出［四起金龙］第四势 ##龙入九天## ！" NOR;
+	COMBAT_D->do_attack(me,target, weapon, TYPE_REGULAR,msg);
+	me->add_temp("apply/attack", -hit);
+	me->add_temp("apply/damage", -damage-extra-lv*100);
+	me->start_busy(4);
+	if(me->query("siqijinlong") < (target->query("level")/10) && !userp(target))
+		{
+	 	 me->add("siqijinlong_exp",1);
+	      tell_object(me, "你的【四起金龙】获得了一点技能熟练度。\n"NOR);
+		}
+	  if((me->query("siqijinlong_exp") > (me->query("siqijinlong")*me->query("siqijinlong")*100))&&(me->query("siqijinlong")< MAX_PFMLEVEL))
+		{
+		me->add("siqijinlong",1);
+		me->set("siqijinlong_exp",0);
+
+	      tell_object(me, HIW"你的【四起金龙】等级上升了。\n"NOR);
+		}
+	return 1;
+}
+int help(object me)
+{
+        write(YEL"\n白云杖法之四起金龙："NOR"\n");
+	write(@HELP
+
+      此招使用后，一招四段攻击敌方。
+
+      读书识字技能等级每上升两级，增加此招命中一点。
+      白云杖法技能等级每上升一级，增加此招伤害一点。
+      大乘佛法技能等级每上升十级，增加此招伤害和命中各一点。
+      四起金龙等级每上升一级，增加此招伤害一百点。
+
+HELP
+	);
+	return 1;
+}

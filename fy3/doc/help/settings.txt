@@ -1,0 +1,53 @@
+[1;31m
+»·¾³±äÊý
+[0m
+Äã¿ÉÒÔÓÃ [36mset[0m Ö¸ÁîÉè¶¨Ò»Ð©ÓÐÓÃµÄ»·¾³±äÊý£¬ÕâÐ©±äÊýÒ²»áËæÖøÄãµÄÈËÎï±»´¢
+´æÏÂÀ´£¬Èç¹ûÓÐ²»ÐèÒªµÄ»·¾³±äÊý£¬Ò²¿ÉÒÔÓÃ [36munset[0m É¾³ý¡£ÏêÏ¸µÄÊ¹ÓÃ·½·¨Çë
+¿´ [36mhelp set[0m ¼° [36mhelp unset[0m¡£
+
+ÒÔÏÂÊÇÄ¿Ç°ÓÐÓÃµÄ»·¾³±äÊý£º
+
+[1;33mbrief[0m[36m		<ÈÎºÎ·ÇÁãµÄÖµ>	Éè¶¨ÒÆ¶¯Ê±Ö»¿´ËùÔÚµØ¼ò¶ÌµÄÃû³Æ£¬Èç¹ûÄú
+				µÄÍøÂ·ËÙ¶È²»ÊÇºÜ¿ì£¬»òÕßÊÇ¶ÔÇøÓòÒÑ¾­Ê®
+				·ÖÊìÏ¤£¬½¨ÒéÄú´ò¿ª briefÄ£Ê½ÒÔ¼õÇáÍøÂ·
+				¸ºµ£¡£
+
+[1;33mbrief2[0m[36m				Éè¶¨ÒÆ¶¯Ê±Ö»¿´ËùÔÚµØ¼ò¶ÌµÄÃû³ÆºÍÈËºÍÎï¡£
+
+[1;33mbrief3[0m[36m				Éè¶¨ÒÆ¶¯Ê±Ö»¿´ËùÔÚµØ¼ò¶ÌµÄÃû³ÆºÍÈËºÍÎï
+				¼°³ö¿Ú¡£
+
+[1;33mwimpy[0m[36m		<°Ù·Ö±È>	µ±ÄúµÄ¾«ÆøÉñµÍì¶Õâ¸ö°Ù·Ö±ÈÊ±¾Í»á×Ô¶¯ÕÒ
+				»ú»áÌÓÃü¡£
+
+[1;33mno_teach[0m[36m 	<ÈÎºÎ·ÇÁãµÄÖµ>	Éè¶¨ÄãÏÖÔÚ²»½ÌÄãµÄÍ½µÜ¼¼ÄÜ£¬ÓÉì¶½ÌÍ½µÜ
+				Òª»¨·ÑÒ»Ð©¾«Éñ£¬µ±Í½µÜ²»¹ÔµÄÊ±ºò....¡£
+
+[1;33msavemyass[0m[36m	<ÈÎºÎÖ¸Áî>	µ±ÄúµÄ¾«ÆøÉñµÍì¶wimpy°Ù·Ö±ÈÊ±£¬Õâ¸öÖ¸Áî
+				»áÓÉÏµÍ³×Ô¶¯ÊäÈë¡£
+
+[1;33mno_tell[0m[36m		<id/all>	[36mÊ¹Íæ¼Ò£¨id£©»òËùÓÐÍæ¼Ò£¨all£©¶¼ÎÞ·¨ºÍÄãËµ»°¡£
+
+[1;33mno_teachskill[0m[36m  skillname>   [36m    no_teachskillµÄ²ÎÊýÉèÖÃÁËÒÔºó£¬ÄÇÖÖskillµÜ×Ó½«
+                                ²»ÄÜÑ§µ½¸ÃÉèÖÃµÄskills¡£Òª×¢Òâ" > "ºÅÒ»¶¨ÒªÐ´µÄ¡£
+
+[1;33mno_follow[0m[36m       <Ö¸¶¨ÈËµÄID>  [36m  Éè¶¨ÄúÏÖÔÚ²»ÈÃÖ¸¶¨µÄÈË¸úËæÄã£¬Õâ¸ö²ÎÊý
+                                Í¬Ñù¾ßÓÐÁÐ±íÊôÐÔ¡£Èç¹ûIDÊÇallÔò±íÊ¾²»½Ó
+                                ÊÜÈÎºÎÈËµÄ¸úËæ¡£
+
+[1;33mno_more[0m[36m         <ÈÎÒâ·ÇÁãÖµ>   [36m Éè¶¨ÄúÏÖÔÚ²»Ê¹ÓÃÒ³·½Ê½ÔÄ¶Á³¤ÐÅÏ¢¡£
+
+[1;33mno_accept[0m[36m       <Íæ¼ÒID> [36m       Éè¶¨ÄúÏÖÔÚ²»½ÓÊÜÄ³ÈË give µÄÀñÎï¡£Õâ¸ö
+                                ²ÎÊý¾ßÓÐÁÐ±íÊôÐÔ¡£Èç¹ûIDÊÇall Ôò±íÊ¾²»
+                                ½ÓÊÜÈÎºÎÈËµÄÎïÆ·¡£
+
+[1;33mprompt[0m[36m           <×Ö·û´®>   [36m    Éè¶¨ÄúÊäÈëÃüÁîÇ°µÄÌáÊ¾·û¡£ÒÔÏÂ×Ö·û´®ÓÐ
+                                ×ÅÌØÊâµÄº¬Òå£º
+                                [35m1. ÒÔµ±Ç°µÄÊ±¼ä×÷ÎªÌáÊ¾·û¡£
+                                [35m2. ÒÔµ±×î½ü¸æËßÄãÐÅÏ¢µÄÍæ¼ÒÓ¢ÎÄid×÷ÎªÌáÊ¾·û¡£
+                                [35m3. ÒÔÄãµÄ¾«ÆøÉñµÄÊý×÷ÎªÌáÊ¾·û¡£
+                                [35m4. ÒÔµ±Ç°µÄ¾«ÆøÉñºÍ¾­ÑéÇ±ÄÜ×÷ÎªÌáÊ¾·û¡£
+                                [35m5. ÒÔµ±Ç°µÄÂ·¾¶×÷ÎªÌáÊ¾·û¡£Ö»ÓÐÎ×Ê¦²ÅÄÜÊ¹ÓÃ
+                                [35mÈç¹ûÄãÏë»Ö¸´×î³õµÄÌáÊ¾·û£¬¿ÉÊÇÉèÖÃÌáÊ¾
+                                [35m·ûÎª0¡£¼´£ºset prompt 0
+

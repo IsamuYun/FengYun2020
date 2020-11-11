@@ -1,0 +1,12 @@
+风云三（本地）   crashed on: Tue Sep 08 15:50:30 1998, error: Segmentation fault
+this_player: obj/user#210 ("风")
+this_object: adm/daemons/chinesed
+fy3 crashed on: Mon Nov  9 03:49:17 2020, error: SIGINT: Process interrupted
+fy3 crashed on: Mon Nov  9 15:23:09 2020, error: SIGTERM: Process terminated
+fy3 crashed on: Mon Nov  9 15:24:11 2020, error: SIGINT: Process interrupted
+fy3 crashed on: Mon Nov  9 15:29:11 2020, error: SIGTERM: Process terminated
+fy3 crashed on: Mon Nov  9 17:06:58 2020, error: SIGTERM: Process terminated
+fy3 crashed on: Mon Nov  9 20:18:57 2020, error: SIGTERM: Process terminated
+fy3 crashed on: Tue Nov 10 05:42:06 2020, error: SIGTERM: Process terminated
+fy3 crashed on: Tue Nov 10 08:28:46 2020, error: SIGINT: Process interrupted
+fy3 crashed on: Tue Nov 10 10:04:51 2020, error: SIGTERM: Process terminated

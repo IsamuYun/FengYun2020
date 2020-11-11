@@ -1,0 +1,11 @@
+
+
+[1;33m¬£ÈËÎïÆª
+[0m
+[1;31mhelp health.txt       [0m  ×´¿öÆª
+[1;35mhelp attributes.txt   [0m  ÊôĞÔÆª
+[1;36mhelp race.txt         [0m  Ãñ×åÆª
+[1;37mhelp parameters.txt   [0m  ²ÎÊıÆª
+
+		 [1;33m³¤ËïÎŞÇé£ÀÖ£Öİ·çÔÆ
+[0m
