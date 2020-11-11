@@ -43,10 +43,10 @@ int main(object me, string arg)
                 notify_fail("你所使用的外功中没有这种功能。\n");
 	//			write ("skill:"+SKILL_D(skill)->belong()+"\n");
 	//			write ("class:"+me->query("class"));
-        if(SKILL_D(skill)->belong()!=me->query("class")&& userp(me))
-	return notify_fail("只有该技能的门派成员才可以使用。\n");
-		if(!SKILL_D(skill)->belong()&& userp(me))
-	return notify_fail("此技能绝招暂没开放。\n");
+        //if(SKILL_D(skill)->belong()!=me->query("class")&& userp(me))
+	//return notify_fail("只有该技能的门派成员才可以使用。\n");
+	//	if(!SKILL_D(skill)->belong()&& userp(me))
+	//return notify_fail("此技能绝招暂没开放。\n");
                 if( SKILL_D(skill)->perform_action(me, arg) ) {
                         if( random(120) < (int)me->query_skill(skill) )
                                 me->improve_skill(skill, 1, 1);

@@ -11,6 +11,7 @@ LONG
         set("exits", ([ /* sizeof() == 4 */
   "west" : __DIR__"sr1",
   "east" : __DIR__"sr2",
+  "up" : __DIR__"eting",
 ]));
        set("objects", ([
         __DIR__"npc/prisoner" : 3,

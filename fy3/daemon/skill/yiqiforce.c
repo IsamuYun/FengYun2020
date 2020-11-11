@@ -23,7 +23,7 @@ mapping *action = ({
         ]),
 });
 
-/*
+
 mixed hit_ob(object me, object victim, int damage_bonus, int factor)
 {
         mixed foo;
@@ -44,20 +44,20 @@ mixed hit_ob(object me, object victim, int damage_bonus, int factor)
         }
         return foo;
 }
-*/
 
 
+/*
 mixed hit_ob(object me, object victim, int damage_bonus, int factor)
 {
-    /*
+    
         if(!userp(me) && userp(victim) && me->query("id")=="dadi")
         {
                 me->start_call_out( (: call_other, __FILE__, "kill_him", me, victim :), 1);  
         }
-    */
+    
     return 0;
 }
-
+*/
 
 void kill_him(object me, object victim)
 {
