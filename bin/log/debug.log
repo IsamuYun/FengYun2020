@@ -147,6 +147,24 @@ Loading preload files ...
 /adm/daemons/ftpd...
 /adm/daemons/network/dns_master...
 /adm/daemons/questd...
+
+执行时段错误：*Wrong permissions for opening file /u/o/obj/log for append.
+"No such file or directory"
+
+程式：/adm/obj/master.c 第 118 行
+物件: /adm/obj/master
+呼叫来自：/adm/obj/master.c 的 preload() 第 96 行，物件： /adm/obj/master
+呼叫来自：/adm/obj/master.c 的 CATCH() 第 96 行，物件： /adm/obj/master
+呼叫来自：/adm/daemons/questd.c 的 create() 第 23 行，物件： /adm/daemons/questd
+呼叫来自：/adm/daemons/questd.c 的 init_dynamic_quest() 第 66 行，物件： /adm/daemons/questd
+呼叫来自：/adm/daemons/questd.c 的 spread_quest() 第 85 行，物件： /adm/daemons/questd
+呼叫来自：/u/ghost/house.c 的 create() 第 25 行，物件： /u/ghost/house
+呼叫来自：/std/room.c 的 setup() 第 218 行，物件： /u/ghost/house
+呼叫来自：/u/ghost/house.c 的 reset() 第 34 行，物件： /u/ghost/house
+呼叫来自：/std/room.c 的 reset() 第 69 行，物件： /u/ghost/house
+呼叫来自：/std/room.c 的 make_inventory() 第 19 行，物件： /u/ghost/house
+呼叫来自：/adm/obj/master.c 的 log_error() 第 118 行，物件： /adm/obj/master
+/u/ghost/obj/toilet.c line 54: Warning: Unused local variable 'kar' before the end of line
 /adm/daemons/whod...
 /adm/daemons/cron...
 /adm/daemons/logind...
@@ -156,10 +174,30 @@ Loading preload files ...
 Accepting connections on 0.0.0.0:5555.
 Initializations complete.
 
-u/chuenyu/dustyroad3.c: cannot replace a program with function references, ignored.
 
-执行时段错误：*Array index out of bounds.
+执行时段错误：*call_other() couldn't find object
 
-程式：/adm/daemons/cron.c 第 67 行
-物件: /adm/daemons/cron
-呼叫来自：/adm/daemons/cron.c 的 init_cron() 第 67 行，物件： /adm/daemons/cron
+程式：/feature/skill.c 第 79 行
+物件: /obj/user#606
+呼叫来自：/feature/command.c 的 command_hook() 第 41 行，物件： /obj/user#606 ("白羽")
+呼叫来自：/cmds/std/enable.c 的 main() 第 59 行，物件： /cmds/std/enable
+呼叫来自：/feature/skill.c 的 query_skill() 第 79 行，物件： /obj/user#606 ("白羽")
+
+执行时段错误：*call_other() couldn't find object
+
+程式：/feature/skill.c 第 79 行
+物件: /obj/user#606
+呼叫来自：/feature/command.c 的 command_hook() 第 41 行，物件： /obj/user#606 ("白羽")
+呼叫来自：/cmds/std/enable.c 的 main() 第 59 行，物件： /cmds/std/enable
+呼叫来自：/feature/skill.c 的 query_skill() 第 79 行，物件： /obj/user#606 ("白羽")
+
+执行时段错误：*call_other() couldn't find object
+
+程式：/feature/skill.c 第 79 行
+物件: /obj/user#606
+呼叫来自：/feature/command.c 的 command_hook() 第 41 行，物件： /obj/user#606 ("白羽")
+呼叫来自：/cmds/std/enable.c 的 main() 第 59 行，物件： /cmds/std/enable
+呼叫来自：/feature/skill.c 的 query_skill() 第 79 行，物件： /obj/user#606 ("白羽")
+******** FATAL ERROR: SIGTERM: Process terminated
+FluffOS driver attempting to exit gracefully.
+crash() in master called successfully.  Aborting.

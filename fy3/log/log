@@ -16192,3 +16192,1124 @@ adm/daemons/weapond.c line 2: Warning: Unknown #pragma, ignored.
 /std/char/npc.c line 96: Warning: Unused local variable 'inv' before 
 /std/char/npc.c line 166: Warning: Unused local variable 'weapon' before 
 /std/char/npc.c line 249: Warning: Unused local variable 'i' before      
+/std/room.c line 3: Warning: Unknown #pragma, ignored. before the end of line
+/std/room.c line 3: Warning: Unknown #pragma, ignored. before the end of line
+/std/room.c line 195: Warning: Unused local variable 'item_desc' before the end of line
+/std/room.c line 3: Warning: Unknown #pragma, ignored. before the end of line
+/std/room.c line 3: Warning: Unknown #pragma, ignored. before the end of line
+/std/room.c line 195: Warning: Unused local variable 'item_desc' before the end of line
+/cmds/std/go.c line 73: Warning: Unused local variable 'my' before 
+/cmds/std/go.c line 73: Warning: Unused local variable 'your' before 
+/std/char/npc.c line 96: Warning: Unused local variable 'enc' before 
+/std/char/npc.c line 96: Warning: Unused local variable 'max' before 
+/std/char/npc.c line 96: Warning: Unused local variable 'inv' before 
+/std/char/npc.c line 166: Warning: Unused local variable 'weapon' before 
+/std/char/npc.c line 249: Warning: Unused local variable 'i' before      
+/obj/corpse.c line 90: Warning: Unused local variable 'name' before the end of line
+/obj/corpse.c line 90: Warning: Unused local variable 'zskill' before the end of line
+/d/chenxiang/diaoyuting.c line 60: Warning: Unused local variable 'dan' before 
+/d/chenxiang/cx2.c line 72: Warning: Unused local variable 'dir' before the end of line
+/feature/move.c line 3: Warning: Unknown #pragma, ignored. before 
+/feature/name.c line 111: Warning: Unused local variable 'fadai' before 
+/adm/daemons/msgd.c line 106: Warning: Unused local variable 'me' before the end of line
+/adm/daemons/msgd.c line 126: Warning: Unused local variable 'j' before the end of line
+/adm/daemons/memoryd.c line 2: Warning: Unknown #pragma, ignored. before the end of line
+/include/globals.h line 9: Warning: redefinition of #define COMMAND_DIR before #define CONFIG_DIR  
+/include/globals.h line 10: Warning: redefinition of #define CONFIG_DIR before #define BACKUP_DIR  
+/include/globals.h line 11: Warning: redefinition of #define BACKUP_DIR before #define DATA_DIR    
+/include/globals.h line 12: Warning: redefinition of #define DATA_DIR before #define HELP_DIR    
+/include/globals.h line 13: Warning: redefinition of #define HELP_DIR before #define LOG_DIR     
+/include/globals.h line 14: Warning: redefinition of #define LOG_DIR before 
+/include/globals.h line 17: Warning: redefinition of #define BR_D before #define BN_D			"/adm
+/include/globals.h line 18: Warning: redefinition of #define BN_D before #define BAN_D			"/ad
+/include/globals.h line 19: Warning: redefinition of #define BAN_D before #define ALIAS_D     
+/include/globals.h line 20: Warning: redefinition of #define ALIAS_D before #define EXAMINE_D   
+/include/globals.h line 21: Warning: redefinition of #define EXAMINE_D before #define CHANNEL_D   
+/include/globals.h line 22: Warning: redefinition of #define CHANNEL_D before #define CHAR_D      
+/include/globals.h line 23: Warning: redefinition of #define CHAR_D before #define YNVOTE_D    
+/include/globals.h line 24: Warning: redefinition of #define YNVOTE_D before #define CHINESE_D   
+/include/globals.h line 25: Warning: redefinition of #define CHINESE_D before #define COMBAT_D    
+/include/globals.h line 26: Warning: redefinition of #define COMBAT_D before #define COMMAND_D   
+/include/globals.h line 27: Warning: redefinition of #define COMMAND_D before #define EMOTE_D     
+/include/globals.h line 28: Warning: redefinition of #define EMOTE_D before #define FINGER_D    
+/include/globals.h line 29: Warning: redefinition of #define FINGER_D before #define UPGRADE_D		"
+/include/globals.h line 30: Warning: redefinition of #define UPGRADE_D before #define INQUIRY_D   
+/include/globals.h line 31: Warning: redefinition of #define INQUIRY_D before #define LOGIN_D     
+/include/globals.h line 32: Warning: redefinition of #define LOGIN_D before #define NATURE_D    
+/include/globals.h line 33: Warning: redefinition of #define NATURE_D before #define PROFILE_D   
+/include/globals.h line 34: Warning: redefinition of #define PROFILE_D before #define RANK_D      
+/include/globals.h line 35: Warning: redefinition of #define RANK_D before #define SECURITY_D  
+/include/globals.h line 36: Warning: redefinition of #define SECURITY_D before #define UPDATE_D    
+/include/globals.h line 37: Warning: redefinition of #define UPDATE_D before #define VIRTUAL_D   
+/include/globals.h line 38: Warning: redefinition of #define VIRTUAL_D before #define WEAPON_D    
+/include/globals.h line 39: Warning: redefinition of #define WEAPON_D before #define WHO_D			"/ad
+/include/globals.h line 40: Warning: redefinition of #define WHO_D before #define TASK_D			"/a
+/include/globals.h line 41: Warning: redefinition of #define TASK_D before #define STATUS_D		"/
+/include/globals.h line 42: Warning: redefinition of #define STATUS_D before #define VOTE_D			"/a
+/include/globals.h line 43: Warning: redefinition of #define VOTE_D before #define CRON_D      
+/include/globals.h line 44: Warning: redefinition of #define CRON_D before #define STORY_D					
+/include/globals.h line 45: Warning: redefinition of #define STORY_D before //信息使用不要删除
+/include/globals.h line 47: Warning: redefinition of #define CONVERT_D before // added by Tie for 
+/include/globals.h line 50: Warning: redefinition of #define QUEST_D before #define CLASS_D(x)  
+/include/globals.h line 51: Warning: redefinition of #define CLASS_D before #define SKILL_D(x)  
+/include/globals.h line 52: Warning: redefinition of #define SKILL_D before #define CONDITION_D(
+/include/globals.h line 53: Warning: redefinition of #define CONDITION_D before #define TONGJI_D(x) 
+/include/globals.h line 54: Warning: redefinition of #define TONGJI_D before 
+/include/globals.h line 57: Warning: redefinition of #define TOPTEN_D before #define TOPTEN_RICH 
+/include/globals.h line 58: Warning: redefinition of #define TOPTEN_RICH before #define TOPTEN_PKER 
+/include/globals.h line 59: Warning: redefinition of #define TOPTEN_PKER before #define TOPTEN_EXP  
+/include/globals.h line 60: Warning: redefinition of #define TOPTEN_EXP before #define TOPTEN_AGE  
+/include/globals.h line 61: Warning: redefinition of #define TOPTEN_AGE before #define TOPTEN_TASKE
+/include/globals.h line 62: Warning: redefinition of #define TOPTEN_TASKER before #define TOPTEN_KILLE
+/include/globals.h line 63: Warning: redefinition of #define TOPTEN_KILLED before #define RICH_B      
+/include/globals.h line 64: Warning: redefinition of #define RICH_B before #define PKER_B      
+/include/globals.h line 65: Warning: redefinition of #define PKER_B before #define EXP_B       
+/include/globals.h line 66: Warning: redefinition of #define EXP_B before #define AGE_B       
+/include/globals.h line 67: Warning: redefinition of #define AGE_B before #define TASKER_B    
+/include/globals.h line 68: Warning: redefinition of #define TASKER_B before #define KILLED_B    
+/include/globals.h line 69: Warning: redefinition of #define KILLED_B before //自创skill使用
+/include/globals.h line 71: Warning: redefinition of #define SKILL_MODEL_UNARMED before #define SKILL_MODEL_
+/include/globals.h line 72: Warning: redefinition of #define SKILL_MODEL_WEAPON before #define SKILL_MODEL_
+/include/globals.h line 73: Warning: redefinition of #define SKILL_MODEL_DEFAULT before //有问题请通知我
+/include/globals.h line 77: Warning: redefinition of #define COIN_OB before #define CORPSE_OB   
+/include/globals.h line 78: Warning: redefinition of #define CORPSE_OB before #define LOGIN_OB    
+/include/globals.h line 79: Warning: redefinition of #define LOGIN_OB before #define MASTER_OB   
+/include/globals.h line 80: Warning: redefinition of #define MASTER_OB before #define	MESSAGE_D	"/
+/include/globals.h line 81: Warning: redefinition of #define MESSAGE_D before #define MAILBOX_OB  
+/include/globals.h line 82: Warning: redefinition of #define MAILBOX_OB before #define SILVER_OB   
+/include/globals.h line 83: Warning: redefinition of #define SILVER_OB before #define GOLD_OB     
+/include/globals.h line 84: Warning: redefinition of #define GOLD_OB before #define THCASH_OB   
+/include/globals.h line 85: Warning: redefinition of #define THCASH_OB before #define TECASH_OB   
+/include/globals.h line 86: Warning: redefinition of #define TECASH_OB before #define SIMUL_EFUN_O
+/include/globals.h line 87: Warning: redefinition of #define SIMUL_EFUN_OB before #define USER_OB     
+/include/globals.h line 88: Warning: redefinition of #define USER_OB before #define VOID_OB     
+/include/globals.h line 89: Warning: redefinition of #define VOID_OB before 
+/include/globals.h line 93: Warning: redefinition of #define BANK before #define BULLETIN_BOA
+/include/globals.h line 94: Warning: redefinition of #define BULLETIN_BOARD before #define CHARACTER   
+/include/globals.h line 95: Warning: redefinition of #define CHARACTER before #define CLASS_GUILD 
+/include/globals.h line 96: Warning: redefinition of #define CLASS_GUILD before #define COMBINED_ITE
+/include/globals.h line 97: Warning: redefinition of #define COMBINED_ITEM before #define EQUIP       
+/include/globals.h line 98: Warning: redefinition of #define EQUIP before #define FORCE       
+/include/globals.h line 99: Warning: redefinition of #define FORCE before #define HOCKSHOP    
+/include/globals.h line 100: Warning: redefinition of #define HOCKSHOP before #define ITEM        
+/include/globals.h line 101: Warning: redefinition of #define ITEM before #define SHEET  "/std
+/include/globals.h line 102: Warning: redefinition of #define SHEET before #define LIQUID      
+/include/globals.h line 103: Warning: redefinition of #define LIQUID before #define MONEY       
+/include/globals.h line 104: Warning: redefinition of #define MONEY before #define NPC         
+/include/globals.h line 105: Warning: redefinition of #define NPC before #define POWDER      
+/include/globals.h line 106: Warning: redefinition of #define POWDER before #define ROOM        
+/include/globals.h line 107: Warning: redefinition of #define ROOM before #define SKILL       
+/include/globals.h line 108: Warning: redefinition of #define SKILL before #define SSERVER     
+/include/globals.h line 109: Warning: redefinition of #define SSERVER before // User IDs
+/include/globals.h line 112: Warning: redefinition of #define ROOT_UID before #define BACKBONE_UID
+/include/globals.h line 113: Warning: redefinition of #define BACKBONE_UID before 
+/include/globals.h line 117: Warning: redefinition of #define F_ACTION before #define F_ALIAS     
+/include/globals.h line 118: Warning: redefinition of #define F_ALIAS before #define F_PAWN			"/f
+/include/globals.h line 119: Warning: redefinition of #define F_PAWN before #define F_APPRENTICE
+/include/globals.h line 120: Warning: redefinition of #define F_APPRENTICE before #define F_ATTACK    
+/include/globals.h line 121: Warning: redefinition of #define F_ATTACK before #define F_ATTRIBUTE 
+/include/globals.h line 122: Warning: redefinition of #define F_ATTRIBUTE before #define F_AUTOLOAD  
+/include/globals.h line 123: Warning: redefinition of #define F_AUTOLOAD before #define F_CLEAN_UP  
+/include/globals.h line 124: Warning: redefinition of #define F_CLEAN_UP before #define F_COMMAND   
+/include/globals.h line 125: Warning: redefinition of #define F_COMMAND before #define F_CONDITION 
+/include/globals.h line 126: Warning: redefinition of #define F_CONDITION before #define F_DAMAGE    
+/include/globals.h line 127: Warning: redefinition of #define F_DAMAGE before #define F_DBASE     
+/include/globals.h line 128: Warning: redefinition of #define F_DBASE before #define F_EDIT      
+/include/globals.h line 129: Warning: redefinition of #define F_EDIT before #define F_EQUIP     
+/include/globals.h line 130: Warning: redefinition of #define F_EQUIP before #define F_FINANCE   
+/include/globals.h line 131: Warning: redefinition of #define F_FINANCE before #define F_FOOD      
+/include/globals.h line 132: Warning: redefinition of #define F_FOOD before #define F_LIQUID    
+/include/globals.h line 133: Warning: redefinition of #define F_LIQUID before #define F_MASTER    
+/include/globals.h line 134: Warning: redefinition of #define F_MASTER before #define F_MESSAGE   
+/include/globals.h line 135: Warning: redefinition of #define F_MESSAGE before #define F_MORE      
+/include/globals.h line 136: Warning: redefinition of #define F_MORE before #define F_MOVE      
+/include/globals.h line 137: Warning: redefinition of #define F_MOVE before #define F_NAME      
+/include/globals.h line 138: Warning: redefinition of #define F_NAME before #define F_SAVE      
+/include/globals.h line 139: Warning: redefinition of #define F_SAVE before #define F_SKILL     
+/include/globals.h line 140: Warning: redefinition of #define F_SKILL before #define F_TEAM      
+/include/globals.h line 141: Warning: redefinition of #define F_TEAM before #define F_TREEMAP   
+/include/globals.h line 142: Warning: redefinition of #define F_TREEMAP before #define F_VENDOR    
+/include/globals.h line 143: Warning: redefinition of #define F_VENDOR before // added by Tie Yu@f
+/include/globals.h line 145: Warning: redefinition of #define F_QUEST before // added by Tie@feng
+/include/globals.h line 147: Warning: redefinition of #define F_PAWNOWNER before #define F_BANKOWNER	
+/include/globals.h line 148: Warning: redefinition of #define F_BANKOWNER before #define F_BANKPAWNOW
+/include/globals.h line 149: Warning: redefinition of #define F_BANKPAWNOWNER before // added by tie@fy3 
+/include/globals.h line 151: Warning: redefinition of #define SAVE_EXTENSION before // Profiling switche
+/adm/daemons/fingerd.c line 4: Warning: Unknown #pragma, ignored. before #pragma save_binary
+/adm/daemons/fingerd.c line 5: Warning: Unknown #pragma, ignored. before 
+/adm/daemons/natured.c line 264: Warning: Unused local variable 'skill' before 
+/adm/daemons/weapond.c line 2: Warning: Unknown #pragma, ignored. before #include <ansi.h>
+/include/net/ftpdsupp.h line 66: Warning: Unused local variable 'file' before the end of line
+/adm/daemons/network/dns_master.c line 418: Warning: Unused local variable 'new_mud' before the end of line
+/adm/daemons/network/dns_master.c line 418: Warning: Unused local variable 'svc' before the end of line
+/adm/daemons/network/dns_master.c line 549: Warning: Expression has no side effects, and the value is unused before ;
+/adm/daemons/network/dns_master.c line 607: Warning: Unused local variable 'm' before the end of line
+/adm/daemons/network/dns_master.c line 607: Warning: Unused local variable 'str' before the end of line
+/adm/daemons/network/dns_master.c line 730: Warning: Unused local variable 'euid' before the end of line
+/adm/daemons/network/dns_master.c line 774: Warning: Unused local variable 'temp' before the end of line
+/adm/daemons/network/dns_master.c line 834: Warning: Unused local variable 'static_db' before the end of line
+/adm/daemons/network/dns_master.c line 834: Warning: Unused local variable 'i' before the end of line
+/adm/daemons/network/dns_master.c line 834: Warning: Unused local variable 'strs' before the end of line
+/adm/daemons/questd.c line 2: Warning: Unknown #pragma, ignored. before mapping *quests;
+/adm/daemons/questd.c line 105: Warning: Unused local variable 'obj1' before 
+/adm/daemons/questd.c line 105: Warning: Unused local variable 'obj2' before 
+/adm/daemons/questd.c line 105: Warning: Unused local variable 'obj3' before 
+/adm/daemons/questd.c line 105: Warning: Unused local variable 'next_obj' before 
+/adm/daemons/questd.c line 241: Warning: Unused local variable 'where' before 
+/include/globals.h line 9: Warning: redefinition of #define COMMAND_DIR before #define CONFIG_DIR  
+/include/globals.h line 10: Warning: redefinition of #define CONFIG_DIR before #define BACKUP_DIR  
+/include/globals.h line 11: Warning: redefinition of #define BACKUP_DIR before #define DATA_DIR    
+/include/globals.h line 12: Warning: redefinition of #define DATA_DIR before #define HELP_DIR    
+/include/globals.h line 13: Warning: redefinition of #define HELP_DIR before #define LOG_DIR     
+/include/globals.h line 14: Warning: redefinition of #define LOG_DIR before 
+/include/globals.h line 17: Warning: redefinition of #define BR_D before #define BN_D			"/adm
+/include/globals.h line 18: Warning: redefinition of #define BN_D before #define BAN_D			"/ad
+/include/globals.h line 19: Warning: redefinition of #define BAN_D before #define ALIAS_D     
+/include/globals.h line 20: Warning: redefinition of #define ALIAS_D before #define EXAMINE_D   
+/include/globals.h line 21: Warning: redefinition of #define EXAMINE_D before #define CHANNEL_D   
+/include/globals.h line 22: Warning: redefinition of #define CHANNEL_D before #define CHAR_D      
+/include/globals.h line 23: Warning: redefinition of #define CHAR_D before #define YNVOTE_D    
+/include/globals.h line 24: Warning: redefinition of #define YNVOTE_D before #define CHINESE_D   
+/include/globals.h line 25: Warning: redefinition of #define CHINESE_D before #define COMBAT_D    
+/include/globals.h line 26: Warning: redefinition of #define COMBAT_D before #define COMMAND_D   
+/include/globals.h line 27: Warning: redefinition of #define COMMAND_D before #define EMOTE_D     
+/include/globals.h line 28: Warning: redefinition of #define EMOTE_D before #define FINGER_D    
+/include/globals.h line 29: Warning: redefinition of #define FINGER_D before #define UPGRADE_D		"
+/include/globals.h line 30: Warning: redefinition of #define UPGRADE_D before #define INQUIRY_D   
+/include/globals.h line 31: Warning: redefinition of #define INQUIRY_D before #define LOGIN_D     
+/include/globals.h line 32: Warning: redefinition of #define LOGIN_D before #define NATURE_D    
+/include/globals.h line 33: Warning: redefinition of #define NATURE_D before #define PROFILE_D   
+/include/globals.h line 34: Warning: redefinition of #define PROFILE_D before #define RANK_D      
+/include/globals.h line 35: Warning: redefinition of #define RANK_D before #define SECURITY_D  
+/include/globals.h line 36: Warning: redefinition of #define SECURITY_D before #define UPDATE_D    
+/include/globals.h line 37: Warning: redefinition of #define UPDATE_D before #define VIRTUAL_D   
+/include/globals.h line 38: Warning: redefinition of #define VIRTUAL_D before #define WEAPON_D    
+/include/globals.h line 39: Warning: redefinition of #define WEAPON_D before #define WHO_D			"/ad
+/include/globals.h line 40: Warning: redefinition of #define WHO_D before #define TASK_D			"/a
+/include/globals.h line 41: Warning: redefinition of #define TASK_D before #define STATUS_D		"/
+/include/globals.h line 42: Warning: redefinition of #define STATUS_D before #define VOTE_D			"/a
+/include/globals.h line 43: Warning: redefinition of #define VOTE_D before #define CRON_D      
+/include/globals.h line 44: Warning: redefinition of #define CRON_D before #define STORY_D					
+/include/globals.h line 45: Warning: redefinition of #define STORY_D before //信息使用不要删除
+/include/globals.h line 47: Warning: redefinition of #define CONVERT_D before // added by Tie for 
+/include/globals.h line 50: Warning: redefinition of #define QUEST_D before #define CLASS_D(x)  
+/include/globals.h line 51: Warning: redefinition of #define CLASS_D before #define SKILL_D(x)  
+/include/globals.h line 52: Warning: redefinition of #define SKILL_D before #define CONDITION_D(
+/include/globals.h line 53: Warning: redefinition of #define CONDITION_D before #define TONGJI_D(x) 
+/include/globals.h line 54: Warning: redefinition of #define TONGJI_D before 
+/include/globals.h line 57: Warning: redefinition of #define TOPTEN_D before #define TOPTEN_RICH 
+/include/globals.h line 58: Warning: redefinition of #define TOPTEN_RICH before #define TOPTEN_PKER 
+/include/globals.h line 59: Warning: redefinition of #define TOPTEN_PKER before #define TOPTEN_EXP  
+/include/globals.h line 60: Warning: redefinition of #define TOPTEN_EXP before #define TOPTEN_AGE  
+/include/globals.h line 61: Warning: redefinition of #define TOPTEN_AGE before #define TOPTEN_TASKE
+/include/globals.h line 62: Warning: redefinition of #define TOPTEN_TASKER before #define TOPTEN_KILLE
+/include/globals.h line 63: Warning: redefinition of #define TOPTEN_KILLED before #define RICH_B      
+/include/globals.h line 64: Warning: redefinition of #define RICH_B before #define PKER_B      
+/include/globals.h line 65: Warning: redefinition of #define PKER_B before #define EXP_B       
+/include/globals.h line 66: Warning: redefinition of #define EXP_B before #define AGE_B       
+/include/globals.h line 67: Warning: redefinition of #define AGE_B before #define TASKER_B    
+/include/globals.h line 68: Warning: redefinition of #define TASKER_B before #define KILLED_B    
+/include/globals.h line 69: Warning: redefinition of #define KILLED_B before //自创skill使用
+/include/globals.h line 71: Warning: redefinition of #define SKILL_MODEL_UNARMED before #define SKILL_MODEL_
+/include/globals.h line 72: Warning: redefinition of #define SKILL_MODEL_WEAPON before #define SKILL_MODEL_
+/include/globals.h line 73: Warning: redefinition of #define SKILL_MODEL_DEFAULT before //有问题请通知我
+/include/globals.h line 77: Warning: redefinition of #define COIN_OB before #define CORPSE_OB   
+/include/globals.h line 78: Warning: redefinition of #define CORPSE_OB before #define LOGIN_OB    
+/include/globals.h line 79: Warning: redefinition of #define LOGIN_OB before #define MASTER_OB   
+/include/globals.h line 80: Warning: redefinition of #define MASTER_OB before #define	MESSAGE_D	"/
+/include/globals.h line 81: Warning: redefinition of #define MESSAGE_D before #define MAILBOX_OB  
+/include/globals.h line 82: Warning: redefinition of #define MAILBOX_OB before #define SILVER_OB   
+/include/globals.h line 83: Warning: redefinition of #define SILVER_OB before #define GOLD_OB     
+/include/globals.h line 84: Warning: redefinition of #define GOLD_OB before #define THCASH_OB   
+/include/globals.h line 85: Warning: redefinition of #define THCASH_OB before #define TECASH_OB   
+/include/globals.h line 86: Warning: redefinition of #define TECASH_OB before #define SIMUL_EFUN_O
+/include/globals.h line 87: Warning: redefinition of #define SIMUL_EFUN_OB before #define USER_OB     
+/include/globals.h line 88: Warning: redefinition of #define USER_OB before #define VOID_OB     
+/include/globals.h line 89: Warning: redefinition of #define VOID_OB before 
+/include/globals.h line 93: Warning: redefinition of #define BANK before #define BULLETIN_BOA
+/include/globals.h line 94: Warning: redefinition of #define BULLETIN_BOARD before #define CHARACTER   
+/include/globals.h line 95: Warning: redefinition of #define CHARACTER before #define CLASS_GUILD 
+/include/globals.h line 96: Warning: redefinition of #define CLASS_GUILD before #define COMBINED_ITE
+/include/globals.h line 97: Warning: redefinition of #define COMBINED_ITEM before #define EQUIP       
+/include/globals.h line 98: Warning: redefinition of #define EQUIP before #define FORCE       
+/include/globals.h line 99: Warning: redefinition of #define FORCE before #define HOCKSHOP    
+/include/globals.h line 100: Warning: redefinition of #define HOCKSHOP before #define ITEM        
+/include/globals.h line 101: Warning: redefinition of #define ITEM before #define SHEET  "/std
+/include/globals.h line 102: Warning: redefinition of #define SHEET before #define LIQUID      
+/include/globals.h line 103: Warning: redefinition of #define LIQUID before #define MONEY       
+/include/globals.h line 104: Warning: redefinition of #define MONEY before #define NPC         
+/include/globals.h line 105: Warning: redefinition of #define NPC before #define POWDER      
+/include/globals.h line 106: Warning: redefinition of #define POWDER before #define ROOM        
+/include/globals.h line 107: Warning: redefinition of #define ROOM before #define SKILL       
+/include/globals.h line 108: Warning: redefinition of #define SKILL before #define SSERVER     
+/include/globals.h line 109: Warning: redefinition of #define SSERVER before // User IDs
+/include/globals.h line 112: Warning: redefinition of #define ROOT_UID before #define BACKBONE_UID
+/include/globals.h line 113: Warning: redefinition of #define BACKBONE_UID before 
+/include/globals.h line 117: Warning: redefinition of #define F_ACTION before #define F_ALIAS     
+/include/globals.h line 118: Warning: redefinition of #define F_ALIAS before #define F_PAWN			"/f
+/include/globals.h line 119: Warning: redefinition of #define F_PAWN before #define F_APPRENTICE
+/include/globals.h line 120: Warning: redefinition of #define F_APPRENTICE before #define F_ATTACK    
+/include/globals.h line 121: Warning: redefinition of #define F_ATTACK before #define F_ATTRIBUTE 
+/include/globals.h line 122: Warning: redefinition of #define F_ATTRIBUTE before #define F_AUTOLOAD  
+/include/globals.h line 123: Warning: redefinition of #define F_AUTOLOAD before #define F_CLEAN_UP  
+/include/globals.h line 124: Warning: redefinition of #define F_CLEAN_UP before #define F_COMMAND   
+/include/globals.h line 125: Warning: redefinition of #define F_COMMAND before #define F_CONDITION 
+/include/globals.h line 126: Warning: redefinition of #define F_CONDITION before #define F_DAMAGE    
+/include/globals.h line 127: Warning: redefinition of #define F_DAMAGE before #define F_DBASE     
+/include/globals.h line 128: Warning: redefinition of #define F_DBASE before #define F_EDIT      
+/include/globals.h line 129: Warning: redefinition of #define F_EDIT before #define F_EQUIP     
+/include/globals.h line 130: Warning: redefinition of #define F_EQUIP before #define F_FINANCE   
+/include/globals.h line 131: Warning: redefinition of #define F_FINANCE before #define F_FOOD      
+/include/globals.h line 132: Warning: redefinition of #define F_FOOD before #define F_LIQUID    
+/include/globals.h line 133: Warning: redefinition of #define F_LIQUID before #define F_MASTER    
+/include/globals.h line 134: Warning: redefinition of #define F_MASTER before #define F_MESSAGE   
+/include/globals.h line 135: Warning: redefinition of #define F_MESSAGE before #define F_MORE      
+/include/globals.h line 136: Warning: redefinition of #define F_MORE before #define F_MOVE      
+/include/globals.h line 137: Warning: redefinition of #define F_MOVE before #define F_NAME      
+/include/globals.h line 138: Warning: redefinition of #define F_NAME before #define F_SAVE      
+/include/globals.h line 139: Warning: redefinition of #define F_SAVE before #define F_SKILL     
+/include/globals.h line 140: Warning: redefinition of #define F_SKILL before #define F_TEAM      
+/include/globals.h line 141: Warning: redefinition of #define F_TEAM before #define F_TREEMAP   
+/include/globals.h line 142: Warning: redefinition of #define F_TREEMAP before #define F_VENDOR    
+/include/globals.h line 143: Warning: redefinition of #define F_VENDOR before // added by Tie Yu@f
+/include/globals.h line 145: Warning: redefinition of #define F_QUEST before // added by Tie@feng
+/include/globals.h line 147: Warning: redefinition of #define F_PAWNOWNER before #define F_BANKOWNER	
+/include/globals.h line 148: Warning: redefinition of #define F_BANKOWNER before #define F_BANKPAWNOW
+/include/globals.h line 149: Warning: redefinition of #define F_BANKPAWNOWNER before // added by tie@fy3 
+/include/globals.h line 151: Warning: redefinition of #define SAVE_EXTENSION before // Profiling switche
+/adm/daemons/cron.c line 127: Warning: Unused local variable 'dir' before 
+/adm/daemons/cron.c line 127: Warning: Unused local variable 'ppls' before 
+/std/room.c line 3: Warning: Unknown #pragma, ignored. before the end of line
+/std/room.c line 195: Warning: Unused local variable 'item_desc' before the end of line
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/feature/alias.c line 74: Warning: Unused local variable 'room' before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/feature/damage.c line 182: Warning: Unused local variable 'i' before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/feature/more.c line 53: Warning: Unused local variable 'j' before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/feature/skill.c line 184: Warning: Unused local variable 'spi' before 
+/feature/skill.c line 213: Warning: Unused local variable 'weak_mode' before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char/npc.c line 96: Warning: Unused local variable 'enc' before 
+/std/char/npc.c line 96: Warning: Unused local variable 'max' before 
+/std/char/npc.c line 96: Warning: Unused local variable 'inv' before 
+/std/char/npc.c line 166: Warning: Unused local variable 'weapon' before 
+/std/char/npc.c line 249: Warning: Unused local variable 'i' before      
+/feature/bankpawnowner.c line 384: Warning: Unused local variable 'fterms' before 
+/feature/bankpawnowner.c line 384: Warning: Unused local variable 'pawn_count' before 
+/feature/bankpawnowner.c line 384: Warning: Unused local variable 'j' before 
+/feature/bankpawnowner.c line 384: Warning: Unused local variable 'rvalue' before 
+/feature/bankpawnowner.c line 426: Warning: Unused local variable 'term' before 
+/feature/vendor.c line 19: Warning: Unused local variable 'list' before the end of line
+/feature/vendor.c line 53: Warning: Unused local variable 'list' before the end of line
+/feature/equip.c line 119: Warning: Unused local variable 'type' before the end of line
+/obj/xiaotong.c line 27: Warning: Unused local variable 'i' before the end of line
+/obj/xiaotong.c line 27: Warning: Unused local variable 'amun' before the end of line
+/d/chenxiang/npc/bankowner.c line 123: Warning: Unused local variable 'obj' before 
+/u/ghost/house3.c line 28: Warning: Unused local variable 'con' before the end of line
+/u/ghost/house3.c line 28: Warning: Unused local variable 'item' before the end of line
+/d/qianjin/npc/afei.c line 83: Warning: Unused local variable 'weapon' before 
+/d/fy/tang2.c line 54: Warning: Unused local variable 'obj' before the end of line
+/d/fy/gmoney.c line 51: Warning: Expression has no side effects, and the value is unused before the end of line
+/d/bat/npc/dingfeng.c line 61: Warning: Unused local variable 'paper' before 
+/d/bat/npc/dingfeng.c line 76: Warning: Unused local variable 'myfile' before 
+/d/laowu/xiao.c line 55: Warning: Unused local variable 'obj' before the end of line
+/d/tieflag/cynroom.c line 56: Warning: Unused local variable 'obj' before the end of line
+/d/tieflag/npc/cyngirl.c line 67: Warning: Unused local variable 'foo' before the end of line
+/d/taoyuan/tunnel.c line 67: Warning: Unused local variable 'room' before 
+/questobj/daoqiao.c line 52: Warning: Unused local variable 'unarmed' before the end of line
+/d/manglin/center3.c line 54: Warning: Unused local variable 'obj' before the end of line
+/d/zhaoze/zhaoze2.c line 61: Warning: Unused local variable 'i' before the end of line
+/adm/daemons/whod.c line 33: Warning: Unused local variable 'me' before 
+/adm/daemons/whod.c line 160: Warning: Unused local variable 'ppl_cnt' before 
+/adm/daemons/whod.c line 198: Warning: Unused local variable 'j' before 
+/adm/daemons/logind.c line 387: Warning: Unused local variable 'name' before 
+/adm/daemons/logind.c line 492: Warning: Unused local variable 'link_ob' before 
+/adm/daemons/logind.c line 492: Warning: Unused local variable 'obj' before 
+/adm/daemons/logind.c line 514: Warning: Unused local variable 'n' before 
+/adm/daemons/logind.c line 707: Warning: Unused local variable 'cloth' before 
+/adm/daemons/logind.c line 707: Warning: Unused local variable 'room' before 
+/adm/daemons/logind.c line 707: Warning: Unused local variable 'reb' before 
+/adm/daemons/logind.c line 707: Warning: Unused local variable 'lv' before 
+/adm/daemons/logind.c line 707: Warning: Unused local variable 'caizhi' before 
+/adm/daemons/logind.c line 824: Warning: Unused local variable 'number' before 
+/adm/daemons/storyd.c line 100: Warning: Unused local variable 'i' before 
+/feature/move.c line 3: Warning: Unknown #pragma, ignored. before 
+/feature/name.c line 111: Warning: Unused local variable 'fadai' before 
+/adm/daemons/msgd.c line 106: Warning: Unused local variable 'me' before the end of line
+/adm/daemons/msgd.c line 126: Warning: Unused local variable 'j' before the end of line
+/adm/daemons/memoryd.c line 2: Warning: Unknown #pragma, ignored. before the end of line
+/include/globals.h line 9: Warning: redefinition of #define COMMAND_DIR before #define CONFIG_DIR  
+/include/globals.h line 10: Warning: redefinition of #define CONFIG_DIR before #define BACKUP_DIR  
+/include/globals.h line 11: Warning: redefinition of #define BACKUP_DIR before #define DATA_DIR    
+/include/globals.h line 12: Warning: redefinition of #define DATA_DIR before #define HELP_DIR    
+/include/globals.h line 13: Warning: redefinition of #define HELP_DIR before #define LOG_DIR     
+/include/globals.h line 14: Warning: redefinition of #define LOG_DIR before 
+/include/globals.h line 17: Warning: redefinition of #define BR_D before #define BN_D			"/adm
+/include/globals.h line 18: Warning: redefinition of #define BN_D before #define BAN_D			"/ad
+/include/globals.h line 19: Warning: redefinition of #define BAN_D before #define ALIAS_D     
+/include/globals.h line 20: Warning: redefinition of #define ALIAS_D before #define EXAMINE_D   
+/include/globals.h line 21: Warning: redefinition of #define EXAMINE_D before #define CHANNEL_D   
+/include/globals.h line 22: Warning: redefinition of #define CHANNEL_D before #define CHAR_D      
+/include/globals.h line 23: Warning: redefinition of #define CHAR_D before #define YNVOTE_D    
+/include/globals.h line 24: Warning: redefinition of #define YNVOTE_D before #define CHINESE_D   
+/include/globals.h line 25: Warning: redefinition of #define CHINESE_D before #define COMBAT_D    
+/include/globals.h line 26: Warning: redefinition of #define COMBAT_D before #define COMMAND_D   
+/include/globals.h line 27: Warning: redefinition of #define COMMAND_D before #define EMOTE_D     
+/include/globals.h line 28: Warning: redefinition of #define EMOTE_D before #define FINGER_D    
+/include/globals.h line 29: Warning: redefinition of #define FINGER_D before #define UPGRADE_D		"
+/include/globals.h line 30: Warning: redefinition of #define UPGRADE_D before #define INQUIRY_D   
+/include/globals.h line 31: Warning: redefinition of #define INQUIRY_D before #define LOGIN_D     
+/include/globals.h line 32: Warning: redefinition of #define LOGIN_D before #define NATURE_D    
+/include/globals.h line 33: Warning: redefinition of #define NATURE_D before #define PROFILE_D   
+/include/globals.h line 34: Warning: redefinition of #define PROFILE_D before #define RANK_D      
+/include/globals.h line 35: Warning: redefinition of #define RANK_D before #define SECURITY_D  
+/include/globals.h line 36: Warning: redefinition of #define SECURITY_D before #define UPDATE_D    
+/include/globals.h line 37: Warning: redefinition of #define UPDATE_D before #define VIRTUAL_D   
+/include/globals.h line 38: Warning: redefinition of #define VIRTUAL_D before #define WEAPON_D    
+/include/globals.h line 39: Warning: redefinition of #define WEAPON_D before #define WHO_D			"/ad
+/include/globals.h line 40: Warning: redefinition of #define WHO_D before #define TASK_D			"/a
+/include/globals.h line 41: Warning: redefinition of #define TASK_D before #define STATUS_D		"/
+/include/globals.h line 42: Warning: redefinition of #define STATUS_D before #define VOTE_D			"/a
+/include/globals.h line 43: Warning: redefinition of #define VOTE_D before #define CRON_D      
+/include/globals.h line 44: Warning: redefinition of #define CRON_D before #define STORY_D					
+/include/globals.h line 45: Warning: redefinition of #define STORY_D before //信息使用不要删除
+/include/globals.h line 47: Warning: redefinition of #define CONVERT_D before // added by Tie for 
+/include/globals.h line 50: Warning: redefinition of #define QUEST_D before #define CLASS_D(x)  
+/include/globals.h line 51: Warning: redefinition of #define CLASS_D before #define SKILL_D(x)  
+/include/globals.h line 52: Warning: redefinition of #define SKILL_D before #define CONDITION_D(
+/include/globals.h line 53: Warning: redefinition of #define CONDITION_D before #define TONGJI_D(x) 
+/include/globals.h line 54: Warning: redefinition of #define TONGJI_D before 
+/include/globals.h line 57: Warning: redefinition of #define TOPTEN_D before #define TOPTEN_RICH 
+/include/globals.h line 58: Warning: redefinition of #define TOPTEN_RICH before #define TOPTEN_PKER 
+/include/globals.h line 59: Warning: redefinition of #define TOPTEN_PKER before #define TOPTEN_EXP  
+/include/globals.h line 60: Warning: redefinition of #define TOPTEN_EXP before #define TOPTEN_AGE  
+/include/globals.h line 61: Warning: redefinition of #define TOPTEN_AGE before #define TOPTEN_TASKE
+/include/globals.h line 62: Warning: redefinition of #define TOPTEN_TASKER before #define TOPTEN_KILLE
+/include/globals.h line 63: Warning: redefinition of #define TOPTEN_KILLED before #define RICH_B      
+/include/globals.h line 64: Warning: redefinition of #define RICH_B before #define PKER_B      
+/include/globals.h line 65: Warning: redefinition of #define PKER_B before #define EXP_B       
+/include/globals.h line 66: Warning: redefinition of #define EXP_B before #define AGE_B       
+/include/globals.h line 67: Warning: redefinition of #define AGE_B before #define TASKER_B    
+/include/globals.h line 68: Warning: redefinition of #define TASKER_B before #define KILLED_B    
+/include/globals.h line 69: Warning: redefinition of #define KILLED_B before //自创skill使用
+/include/globals.h line 71: Warning: redefinition of #define SKILL_MODEL_UNARMED before #define SKILL_MODEL_
+/include/globals.h line 72: Warning: redefinition of #define SKILL_MODEL_WEAPON before #define SKILL_MODEL_
+/include/globals.h line 73: Warning: redefinition of #define SKILL_MODEL_DEFAULT before //有问题请通知我
+/include/globals.h line 77: Warning: redefinition of #define COIN_OB before #define CORPSE_OB   
+/include/globals.h line 78: Warning: redefinition of #define CORPSE_OB before #define LOGIN_OB    
+/include/globals.h line 79: Warning: redefinition of #define LOGIN_OB before #define MASTER_OB   
+/include/globals.h line 80: Warning: redefinition of #define MASTER_OB before #define	MESSAGE_D	"/
+/include/globals.h line 81: Warning: redefinition of #define MESSAGE_D before #define MAILBOX_OB  
+/include/globals.h line 82: Warning: redefinition of #define MAILBOX_OB before #define SILVER_OB   
+/include/globals.h line 83: Warning: redefinition of #define SILVER_OB before #define GOLD_OB     
+/include/globals.h line 84: Warning: redefinition of #define GOLD_OB before #define THCASH_OB   
+/include/globals.h line 85: Warning: redefinition of #define THCASH_OB before #define TECASH_OB   
+/include/globals.h line 86: Warning: redefinition of #define TECASH_OB before #define SIMUL_EFUN_O
+/include/globals.h line 87: Warning: redefinition of #define SIMUL_EFUN_OB before #define USER_OB     
+/include/globals.h line 88: Warning: redefinition of #define USER_OB before #define VOID_OB     
+/include/globals.h line 89: Warning: redefinition of #define VOID_OB before 
+/include/globals.h line 93: Warning: redefinition of #define BANK before #define BULLETIN_BOA
+/include/globals.h line 94: Warning: redefinition of #define BULLETIN_BOARD before #define CHARACTER   
+/include/globals.h line 95: Warning: redefinition of #define CHARACTER before #define CLASS_GUILD 
+/include/globals.h line 96: Warning: redefinition of #define CLASS_GUILD before #define COMBINED_ITE
+/include/globals.h line 97: Warning: redefinition of #define COMBINED_ITEM before #define EQUIP       
+/include/globals.h line 98: Warning: redefinition of #define EQUIP before #define FORCE       
+/include/globals.h line 99: Warning: redefinition of #define FORCE before #define HOCKSHOP    
+/include/globals.h line 100: Warning: redefinition of #define HOCKSHOP before #define ITEM        
+/include/globals.h line 101: Warning: redefinition of #define ITEM before #define SHEET  "/std
+/include/globals.h line 102: Warning: redefinition of #define SHEET before #define LIQUID      
+/include/globals.h line 103: Warning: redefinition of #define LIQUID before #define MONEY       
+/include/globals.h line 104: Warning: redefinition of #define MONEY before #define NPC         
+/include/globals.h line 105: Warning: redefinition of #define NPC before #define POWDER      
+/include/globals.h line 106: Warning: redefinition of #define POWDER before #define ROOM        
+/include/globals.h line 107: Warning: redefinition of #define ROOM before #define SKILL       
+/include/globals.h line 108: Warning: redefinition of #define SKILL before #define SSERVER     
+/include/globals.h line 109: Warning: redefinition of #define SSERVER before // User IDs
+/include/globals.h line 112: Warning: redefinition of #define ROOT_UID before #define BACKBONE_UID
+/include/globals.h line 113: Warning: redefinition of #define BACKBONE_UID before 
+/include/globals.h line 117: Warning: redefinition of #define F_ACTION before #define F_ALIAS     
+/include/globals.h line 118: Warning: redefinition of #define F_ALIAS before #define F_PAWN			"/f
+/include/globals.h line 119: Warning: redefinition of #define F_PAWN before #define F_APPRENTICE
+/include/globals.h line 120: Warning: redefinition of #define F_APPRENTICE before #define F_ATTACK    
+/include/globals.h line 121: Warning: redefinition of #define F_ATTACK before #define F_ATTRIBUTE 
+/include/globals.h line 122: Warning: redefinition of #define F_ATTRIBUTE before #define F_AUTOLOAD  
+/include/globals.h line 123: Warning: redefinition of #define F_AUTOLOAD before #define F_CLEAN_UP  
+/include/globals.h line 124: Warning: redefinition of #define F_CLEAN_UP before #define F_COMMAND   
+/include/globals.h line 125: Warning: redefinition of #define F_COMMAND before #define F_CONDITION 
+/include/globals.h line 126: Warning: redefinition of #define F_CONDITION before #define F_DAMAGE    
+/include/globals.h line 127: Warning: redefinition of #define F_DAMAGE before #define F_DBASE     
+/include/globals.h line 128: Warning: redefinition of #define F_DBASE before #define F_EDIT      
+/include/globals.h line 129: Warning: redefinition of #define F_EDIT before #define F_EQUIP     
+/include/globals.h line 130: Warning: redefinition of #define F_EQUIP before #define F_FINANCE   
+/include/globals.h line 131: Warning: redefinition of #define F_FINANCE before #define F_FOOD      
+/include/globals.h line 132: Warning: redefinition of #define F_FOOD before #define F_LIQUID    
+/include/globals.h line 133: Warning: redefinition of #define F_LIQUID before #define F_MASTER    
+/include/globals.h line 134: Warning: redefinition of #define F_MASTER before #define F_MESSAGE   
+/include/globals.h line 135: Warning: redefinition of #define F_MESSAGE before #define F_MORE      
+/include/globals.h line 136: Warning: redefinition of #define F_MORE before #define F_MOVE      
+/include/globals.h line 137: Warning: redefinition of #define F_MOVE before #define F_NAME      
+/include/globals.h line 138: Warning: redefinition of #define F_NAME before #define F_SAVE      
+/include/globals.h line 139: Warning: redefinition of #define F_SAVE before #define F_SKILL     
+/include/globals.h line 140: Warning: redefinition of #define F_SKILL before #define F_TEAM      
+/include/globals.h line 141: Warning: redefinition of #define F_TEAM before #define F_TREEMAP   
+/include/globals.h line 142: Warning: redefinition of #define F_TREEMAP before #define F_VENDOR    
+/include/globals.h line 143: Warning: redefinition of #define F_VENDOR before // added by Tie Yu@f
+/include/globals.h line 145: Warning: redefinition of #define F_QUEST before // added by Tie@feng
+/include/globals.h line 147: Warning: redefinition of #define F_PAWNOWNER before #define F_BANKOWNER	
+/include/globals.h line 148: Warning: redefinition of #define F_BANKOWNER before #define F_BANKPAWNOW
+/include/globals.h line 149: Warning: redefinition of #define F_BANKPAWNOWNER before // added by tie@fy3 
+/include/globals.h line 151: Warning: redefinition of #define SAVE_EXTENSION before // Profiling switche
+/adm/daemons/fingerd.c line 4: Warning: Unknown #pragma, ignored. before #pragma save_binary
+/adm/daemons/fingerd.c line 5: Warning: Unknown #pragma, ignored. before 
+/adm/daemons/natured.c line 264: Warning: Unused local variable 'skill' before 
+/adm/daemons/weapond.c line 2: Warning: Unknown #pragma, ignored. before #include <ansi.h>
+/include/net/ftpdsupp.h line 66: Warning: Unused local variable 'file' before the end of line
+/adm/daemons/network/dns_master.c line 418: Warning: Unused local variable 'new_mud' before the end of line
+/adm/daemons/network/dns_master.c line 418: Warning: Unused local variable 'svc' before the end of line
+/adm/daemons/network/dns_master.c line 549: Warning: Expression has no side effects, and the value is unused before ;
+/adm/daemons/network/dns_master.c line 607: Warning: Unused local variable 'm' before the end of line
+/adm/daemons/network/dns_master.c line 607: Warning: Unused local variable 'str' before the end of line
+/adm/daemons/network/dns_master.c line 730: Warning: Unused local variable 'euid' before the end of line
+/adm/daemons/network/dns_master.c line 774: Warning: Unused local variable 'temp' before the end of line
+/adm/daemons/network/dns_master.c line 834: Warning: Unused local variable 'static_db' before the end of line
+/adm/daemons/network/dns_master.c line 834: Warning: Unused local variable 'i' before the end of line
+/adm/daemons/network/dns_master.c line 834: Warning: Unused local variable 'strs' before the end of line
+/adm/daemons/questd.c line 2: Warning: Unknown #pragma, ignored. before mapping *quests;
+/adm/daemons/questd.c line 105: Warning: Unused local variable 'obj1' before 
+/adm/daemons/questd.c line 105: Warning: Unused local variable 'obj2' before 
+/adm/daemons/questd.c line 105: Warning: Unused local variable 'obj3' before 
+/adm/daemons/questd.c line 105: Warning: Unused local variable 'next_obj' before 
+/adm/daemons/questd.c line 241: Warning: Unused local variable 'where' before 
+/include/globals.h line 9: Warning: redefinition of #define COMMAND_DIR before #define CONFIG_DIR  
+/include/globals.h line 10: Warning: redefinition of #define CONFIG_DIR before #define BACKUP_DIR  
+/include/globals.h line 11: Warning: redefinition of #define BACKUP_DIR before #define DATA_DIR    
+/include/globals.h line 12: Warning: redefinition of #define DATA_DIR before #define HELP_DIR    
+/include/globals.h line 13: Warning: redefinition of #define HELP_DIR before #define LOG_DIR     
+/include/globals.h line 14: Warning: redefinition of #define LOG_DIR before 
+/include/globals.h line 17: Warning: redefinition of #define BR_D before #define BN_D			"/adm
+/include/globals.h line 18: Warning: redefinition of #define BN_D before #define BAN_D			"/ad
+/include/globals.h line 19: Warning: redefinition of #define BAN_D before #define ALIAS_D     
+/include/globals.h line 20: Warning: redefinition of #define ALIAS_D before #define EXAMINE_D   
+/include/globals.h line 21: Warning: redefinition of #define EXAMINE_D before #define CHANNEL_D   
+/include/globals.h line 22: Warning: redefinition of #define CHANNEL_D before #define CHAR_D      
+/include/globals.h line 23: Warning: redefinition of #define CHAR_D before #define YNVOTE_D    
+/include/globals.h line 24: Warning: redefinition of #define YNVOTE_D before #define CHINESE_D   
+/include/globals.h line 25: Warning: redefinition of #define CHINESE_D before #define COMBAT_D    
+/include/globals.h line 26: Warning: redefinition of #define COMBAT_D before #define COMMAND_D   
+/include/globals.h line 27: Warning: redefinition of #define COMMAND_D before #define EMOTE_D     
+/include/globals.h line 28: Warning: redefinition of #define EMOTE_D before #define FINGER_D    
+/include/globals.h line 29: Warning: redefinition of #define FINGER_D before #define UPGRADE_D		"
+/include/globals.h line 30: Warning: redefinition of #define UPGRADE_D before #define INQUIRY_D   
+/include/globals.h line 31: Warning: redefinition of #define INQUIRY_D before #define LOGIN_D     
+/include/globals.h line 32: Warning: redefinition of #define LOGIN_D before #define NATURE_D    
+/include/globals.h line 33: Warning: redefinition of #define NATURE_D before #define PROFILE_D   
+/include/globals.h line 34: Warning: redefinition of #define PROFILE_D before #define RANK_D      
+/include/globals.h line 35: Warning: redefinition of #define RANK_D before #define SECURITY_D  
+/include/globals.h line 36: Warning: redefinition of #define SECURITY_D before #define UPDATE_D    
+/include/globals.h line 37: Warning: redefinition of #define UPDATE_D before #define VIRTUAL_D   
+/include/globals.h line 38: Warning: redefinition of #define VIRTUAL_D before #define WEAPON_D    
+/include/globals.h line 39: Warning: redefinition of #define WEAPON_D before #define WHO_D			"/ad
+/include/globals.h line 40: Warning: redefinition of #define WHO_D before #define TASK_D			"/a
+/include/globals.h line 41: Warning: redefinition of #define TASK_D before #define STATUS_D		"/
+/include/globals.h line 42: Warning: redefinition of #define STATUS_D before #define VOTE_D			"/a
+/include/globals.h line 43: Warning: redefinition of #define VOTE_D before #define CRON_D      
+/include/globals.h line 44: Warning: redefinition of #define CRON_D before #define STORY_D					
+/include/globals.h line 45: Warning: redefinition of #define STORY_D before //信息使用不要删除
+/include/globals.h line 47: Warning: redefinition of #define CONVERT_D before // added by Tie for 
+/include/globals.h line 50: Warning: redefinition of #define QUEST_D before #define CLASS_D(x)  
+/include/globals.h line 51: Warning: redefinition of #define CLASS_D before #define SKILL_D(x)  
+/include/globals.h line 52: Warning: redefinition of #define SKILL_D before #define CONDITION_D(
+/include/globals.h line 53: Warning: redefinition of #define CONDITION_D before #define TONGJI_D(x) 
+/include/globals.h line 54: Warning: redefinition of #define TONGJI_D before 
+/include/globals.h line 57: Warning: redefinition of #define TOPTEN_D before #define TOPTEN_RICH 
+/include/globals.h line 58: Warning: redefinition of #define TOPTEN_RICH before #define TOPTEN_PKER 
+/include/globals.h line 59: Warning: redefinition of #define TOPTEN_PKER before #define TOPTEN_EXP  
+/include/globals.h line 60: Warning: redefinition of #define TOPTEN_EXP before #define TOPTEN_AGE  
+/include/globals.h line 61: Warning: redefinition of #define TOPTEN_AGE before #define TOPTEN_TASKE
+/include/globals.h line 62: Warning: redefinition of #define TOPTEN_TASKER before #define TOPTEN_KILLE
+/include/globals.h line 63: Warning: redefinition of #define TOPTEN_KILLED before #define RICH_B      
+/include/globals.h line 64: Warning: redefinition of #define RICH_B before #define PKER_B      
+/include/globals.h line 65: Warning: redefinition of #define PKER_B before #define EXP_B       
+/include/globals.h line 66: Warning: redefinition of #define EXP_B before #define AGE_B       
+/include/globals.h line 67: Warning: redefinition of #define AGE_B before #define TASKER_B    
+/include/globals.h line 68: Warning: redefinition of #define TASKER_B before #define KILLED_B    
+/include/globals.h line 69: Warning: redefinition of #define KILLED_B before //自创skill使用
+/include/globals.h line 71: Warning: redefinition of #define SKILL_MODEL_UNARMED before #define SKILL_MODEL_
+/include/globals.h line 72: Warning: redefinition of #define SKILL_MODEL_WEAPON before #define SKILL_MODEL_
+/include/globals.h line 73: Warning: redefinition of #define SKILL_MODEL_DEFAULT before //有问题请通知我
+/include/globals.h line 77: Warning: redefinition of #define COIN_OB before #define CORPSE_OB   
+/include/globals.h line 78: Warning: redefinition of #define CORPSE_OB before #define LOGIN_OB    
+/include/globals.h line 79: Warning: redefinition of #define LOGIN_OB before #define MASTER_OB   
+/include/globals.h line 80: Warning: redefinition of #define MASTER_OB before #define	MESSAGE_D	"/
+/include/globals.h line 81: Warning: redefinition of #define MESSAGE_D before #define MAILBOX_OB  
+/include/globals.h line 82: Warning: redefinition of #define MAILBOX_OB before #define SILVER_OB   
+/include/globals.h line 83: Warning: redefinition of #define SILVER_OB before #define GOLD_OB     
+/include/globals.h line 84: Warning: redefinition of #define GOLD_OB before #define THCASH_OB   
+/include/globals.h line 85: Warning: redefinition of #define THCASH_OB before #define TECASH_OB   
+/include/globals.h line 86: Warning: redefinition of #define TECASH_OB before #define SIMUL_EFUN_O
+/include/globals.h line 87: Warning: redefinition of #define SIMUL_EFUN_OB before #define USER_OB     
+/include/globals.h line 88: Warning: redefinition of #define USER_OB before #define VOID_OB     
+/include/globals.h line 89: Warning: redefinition of #define VOID_OB before 
+/include/globals.h line 93: Warning: redefinition of #define BANK before #define BULLETIN_BOA
+/include/globals.h line 94: Warning: redefinition of #define BULLETIN_BOARD before #define CHARACTER   
+/include/globals.h line 95: Warning: redefinition of #define CHARACTER before #define CLASS_GUILD 
+/include/globals.h line 96: Warning: redefinition of #define CLASS_GUILD before #define COMBINED_ITE
+/include/globals.h line 97: Warning: redefinition of #define COMBINED_ITEM before #define EQUIP       
+/include/globals.h line 98: Warning: redefinition of #define EQUIP before #define FORCE       
+/include/globals.h line 99: Warning: redefinition of #define FORCE before #define HOCKSHOP    
+/include/globals.h line 100: Warning: redefinition of #define HOCKSHOP before #define ITEM        
+/include/globals.h line 101: Warning: redefinition of #define ITEM before #define SHEET  "/std
+/include/globals.h line 102: Warning: redefinition of #define SHEET before #define LIQUID      
+/include/globals.h line 103: Warning: redefinition of #define LIQUID before #define MONEY       
+/include/globals.h line 104: Warning: redefinition of #define MONEY before #define NPC         
+/include/globals.h line 105: Warning: redefinition of #define NPC before #define POWDER      
+/include/globals.h line 106: Warning: redefinition of #define POWDER before #define ROOM        
+/include/globals.h line 107: Warning: redefinition of #define ROOM before #define SKILL       
+/include/globals.h line 108: Warning: redefinition of #define SKILL before #define SSERVER     
+/include/globals.h line 109: Warning: redefinition of #define SSERVER before // User IDs
+/include/globals.h line 112: Warning: redefinition of #define ROOT_UID before #define BACKBONE_UID
+/include/globals.h line 113: Warning: redefinition of #define BACKBONE_UID before 
+/include/globals.h line 117: Warning: redefinition of #define F_ACTION before #define F_ALIAS     
+/include/globals.h line 118: Warning: redefinition of #define F_ALIAS before #define F_PAWN			"/f
+/include/globals.h line 119: Warning: redefinition of #define F_PAWN before #define F_APPRENTICE
+/include/globals.h line 120: Warning: redefinition of #define F_APPRENTICE before #define F_ATTACK    
+/include/globals.h line 121: Warning: redefinition of #define F_ATTACK before #define F_ATTRIBUTE 
+/include/globals.h line 122: Warning: redefinition of #define F_ATTRIBUTE before #define F_AUTOLOAD  
+/include/globals.h line 123: Warning: redefinition of #define F_AUTOLOAD before #define F_CLEAN_UP  
+/include/globals.h line 124: Warning: redefinition of #define F_CLEAN_UP before #define F_COMMAND   
+/include/globals.h line 125: Warning: redefinition of #define F_COMMAND before #define F_CONDITION 
+/include/globals.h line 126: Warning: redefinition of #define F_CONDITION before #define F_DAMAGE    
+/include/globals.h line 127: Warning: redefinition of #define F_DAMAGE before #define F_DBASE     
+/include/globals.h line 128: Warning: redefinition of #define F_DBASE before #define F_EDIT      
+/include/globals.h line 129: Warning: redefinition of #define F_EDIT before #define F_EQUIP     
+/include/globals.h line 130: Warning: redefinition of #define F_EQUIP before #define F_FINANCE   
+/include/globals.h line 131: Warning: redefinition of #define F_FINANCE before #define F_FOOD      
+/include/globals.h line 132: Warning: redefinition of #define F_FOOD before #define F_LIQUID    
+/include/globals.h line 133: Warning: redefinition of #define F_LIQUID before #define F_MASTER    
+/include/globals.h line 134: Warning: redefinition of #define F_MASTER before #define F_MESSAGE   
+/include/globals.h line 135: Warning: redefinition of #define F_MESSAGE before #define F_MORE      
+/include/globals.h line 136: Warning: redefinition of #define F_MORE before #define F_MOVE      
+/include/globals.h line 137: Warning: redefinition of #define F_MOVE before #define F_NAME      
+/include/globals.h line 138: Warning: redefinition of #define F_NAME before #define F_SAVE      
+/include/globals.h line 139: Warning: redefinition of #define F_SAVE before #define F_SKILL     
+/include/globals.h line 140: Warning: redefinition of #define F_SKILL before #define F_TEAM      
+/include/globals.h line 141: Warning: redefinition of #define F_TEAM before #define F_TREEMAP   
+/include/globals.h line 142: Warning: redefinition of #define F_TREEMAP before #define F_VENDOR    
+/include/globals.h line 143: Warning: redefinition of #define F_VENDOR before // added by Tie Yu@f
+/include/globals.h line 145: Warning: redefinition of #define F_QUEST before // added by Tie@feng
+/include/globals.h line 147: Warning: redefinition of #define F_PAWNOWNER before #define F_BANKOWNER	
+/include/globals.h line 148: Warning: redefinition of #define F_BANKOWNER before #define F_BANKPAWNOW
+/include/globals.h line 149: Warning: redefinition of #define F_BANKPAWNOWNER before // added by tie@fy3 
+/include/globals.h line 151: Warning: redefinition of #define SAVE_EXTENSION before // Profiling switche
+/adm/daemons/cron.c line 127: Warning: Unused local variable 'dir' before 
+/adm/daemons/cron.c line 127: Warning: Unused local variable 'ppls' before 
+/std/room.c line 3: Warning: Unknown #pragma, ignored. before the end of line
+/std/room.c line 195: Warning: Unused local variable 'item_desc' before the end of line
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/feature/alias.c line 74: Warning: Unused local variable 'room' before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/feature/damage.c line 182: Warning: Unused local variable 'i' before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/feature/more.c line 53: Warning: Unused local variable 'j' before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/feature/skill.c line 184: Warning: Unused local variable 'spi' before 
+/feature/skill.c line 213: Warning: Unused local variable 'weak_mode' before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char/npc.c line 96: Warning: Unused local variable 'enc' before 
+/std/char/npc.c line 96: Warning: Unused local variable 'max' before 
+/std/char/npc.c line 96: Warning: Unused local variable 'inv' before 
+/std/char/npc.c line 166: Warning: Unused local variable 'weapon' before 
+/std/char/npc.c line 249: Warning: Unused local variable 'i' before      
+/feature/bankpawnowner.c line 384: Warning: Unused local variable 'fterms' before 
+/feature/bankpawnowner.c line 384: Warning: Unused local variable 'pawn_count' before 
+/feature/bankpawnowner.c line 384: Warning: Unused local variable 'j' before 
+/feature/bankpawnowner.c line 384: Warning: Unused local variable 'rvalue' before 
+/feature/bankpawnowner.c line 426: Warning: Unused local variable 'term' before 
+/feature/vendor.c line 19: Warning: Unused local variable 'list' before the end of line
+/feature/vendor.c line 53: Warning: Unused local variable 'list' before the end of line
+/feature/equip.c line 119: Warning: Unused local variable 'type' before the end of line
+/obj/xiaotong.c line 27: Warning: Unused local variable 'i' before the end of line
+/obj/xiaotong.c line 27: Warning: Unused local variable 'amun' before the end of line
+/d/chenxiang/npc/bankowner.c line 123: Warning: Unused local variable 'obj' before 
+/u/ghost/house3.c line 28: Warning: Unused local variable 'con' before the end of line
+/u/ghost/house3.c line 28: Warning: Unused local variable 'item' before the end of line
+/d/qianjin/npc/afei.c line 83: Warning: Unused local variable 'weapon' before 
+/d/fy/obj/luzi2.c line 216: Warning: Unused local variable 'flag' before 
+/d/fy/obj/luzi2.c line 216: Warning: Unused local variable 'gong' before 
+/d/fy/obj/luzi2.c line 316: Warning: Unused local variable 'lv' before 
+/d/fy/obj/luzi2.c line 316: Warning: Unused local variable 'flag' before 
+/d/fy/obj/luzi2.c line 316: Warning: Unused local variable 'lv3' before 
+/d/fy/obj/luzi2.c line 316: Warning: Unused local variable 'exp' before 
+/d/fy/obj/luzi2.c line 316: Warning: Unused local variable 'll' before 
+/obj/npc/trashcan.c line 32: Warning: Unused local variable 'i' before the end of line
+/obj/npc/trashcan.c line 32: Warning: Unused local variable 'amun' before the end of line
+/d/tieflag/npc/obj/tiesword.c line 34: Warning: Unused local variable 'pro' before 
+/u/wudang/xzhouse1.c line 37: Warning: Unused local variable 'con' before the end of line
+/u/wudang/xzhouse1.c line 37: Warning: Unused local variable 'item' before the end of line
+/questobj/daoqiao.c line 52: Warning: Unused local variable 'unarmed' before the end of line
+/u/wudang/wudang3.c line 71: Warning: Unused local variable 'obj' before the end of line
+/u/wudang/wudang3.c line 109: Warning: Unused local variable 'dir' before the end of line
+/u/ghost/forest8.c line 30: Warning: Unused local variable 'fen' before the end of line
+/u/ghost/forest8.c line 30: Warning: Unused local variable 'tree' before the end of line
+/adm/daemons/whod.c line 33: Warning: Unused local variable 'me' before 
+/adm/daemons/whod.c line 160: Warning: Unused local variable 'ppl_cnt' before 
+/adm/daemons/whod.c line 198: Warning: Unused local variable 'j' before 
+/adm/daemons/logind.c line 387: Warning: Unused local variable 'name' before 
+/adm/daemons/logind.c line 492: Warning: Unused local variable 'link_ob' before 
+/adm/daemons/logind.c line 492: Warning: Unused local variable 'obj' before 
+/adm/daemons/logind.c line 514: Warning: Unused local variable 'n' before 
+/adm/daemons/logind.c line 707: Warning: Unused local variable 'cloth' before 
+/adm/daemons/logind.c line 707: Warning: Unused local variable 'room' before 
+/adm/daemons/logind.c line 707: Warning: Unused local variable 'reb' before 
+/adm/daemons/logind.c line 707: Warning: Unused local variable 'lv' before 
+/adm/daemons/logind.c line 707: Warning: Unused local variable 'caizhi' before 
+/adm/daemons/logind.c line 824: Warning: Unused local variable 'number' before 
+/adm/daemons/storyd.c line 100: Warning: Unused local variable 'i' before 
+/cmds/std/go.c line 73: Warning: Unused local variable 'my' before 
+/cmds/std/go.c line 73: Warning: Unused local variable 'your' before 
+/u/guanwai/octo13.c line 33: Warning: Unused local variable 'box' before the end of line
+/u/guanwai/octo13.c line 33: Warning: Unused local variable 'matter' before the end of line
+/adm/daemons/band.c line 94: Warning: Unused local variable 'i' before 
+/adm/daemons/band.c line 105: Warning: Unused local variable 'i' before 
+/cmds/std/look.c line 368: Warning: Unused local variable 'weapon' before 
+/cmds/std/look.c line 368: Warning: Unused local variable 'skill_type' before 
+/cmds/std/look.c line 368: Warning: Unused local variable 'parry_type' before 
+/cmds/std/look.c line 368: Warning: Unused local variable 'attack_points' before 
+/cmds/std/look.c line 480: Warning: Unused local variable 'limb_status' before 
+/adm/daemons/statusd.c line 15: Warning: Unused local variable 'file' before the end of line
+/adm/daemons/statusd.c line 59: Warning: Unused local variable 'field' before the end of line
+/adm/daemons/statusd.c line 59: Warning: Unused local variable 'j' before the end of line
+/adm/daemons/toptend.c line 243: Warning: Unused local variable 'name' before 
+/adm/daemons/toptend.c line 243: Warning: Unused local variable 'id' before 
+/adm/daemons/toptend.c line 243: Warning: Unused local variable 'money' before 
+/adm/daemons/toptend.c line 349: Warning: Unused local variable 'str1' before 
+/cmds/usr/skills.c line 116: Warning: Unused local variable 'list' before 
+/cmds/usr/skills.c line 116: Warning: Unused local variable 'cardname' before 
+/cmds/usr/skills.c line 116: Warning: Unused local variable 'marry_flag' before 
+/cmds/usr/skills.c line 116: Warning: Unused local variable 'tmps' before 
+/cmds/usr/skills.c line 191: Warning: Unused local variable 'list' before 
+/cmds/usr/skills.c line 191: Warning: Unused local variable 'couple_ob' before 
+/cmds/usr/skills.c line 191: Warning: Unused local variable 'target' before 
+/cmds/usr/skills.c line 191: Warning: Unused local variable 'cardname' before 
+/cmds/usr/skills.c line 191: Warning: Unused local variable 'marry_flag' before 
+/cmds/std/learn.c line 127: Warning: Unused local variable 'master' before 
+/cmds/std/learn.c line 127: Warning: Unused local variable 'list' before 
+/cmds/std/learn.c line 127: Warning: Unused local variable 'marry_card' before 
+/cmds/std/learn.c line 127: Warning: Unused local variable 'target' before 
+/cmds/std/learn.c line 127: Warning: Unused local variable 'cardname' before 
+/cmds/std/learn.c line 127: Warning: Unused local variable 'i' before 
+/cmds/std/learn.c line 127: Warning: Unused local variable 'marry_flag' before 
+/cmds/std/research.c line 48: Warning: Unused local variable 'gin_cost' before 
+/d/qianfo/fangsheng.c line 76: Warning: Unused local variable 'dir' before the end of line
+/cmds/usr/quit.c line 82: Warning: Unused local variable 'env' before the end of line
+/cmds/usr/quit.c line 82: Warning: Unused local variable 'ob' before the end of line
+/feature/move.c line 3: Warning: Unknown #pragma, ignored. before 
+/feature/name.c line 111: Warning: Unused local variable 'fadai' before 
+/adm/daemons/msgd.c line 106: Warning: Unused local variable 'me' before the end of line
+/adm/daemons/msgd.c line 126: Warning: Unused local variable 'j' before the end of line
+/adm/daemons/memoryd.c line 2: Warning: Unknown #pragma, ignored. before the end of line
+/include/globals.h line 9: Warning: redefinition of #define COMMAND_DIR before #define CONFIG_DIR  
+/include/globals.h line 10: Warning: redefinition of #define CONFIG_DIR before #define BACKUP_DIR  
+/include/globals.h line 11: Warning: redefinition of #define BACKUP_DIR before #define DATA_DIR    
+/include/globals.h line 12: Warning: redefinition of #define DATA_DIR before #define HELP_DIR    
+/include/globals.h line 13: Warning: redefinition of #define HELP_DIR before #define LOG_DIR     
+/include/globals.h line 14: Warning: redefinition of #define LOG_DIR before 
+/include/globals.h line 17: Warning: redefinition of #define BR_D before #define BN_D			"/adm
+/include/globals.h line 18: Warning: redefinition of #define BN_D before #define BAN_D			"/ad
+/include/globals.h line 19: Warning: redefinition of #define BAN_D before #define ALIAS_D     
+/include/globals.h line 20: Warning: redefinition of #define ALIAS_D before #define EXAMINE_D   
+/include/globals.h line 21: Warning: redefinition of #define EXAMINE_D before #define CHANNEL_D   
+/include/globals.h line 22: Warning: redefinition of #define CHANNEL_D before #define CHAR_D      
+/include/globals.h line 23: Warning: redefinition of #define CHAR_D before #define YNVOTE_D    
+/include/globals.h line 24: Warning: redefinition of #define YNVOTE_D before #define CHINESE_D   
+/include/globals.h line 25: Warning: redefinition of #define CHINESE_D before #define COMBAT_D    
+/include/globals.h line 26: Warning: redefinition of #define COMBAT_D before #define COMMAND_D   
+/include/globals.h line 27: Warning: redefinition of #define COMMAND_D before #define EMOTE_D     
+/include/globals.h line 28: Warning: redefinition of #define EMOTE_D before #define FINGER_D    
+/include/globals.h line 29: Warning: redefinition of #define FINGER_D before #define UPGRADE_D		"
+/include/globals.h line 30: Warning: redefinition of #define UPGRADE_D before #define INQUIRY_D   
+/include/globals.h line 31: Warning: redefinition of #define INQUIRY_D before #define LOGIN_D     
+/include/globals.h line 32: Warning: redefinition of #define LOGIN_D before #define NATURE_D    
+/include/globals.h line 33: Warning: redefinition of #define NATURE_D before #define PROFILE_D   
+/include/globals.h line 34: Warning: redefinition of #define PROFILE_D before #define RANK_D      
+/include/globals.h line 35: Warning: redefinition of #define RANK_D before #define SECURITY_D  
+/include/globals.h line 36: Warning: redefinition of #define SECURITY_D before #define UPDATE_D    
+/include/globals.h line 37: Warning: redefinition of #define UPDATE_D before #define VIRTUAL_D   
+/include/globals.h line 38: Warning: redefinition of #define VIRTUAL_D before #define WEAPON_D    
+/include/globals.h line 39: Warning: redefinition of #define WEAPON_D before #define WHO_D			"/ad
+/include/globals.h line 40: Warning: redefinition of #define WHO_D before #define TASK_D			"/a
+/include/globals.h line 41: Warning: redefinition of #define TASK_D before #define STATUS_D		"/
+/include/globals.h line 42: Warning: redefinition of #define STATUS_D before #define VOTE_D			"/a
+/include/globals.h line 43: Warning: redefinition of #define VOTE_D before #define CRON_D      
+/include/globals.h line 44: Warning: redefinition of #define CRON_D before #define STORY_D					
+/include/globals.h line 45: Warning: redefinition of #define STORY_D before //信息使用不要删除
+/include/globals.h line 47: Warning: redefinition of #define CONVERT_D before // added by Tie for 
+/include/globals.h line 50: Warning: redefinition of #define QUEST_D before #define CLASS_D(x)  
+/include/globals.h line 51: Warning: redefinition of #define CLASS_D before #define SKILL_D(x)  
+/include/globals.h line 52: Warning: redefinition of #define SKILL_D before #define CONDITION_D(
+/include/globals.h line 53: Warning: redefinition of #define CONDITION_D before #define TONGJI_D(x) 
+/include/globals.h line 54: Warning: redefinition of #define TONGJI_D before 
+/include/globals.h line 57: Warning: redefinition of #define TOPTEN_D before #define TOPTEN_RICH 
+/include/globals.h line 58: Warning: redefinition of #define TOPTEN_RICH before #define TOPTEN_PKER 
+/include/globals.h line 59: Warning: redefinition of #define TOPTEN_PKER before #define TOPTEN_EXP  
+/include/globals.h line 60: Warning: redefinition of #define TOPTEN_EXP before #define TOPTEN_AGE  
+/include/globals.h line 61: Warning: redefinition of #define TOPTEN_AGE before #define TOPTEN_TASKE
+/include/globals.h line 62: Warning: redefinition of #define TOPTEN_TASKER before #define TOPTEN_KILLE
+/include/globals.h line 63: Warning: redefinition of #define TOPTEN_KILLED before #define RICH_B      
+/include/globals.h line 64: Warning: redefinition of #define RICH_B before #define PKER_B      
+/include/globals.h line 65: Warning: redefinition of #define PKER_B before #define EXP_B       
+/include/globals.h line 66: Warning: redefinition of #define EXP_B before #define AGE_B       
+/include/globals.h line 67: Warning: redefinition of #define AGE_B before #define TASKER_B    
+/include/globals.h line 68: Warning: redefinition of #define TASKER_B before #define KILLED_B    
+/include/globals.h line 69: Warning: redefinition of #define KILLED_B before //自创skill使用
+/include/globals.h line 71: Warning: redefinition of #define SKILL_MODEL_UNARMED before #define SKILL_MODEL_
+/include/globals.h line 72: Warning: redefinition of #define SKILL_MODEL_WEAPON before #define SKILL_MODEL_
+/include/globals.h line 73: Warning: redefinition of #define SKILL_MODEL_DEFAULT before //有问题请通知我
+/include/globals.h line 77: Warning: redefinition of #define COIN_OB before #define CORPSE_OB   
+/include/globals.h line 78: Warning: redefinition of #define CORPSE_OB before #define LOGIN_OB    
+/include/globals.h line 79: Warning: redefinition of #define LOGIN_OB before #define MASTER_OB   
+/include/globals.h line 80: Warning: redefinition of #define MASTER_OB before #define	MESSAGE_D	"/
+/include/globals.h line 81: Warning: redefinition of #define MESSAGE_D before #define MAILBOX_OB  
+/include/globals.h line 82: Warning: redefinition of #define MAILBOX_OB before #define SILVER_OB   
+/include/globals.h line 83: Warning: redefinition of #define SILVER_OB before #define GOLD_OB     
+/include/globals.h line 84: Warning: redefinition of #define GOLD_OB before #define THCASH_OB   
+/include/globals.h line 85: Warning: redefinition of #define THCASH_OB before #define TECASH_OB   
+/include/globals.h line 86: Warning: redefinition of #define TECASH_OB before #define SIMUL_EFUN_O
+/include/globals.h line 87: Warning: redefinition of #define SIMUL_EFUN_OB before #define USER_OB     
+/include/globals.h line 88: Warning: redefinition of #define USER_OB before #define VOID_OB     
+/include/globals.h line 89: Warning: redefinition of #define VOID_OB before 
+/include/globals.h line 93: Warning: redefinition of #define BANK before #define BULLETIN_BOA
+/include/globals.h line 94: Warning: redefinition of #define BULLETIN_BOARD before #define CHARACTER   
+/include/globals.h line 95: Warning: redefinition of #define CHARACTER before #define CLASS_GUILD 
+/include/globals.h line 96: Warning: redefinition of #define CLASS_GUILD before #define COMBINED_ITE
+/include/globals.h line 97: Warning: redefinition of #define COMBINED_ITEM before #define EQUIP       
+/include/globals.h line 98: Warning: redefinition of #define EQUIP before #define FORCE       
+/include/globals.h line 99: Warning: redefinition of #define FORCE before #define HOCKSHOP    
+/include/globals.h line 100: Warning: redefinition of #define HOCKSHOP before #define ITEM        
+/include/globals.h line 101: Warning: redefinition of #define ITEM before #define SHEET  "/std
+/include/globals.h line 102: Warning: redefinition of #define SHEET before #define LIQUID      
+/include/globals.h line 103: Warning: redefinition of #define LIQUID before #define MONEY       
+/include/globals.h line 104: Warning: redefinition of #define MONEY before #define NPC         
+/include/globals.h line 105: Warning: redefinition of #define NPC before #define POWDER      
+/include/globals.h line 106: Warning: redefinition of #define POWDER before #define ROOM        
+/include/globals.h line 107: Warning: redefinition of #define ROOM before #define SKILL       
+/include/globals.h line 108: Warning: redefinition of #define SKILL before #define SSERVER     
+/include/globals.h line 109: Warning: redefinition of #define SSERVER before // User IDs
+/include/globals.h line 112: Warning: redefinition of #define ROOT_UID before #define BACKBONE_UID
+/include/globals.h line 113: Warning: redefinition of #define BACKBONE_UID before 
+/include/globals.h line 117: Warning: redefinition of #define F_ACTION before #define F_ALIAS     
+/include/globals.h line 118: Warning: redefinition of #define F_ALIAS before #define F_PAWN			"/f
+/include/globals.h line 119: Warning: redefinition of #define F_PAWN before #define F_APPRENTICE
+/include/globals.h line 120: Warning: redefinition of #define F_APPRENTICE before #define F_ATTACK    
+/include/globals.h line 121: Warning: redefinition of #define F_ATTACK before #define F_ATTRIBUTE 
+/include/globals.h line 122: Warning: redefinition of #define F_ATTRIBUTE before #define F_AUTOLOAD  
+/include/globals.h line 123: Warning: redefinition of #define F_AUTOLOAD before #define F_CLEAN_UP  
+/include/globals.h line 124: Warning: redefinition of #define F_CLEAN_UP before #define F_COMMAND   
+/include/globals.h line 125: Warning: redefinition of #define F_COMMAND before #define F_CONDITION 
+/include/globals.h line 126: Warning: redefinition of #define F_CONDITION before #define F_DAMAGE    
+/include/globals.h line 127: Warning: redefinition of #define F_DAMAGE before #define F_DBASE     
+/include/globals.h line 128: Warning: redefinition of #define F_DBASE before #define F_EDIT      
+/include/globals.h line 129: Warning: redefinition of #define F_EDIT before #define F_EQUIP     
+/include/globals.h line 130: Warning: redefinition of #define F_EQUIP before #define F_FINANCE   
+/include/globals.h line 131: Warning: redefinition of #define F_FINANCE before #define F_FOOD      
+/include/globals.h line 132: Warning: redefinition of #define F_FOOD before #define F_LIQUID    
+/include/globals.h line 133: Warning: redefinition of #define F_LIQUID before #define F_MASTER    
+/include/globals.h line 134: Warning: redefinition of #define F_MASTER before #define F_MESSAGE   
+/include/globals.h line 135: Warning: redefinition of #define F_MESSAGE before #define F_MORE      
+/include/globals.h line 136: Warning: redefinition of #define F_MORE before #define F_MOVE      
+/include/globals.h line 137: Warning: redefinition of #define F_MOVE before #define F_NAME      
+/include/globals.h line 138: Warning: redefinition of #define F_NAME before #define F_SAVE      
+/include/globals.h line 139: Warning: redefinition of #define F_SAVE before #define F_SKILL     
+/include/globals.h line 140: Warning: redefinition of #define F_SKILL before #define F_TEAM      
+/include/globals.h line 141: Warning: redefinition of #define F_TEAM before #define F_TREEMAP   
+/include/globals.h line 142: Warning: redefinition of #define F_TREEMAP before #define F_VENDOR    
+/include/globals.h line 143: Warning: redefinition of #define F_VENDOR before // added by Tie Yu@f
+/include/globals.h line 145: Warning: redefinition of #define F_QUEST before // added by Tie@feng
+/include/globals.h line 147: Warning: redefinition of #define F_PAWNOWNER before #define F_BANKOWNER	
+/include/globals.h line 148: Warning: redefinition of #define F_BANKOWNER before #define F_BANKPAWNOW
+/include/globals.h line 149: Warning: redefinition of #define F_BANKPAWNOWNER before // added by tie@fy3 
+/include/globals.h line 151: Warning: redefinition of #define SAVE_EXTENSION before // Profiling switche
+/adm/daemons/fingerd.c line 4: Warning: Unknown #pragma, ignored. before #pragma save_binary
+/adm/daemons/fingerd.c line 5: Warning: Unknown #pragma, ignored. before 
+/adm/daemons/natured.c line 264: Warning: Unused local variable 'skill' before 
+/adm/daemons/weapond.c line 2: Warning: Unknown #pragma, ignored. before #include <ansi.h>
+/include/net/ftpdsupp.h line 66: Warning: Unused local variable 'file' before the end of line
+/adm/daemons/network/dns_master.c line 418: Warning: Unused local variable 'new_mud' before the end of line
+/adm/daemons/network/dns_master.c line 418: Warning: Unused local variable 'svc' before the end of line
+/adm/daemons/network/dns_master.c line 549: Warning: Expression has no side effects, and the value is unused before ;
+/adm/daemons/network/dns_master.c line 607: Warning: Unused local variable 'm' before the end of line
+/adm/daemons/network/dns_master.c line 607: Warning: Unused local variable 'str' before the end of line
+/adm/daemons/network/dns_master.c line 730: Warning: Unused local variable 'euid' before the end of line
+/adm/daemons/network/dns_master.c line 774: Warning: Unused local variable 'temp' before the end of line
+/adm/daemons/network/dns_master.c line 834: Warning: Unused local variable 'static_db' before the end of line
+/adm/daemons/network/dns_master.c line 834: Warning: Unused local variable 'i' before the end of line
+/adm/daemons/network/dns_master.c line 834: Warning: Unused local variable 'strs' before the end of line
+/adm/daemons/questd.c line 2: Warning: Unknown #pragma, ignored. before mapping *quests;
+/adm/daemons/questd.c line 105: Warning: Unused local variable 'obj1' before 
+/adm/daemons/questd.c line 105: Warning: Unused local variable 'obj2' before 
+/adm/daemons/questd.c line 105: Warning: Unused local variable 'obj3' before 
+/adm/daemons/questd.c line 105: Warning: Unused local variable 'next_obj' before 
+/adm/daemons/questd.c line 241: Warning: Unused local variable 'where' before 
+/include/globals.h line 9: Warning: redefinition of #define COMMAND_DIR before #define CONFIG_DIR  
+/include/globals.h line 10: Warning: redefinition of #define CONFIG_DIR before #define BACKUP_DIR  
+/include/globals.h line 11: Warning: redefinition of #define BACKUP_DIR before #define DATA_DIR    
+/include/globals.h line 12: Warning: redefinition of #define DATA_DIR before #define HELP_DIR    
+/include/globals.h line 13: Warning: redefinition of #define HELP_DIR before #define LOG_DIR     
+/include/globals.h line 14: Warning: redefinition of #define LOG_DIR before 
+/include/globals.h line 17: Warning: redefinition of #define BR_D before #define BN_D			"/adm
+/include/globals.h line 18: Warning: redefinition of #define BN_D before #define BAN_D			"/ad
+/include/globals.h line 19: Warning: redefinition of #define BAN_D before #define ALIAS_D     
+/include/globals.h line 20: Warning: redefinition of #define ALIAS_D before #define EXAMINE_D   
+/include/globals.h line 21: Warning: redefinition of #define EXAMINE_D before #define CHANNEL_D   
+/include/globals.h line 22: Warning: redefinition of #define CHANNEL_D before #define CHAR_D      
+/include/globals.h line 23: Warning: redefinition of #define CHAR_D before #define YNVOTE_D    
+/include/globals.h line 24: Warning: redefinition of #define YNVOTE_D before #define CHINESE_D   
+/include/globals.h line 25: Warning: redefinition of #define CHINESE_D before #define COMBAT_D    
+/include/globals.h line 26: Warning: redefinition of #define COMBAT_D before #define COMMAND_D   
+/include/globals.h line 27: Warning: redefinition of #define COMMAND_D before #define EMOTE_D     
+/include/globals.h line 28: Warning: redefinition of #define EMOTE_D before #define FINGER_D    
+/include/globals.h line 29: Warning: redefinition of #define FINGER_D before #define UPGRADE_D		"
+/include/globals.h line 30: Warning: redefinition of #define UPGRADE_D before #define INQUIRY_D   
+/include/globals.h line 31: Warning: redefinition of #define INQUIRY_D before #define LOGIN_D     
+/include/globals.h line 32: Warning: redefinition of #define LOGIN_D before #define NATURE_D    
+/include/globals.h line 33: Warning: redefinition of #define NATURE_D before #define PROFILE_D   
+/include/globals.h line 34: Warning: redefinition of #define PROFILE_D before #define RANK_D      
+/include/globals.h line 35: Warning: redefinition of #define RANK_D before #define SECURITY_D  
+/include/globals.h line 36: Warning: redefinition of #define SECURITY_D before #define UPDATE_D    
+/include/globals.h line 37: Warning: redefinition of #define UPDATE_D before #define VIRTUAL_D   
+/include/globals.h line 38: Warning: redefinition of #define VIRTUAL_D before #define WEAPON_D    
+/include/globals.h line 39: Warning: redefinition of #define WEAPON_D before #define WHO_D			"/ad
+/include/globals.h line 40: Warning: redefinition of #define WHO_D before #define TASK_D			"/a
+/include/globals.h line 41: Warning: redefinition of #define TASK_D before #define STATUS_D		"/
+/include/globals.h line 42: Warning: redefinition of #define STATUS_D before #define VOTE_D			"/a
+/include/globals.h line 43: Warning: redefinition of #define VOTE_D before #define CRON_D      
+/include/globals.h line 44: Warning: redefinition of #define CRON_D before #define STORY_D					
+/include/globals.h line 45: Warning: redefinition of #define STORY_D before //信息使用不要删除
+/include/globals.h line 47: Warning: redefinition of #define CONVERT_D before // added by Tie for 
+/include/globals.h line 50: Warning: redefinition of #define QUEST_D before #define CLASS_D(x)  
+/include/globals.h line 51: Warning: redefinition of #define CLASS_D before #define SKILL_D(x)  
+/include/globals.h line 52: Warning: redefinition of #define SKILL_D before #define CONDITION_D(
+/include/globals.h line 53: Warning: redefinition of #define CONDITION_D before #define TONGJI_D(x) 
+/include/globals.h line 54: Warning: redefinition of #define TONGJI_D before 
+/include/globals.h line 57: Warning: redefinition of #define TOPTEN_D before #define TOPTEN_RICH 
+/include/globals.h line 58: Warning: redefinition of #define TOPTEN_RICH before #define TOPTEN_PKER 
+/include/globals.h line 59: Warning: redefinition of #define TOPTEN_PKER before #define TOPTEN_EXP  
+/include/globals.h line 60: Warning: redefinition of #define TOPTEN_EXP before #define TOPTEN_AGE  
+/include/globals.h line 61: Warning: redefinition of #define TOPTEN_AGE before #define TOPTEN_TASKE
+/include/globals.h line 62: Warning: redefinition of #define TOPTEN_TASKER before #define TOPTEN_KILLE
+/include/globals.h line 63: Warning: redefinition of #define TOPTEN_KILLED before #define RICH_B      
+/include/globals.h line 64: Warning: redefinition of #define RICH_B before #define PKER_B      
+/include/globals.h line 65: Warning: redefinition of #define PKER_B before #define EXP_B       
+/include/globals.h line 66: Warning: redefinition of #define EXP_B before #define AGE_B       
+/include/globals.h line 67: Warning: redefinition of #define AGE_B before #define TASKER_B    
+/include/globals.h line 68: Warning: redefinition of #define TASKER_B before #define KILLED_B    
+/include/globals.h line 69: Warning: redefinition of #define KILLED_B before //自创skill使用
+/include/globals.h line 71: Warning: redefinition of #define SKILL_MODEL_UNARMED before #define SKILL_MODEL_
+/include/globals.h line 72: Warning: redefinition of #define SKILL_MODEL_WEAPON before #define SKILL_MODEL_
+/include/globals.h line 73: Warning: redefinition of #define SKILL_MODEL_DEFAULT before //有问题请通知我
+/include/globals.h line 77: Warning: redefinition of #define COIN_OB before #define CORPSE_OB   
+/include/globals.h line 78: Warning: redefinition of #define CORPSE_OB before #define LOGIN_OB    
+/include/globals.h line 79: Warning: redefinition of #define LOGIN_OB before #define MASTER_OB   
+/include/globals.h line 80: Warning: redefinition of #define MASTER_OB before #define	MESSAGE_D	"/
+/include/globals.h line 81: Warning: redefinition of #define MESSAGE_D before #define MAILBOX_OB  
+/include/globals.h line 82: Warning: redefinition of #define MAILBOX_OB before #define SILVER_OB   
+/include/globals.h line 83: Warning: redefinition of #define SILVER_OB before #define GOLD_OB     
+/include/globals.h line 84: Warning: redefinition of #define GOLD_OB before #define THCASH_OB   
+/include/globals.h line 85: Warning: redefinition of #define THCASH_OB before #define TECASH_OB   
+/include/globals.h line 86: Warning: redefinition of #define TECASH_OB before #define SIMUL_EFUN_O
+/include/globals.h line 87: Warning: redefinition of #define SIMUL_EFUN_OB before #define USER_OB     
+/include/globals.h line 88: Warning: redefinition of #define USER_OB before #define VOID_OB     
+/include/globals.h line 89: Warning: redefinition of #define VOID_OB before 
+/include/globals.h line 93: Warning: redefinition of #define BANK before #define BULLETIN_BOA
+/include/globals.h line 94: Warning: redefinition of #define BULLETIN_BOARD before #define CHARACTER   
+/include/globals.h line 95: Warning: redefinition of #define CHARACTER before #define CLASS_GUILD 
+/include/globals.h line 96: Warning: redefinition of #define CLASS_GUILD before #define COMBINED_ITE
+/include/globals.h line 97: Warning: redefinition of #define COMBINED_ITEM before #define EQUIP       
+/include/globals.h line 98: Warning: redefinition of #define EQUIP before #define FORCE       
+/include/globals.h line 99: Warning: redefinition of #define FORCE before #define HOCKSHOP    
+/include/globals.h line 100: Warning: redefinition of #define HOCKSHOP before #define ITEM        
+/include/globals.h line 101: Warning: redefinition of #define ITEM before #define SHEET  "/std
+/include/globals.h line 102: Warning: redefinition of #define SHEET before #define LIQUID      
+/include/globals.h line 103: Warning: redefinition of #define LIQUID before #define MONEY       
+/include/globals.h line 104: Warning: redefinition of #define MONEY before #define NPC         
+/include/globals.h line 105: Warning: redefinition of #define NPC before #define POWDER      
+/include/globals.h line 106: Warning: redefinition of #define POWDER before #define ROOM        
+/include/globals.h line 107: Warning: redefinition of #define ROOM before #define SKILL       
+/include/globals.h line 108: Warning: redefinition of #define SKILL before #define SSERVER     
+/include/globals.h line 109: Warning: redefinition of #define SSERVER before // User IDs
+/include/globals.h line 112: Warning: redefinition of #define ROOT_UID before #define BACKBONE_UID
+/include/globals.h line 113: Warning: redefinition of #define BACKBONE_UID before 
+/include/globals.h line 117: Warning: redefinition of #define F_ACTION before #define F_ALIAS     
+/include/globals.h line 118: Warning: redefinition of #define F_ALIAS before #define F_PAWN			"/f
+/include/globals.h line 119: Warning: redefinition of #define F_PAWN before #define F_APPRENTICE
+/include/globals.h line 120: Warning: redefinition of #define F_APPRENTICE before #define F_ATTACK    
+/include/globals.h line 121: Warning: redefinition of #define F_ATTACK before #define F_ATTRIBUTE 
+/include/globals.h line 122: Warning: redefinition of #define F_ATTRIBUTE before #define F_AUTOLOAD  
+/include/globals.h line 123: Warning: redefinition of #define F_AUTOLOAD before #define F_CLEAN_UP  
+/include/globals.h line 124: Warning: redefinition of #define F_CLEAN_UP before #define F_COMMAND   
+/include/globals.h line 125: Warning: redefinition of #define F_COMMAND before #define F_CONDITION 
+/include/globals.h line 126: Warning: redefinition of #define F_CONDITION before #define F_DAMAGE    
+/include/globals.h line 127: Warning: redefinition of #define F_DAMAGE before #define F_DBASE     
+/include/globals.h line 128: Warning: redefinition of #define F_DBASE before #define F_EDIT      
+/include/globals.h line 129: Warning: redefinition of #define F_EDIT before #define F_EQUIP     
+/include/globals.h line 130: Warning: redefinition of #define F_EQUIP before #define F_FINANCE   
+/include/globals.h line 131: Warning: redefinition of #define F_FINANCE before #define F_FOOD      
+/include/globals.h line 132: Warning: redefinition of #define F_FOOD before #define F_LIQUID    
+/include/globals.h line 133: Warning: redefinition of #define F_LIQUID before #define F_MASTER    
+/include/globals.h line 134: Warning: redefinition of #define F_MASTER before #define F_MESSAGE   
+/include/globals.h line 135: Warning: redefinition of #define F_MESSAGE before #define F_MORE      
+/include/globals.h line 136: Warning: redefinition of #define F_MORE before #define F_MOVE      
+/include/globals.h line 137: Warning: redefinition of #define F_MOVE before #define F_NAME      
+/include/globals.h line 138: Warning: redefinition of #define F_NAME before #define F_SAVE      
+/include/globals.h line 139: Warning: redefinition of #define F_SAVE before #define F_SKILL     
+/include/globals.h line 140: Warning: redefinition of #define F_SKILL before #define F_TEAM      
+/include/globals.h line 141: Warning: redefinition of #define F_TEAM before #define F_TREEMAP   
+/include/globals.h line 142: Warning: redefinition of #define F_TREEMAP before #define F_VENDOR    
+/include/globals.h line 143: Warning: redefinition of #define F_VENDOR before // added by Tie Yu@f
+/include/globals.h line 145: Warning: redefinition of #define F_QUEST before // added by Tie@feng
+/include/globals.h line 147: Warning: redefinition of #define F_PAWNOWNER before #define F_BANKOWNER	
+/include/globals.h line 148: Warning: redefinition of #define F_BANKOWNER before #define F_BANKPAWNOW
+/include/globals.h line 149: Warning: redefinition of #define F_BANKPAWNOWNER before // added by tie@fy3 
+/include/globals.h line 151: Warning: redefinition of #define SAVE_EXTENSION before // Profiling switche
+/adm/daemons/cron.c line 127: Warning: Unused local variable 'dir' before 
+/adm/daemons/cron.c line 127: Warning: Unused local variable 'ppls' before 
+/std/room.c line 3: Warning: Unknown #pragma, ignored. before the end of line
+/std/room.c line 195: Warning: Unused local variable 'item_desc' before the end of line
+/d/shenshui/dongkou.c line 67: Warning: Unused local variable 'obj' before the end of line
+/feature/equip.c line 119: Warning: Unused local variable 'type' before the end of line
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/feature/alias.c line 74: Warning: Unused local variable 'room' before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/feature/damage.c line 182: Warning: Unused local variable 'i' before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/feature/more.c line 53: Warning: Unused local variable 'j' before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/feature/skill.c line 184: Warning: Unused local variable 'spi' before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char.c line 3: Warning: Unknown #pragma, ignored. before 
+/std/char/npc.c line 96: Warning: Unused local variable 'enc' before 
+/std/char/npc.c line 96: Warning: Unused local variable 'max' before 
+/std/char/npc.c line 96: Warning: Unused local variable 'inv' before 
+/std/char/npc.c line 166: Warning: Unused local variable 'weapon' before 
+/std/char/npc.c line 249: Warning: Unused local variable 'i' before      
+/d/zhaoze/zhaoze2.c line 61: Warning: Unused local variable 'i' before the end of line
+/d/fy/npc/half_god.c line 110: Warning: Unused local variable 'test' before the end of line
+/d/fy/npc/half_god.c line 174: Warning: Unused local variable 'j' before the end of line
+/d/fy/npc/half_god.c line 174: Warning: Unused local variable 'combatexp' before the end of line
+/d/fy/npc/half_god.c line 174: Warning: Unused local variable 'lvl' before the end of line
+/d/fy/npc/half_god.c line 174: Warning: Unused local variable 'local' before the end of line
+/d/fy/npc/half_god.c line 174: Warning: Unused local variable 't' before the end of line
+/d/taishan/npc/mantrainer.c line 120: Warning: Unused local variable 'cost' before 
+/d/taishan/npc/pettrainer4.c line 126: Warning: Unused local variable 'cost' before the end of line
+/d/stone/npc/master.c line 324: Warning: Unused local variable 'val' before 
+/d/stone/npc/master.c line 324: Warning: Unused local variable 'extra' before 
+/d/stone/npc/master.c line 324: Warning: Unused local variable 'test' before 
+/d/stone/npc/master.c line 324: Warning: Unused local variable 'file' before 
+/d/stone/npc/master.c line 324: Warning: Unused local variable 'name' before 
+/adm/daemons/combatd.c line 76: Warning: Expression has no side effects, and the value is unused before 
+/adm/daemons/combatd.c line 380: Warning: Unused local variable 'status' before 
+/adm/daemons/combatd.c line 380: Warning: Unused local variable 'power' before 
+/adm/daemons/combatd.c line 1306: Warning: Unused local variable 'ob' before 
+/adm/daemons/combatd.c line 1727: Warning: Unused local variable 'parry_type' before 
+/adm/daemons/combatd.c line 1727: Warning: Unused local variable 'objnew' before 
+/questobj/daoqiao.c line 52: Warning: Unused local variable 'unarmed' before the end of line
+/d/taishan/pingfeng.c line 53: Warning: Unused local variable 'obj' before the end of line
+/feature/vendor.c line 19: Warning: Unused local variable 'list' before the end of line
+/feature/vendor.c line 53: Warning: Unused local variable 'list' before the end of line
+/feature/bankpawnowner.c line 384: Warning: Unused local variable 'fterms' before 
+/feature/bankpawnowner.c line 384: Warning: Unused local variable 'pawn_count' before 
+/feature/bankpawnowner.c line 384: Warning: Unused local variable 'j' before 
+/feature/bankpawnowner.c line 384: Warning: Unused local variable 'rvalue' before 
+/feature/bankpawnowner.c line 426: Warning: Unused local variable 'term' before 
+/obj/xiaotong.c line 27: Warning: Unused local variable 'i' before the end of line
+/obj/xiaotong.c line 27: Warning: Unused local variable 'amun' before the end of line
+/d/chenxiang/npc/bankowner.c line 123: Warning: Unused local variable 'obj' before 
+/u/ghost/house3.c line 28: Warning: Unused local variable 'con' before the end of line
+/u/ghost/house3.c line 28: Warning: Unused local variable 'item' before the end of line
+/d/qianjin/npc/afei.c line 83: Warning: Unused local variable 'weapon' before 
+/d/shaolin/cj6.c line 36: Warning: Unused local variable 'ob' before the end of line
+/u/chuenyu/east_garden.c line 59: Warning: Unused local variable 'obj' before the end of line
+/u/ghost/house.c line 26: Warning: Unused local variable 'con' before the end of line
+/u/ghost/house.c line 26: Warning: Unused local variable 'item' before the end of line
+/d/fy/tang2.c line 54: Warning: Unused local variable 'obj' before the end of line
+/adm/daemons/whod.c line 33: Warning: Unused local variable 'me' before 
+/adm/daemons/whod.c line 160: Warning: Unused local variable 'ppl_cnt' before 
+/adm/daemons/whod.c line 198: Warning: Unused local variable 'j' before 
+/adm/daemons/logind.c line 387: Warning: Unused local variable 'name' before 
+/adm/daemons/logind.c line 492: Warning: Unused local variable 'link_ob' before 
+/adm/daemons/logind.c line 492: Warning: Unused local variable 'obj' before 
+/adm/daemons/logind.c line 514: Warning: Unused local variable 'n' before 
+/adm/daemons/logind.c line 707: Warning: Unused local variable 'cloth' before 
+/adm/daemons/logind.c line 707: Warning: Unused local variable 'room' before 
+/adm/daemons/logind.c line 707: Warning: Unused local variable 'reb' before 
+/adm/daemons/logind.c line 707: Warning: Unused local variable 'lv' before 
+/adm/daemons/logind.c line 707: Warning: Unused local variable 'caizhi' before 
+/adm/daemons/logind.c line 824: Warning: Unused local variable 'number' before 
+/adm/daemons/storyd.c line 100: Warning: Unused local variable 'i' before 
+/adm/daemons/band.c line 94: Warning: Unused local variable 'i' before 
+/adm/daemons/band.c line 105: Warning: Unused local variable 'i' before 
+/cmds/std/go.c line 73: Warning: Unused local variable 'my' before 
+/cmds/std/go.c line 73: Warning: Unused local variable 'your' before 
+/u/wudang/xzhouse1.c line 37: Warning: Unused local variable 'con' before the end of line
+/u/wudang/xzhouse1.c line 37: Warning: Unused local variable 'item' before the end of line
+/u/guanwai/octo13.c line 33: Warning: Unused local variable 'box' before the end of line
+/u/guanwai/octo13.c line 33: Warning: Unused local variable 'matter' before the end of line
+/cmds/std/look.c line 368: Warning: Unused local variable 'weapon' before 
+/cmds/std/look.c line 368: Warning: Unused local variable 'skill_type' before 
+/cmds/std/look.c line 368: Warning: Unused local variable 'parry_type' before 
+/cmds/std/look.c line 368: Warning: Unused local variable 'attack_points' before 
+/cmds/std/look.c line 480: Warning: Unused local variable 'limb_status' before 
+/adm/daemons/statusd.c line 15: Warning: Unused local variable 'file' before the end of line
+/adm/daemons/statusd.c line 59: Warning: Unused local variable 'field' before the end of line
+/adm/daemons/statusd.c line 59: Warning: Unused local variable 'j' before the end of line
+/adm/daemons/toptend.c line 243: Warning: Unused local variable 'name' before 
+/adm/daemons/toptend.c line 243: Warning: Unused local variable 'id' before 
+/adm/daemons/toptend.c line 243: Warning: Unused local variable 'money' before 
+/adm/daemons/toptend.c line 349: Warning: Unused local variable 'str1' before 
+/cmds/std/research.c line 50: Warning: Unused local variable 'gin_cost' before 
+/cmds/std/enable.c line 133: Warning: Unused local variable 'types' before 
+/cmds/usr/skills.c line 116: Warning: Unused local variable 'list' before 
+/cmds/usr/skills.c line 116: Warning: Unused local variable 'cardname' before 
+/cmds/usr/skills.c line 116: Warning: Unused local variable 'marry_flag' before 
+/cmds/usr/skills.c line 116: Warning: Unused local variable 'tmps' before 
+/cmds/usr/skills.c line 191: Warning: Unused local variable 'list' before 
+/cmds/usr/skills.c line 191: Warning: Unused local variable 'couple_ob' before 
+/cmds/usr/skills.c line 191: Warning: Unused local variable 'target' before 
+/cmds/usr/skills.c line 191: Warning: Unused local variable 'cardname' before 
+/cmds/usr/skills.c line 191: Warning: Unused local variable 'marry_flag' before 
+/cmds/usr/quit.c line 82: Warning: Unused local variable 'env' before the end of line
+/cmds/usr/quit.c line 82: Warning: Unused local variable 'ob' before the end of line

@@ -103,3 +103,16 @@
 /u/palace/npc/girls.c line 34: Warning: Unused local variable 'amun' before the end of line
 /u/palace/npc/playinggirl.c line 34: Warning: Unused local variable 'i' before the end of line
 /u/palace/npc/playinggirl.c line 34: Warning: Unused local variable 'amun' before the end of line
+/u/guanwai/npc/petowner.c line 192: Warning: Unused local variable 'ob' before the end of line
+/u/guanwai/npc/petowner.c line 192: Warning: Unused local variable 'filename' before the end of line
+/u/guanwai/npc/petowner.c line 192: Warning: Unused local variable 'ob' before the end of line
+/u/guanwai/npc/petowner.c line 192: Warning: Unused local variable 'filename' before the end of line
+/u/palace/npc/girls.c line 34: Warning: Unused local variable 'i' before the end of line
+/u/palace/npc/girls.c line 34: Warning: Unused local variable 'amun' before the end of line
+/u/palace/npc/girls.c line 34: Warning: Unused local variable 'i' before the end of line
+/u/palace/npc/girls.c line 34: Warning: Unused local variable 'amun' before the end of line
+/u/guanwai/npc/petowner.c line 192: Warning: Unused local variable 'ob' before the end of line
+/u/guanwai/npc/petowner.c line 192: Warning: Unused local variable 'filename' before the end of line
+/u/wudang/npc/seller1.c line 31: Warning: Unused local variable 'ob' before the end of line
+/u/wudang/npc/xiaotong.c line 30: Warning: Unused local variable 'i' before the end of line
+/u/wudang/npc/xiaotong.c line 30: Warning: Unused local variable 'amun' before the end of line
