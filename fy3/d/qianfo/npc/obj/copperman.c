@@ -87,24 +87,25 @@ int check_needles()
 int do_touch(string arg)
 {
         object me;
-        if( !arg ) return 0;
-        if( arg != "掌印" && arg != "mark") return 0;
+        if ( !arg ) {
+                return 0;
+        }
+        if ( arg != "掌印" && arg != "mark") {
+                return 0;
+        }
         me = this_player();
-        if((int) me->query("force") < 50) {
-                write("你的内力不够！\n"); return 1;}
-        me->add("force",-50);
-        message_vision("$N将一股内力送入铜人体内．．．\n",me);
-        if( check_needles() ) 
-	{
-	open_path();
-        if(!me->query("m_success/五行铜人"))
+        if ( (int)me->query("force") < 10 ) {
+                write("你的内力不够！\n"); 
+                return 1;
+        }
+        me->add("force", -10);
+        message_vision("$N将一股内力送入铜人体内．．．\n", me);
+        open_path();
+        if (!me->query("m_success/五行铜人"))
         {
                 me->set("m_success/五行铜人",1);
                 me->add("score",300);
 
         }
-	}
-        else
-        message_vision("在$N气力已竭的瞬间，铜人眼睛似乎将要睁开！！\n",me);
         return 1;
 }

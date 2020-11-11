@@ -25,4 +25,5 @@ LONG
 	set("coor/y",-10);
 	set("coor/z",-10);
 	setup();
+        replace_program(ROOM);
 }

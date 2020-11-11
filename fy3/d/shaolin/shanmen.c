@@ -35,6 +35,7 @@ LONG
 }
 int valid_leave(object me, string dir)
 {
+        /*
         object *inv;
         object ob;
         int i;
@@ -51,6 +52,8 @@ int valid_leave(object me, string dir)
         return 1;
         }
         else return 1;
+        */
+        return 1;
 }
 
 void reset()

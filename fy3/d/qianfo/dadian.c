@@ -15,7 +15,7 @@ LONG
   );
   set("exits",([
          "south":__DIR__"qianyuan.c",
-//         "north":__DIR__"tianwang.c"
+         "north":__DIR__"tianwang.c"
                ]));
         set("objects", ([
                 __DIR__"obj/copperman" : 1,
