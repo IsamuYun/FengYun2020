@@ -10,6 +10,8 @@ string *absorb_msg = ({
         "$n「嘿」的一声，不躲不闪，运起铁布衫迎向$N！\n",
 });
 
+int effective_level() { return 30;}
+
 string query_absorb_msg()
 {
 	return absorb_msg[random(sizeof(absorb_msg))];
