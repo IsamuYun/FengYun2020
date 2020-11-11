@@ -13,8 +13,8 @@ int main(object me, string arg)
 
         if( me->is_busy() )
                 return notify_fail("你上一个动作还没有完成，不能施用内功。\n"); 
-        if( me->query("combat_exp")<2000 )
-                return notify_fail("（你的实战经验太低了，不能施用内功。） \n");
+        //if( me->query("combat_exp")<2000 )
+        //        return notify_fail("（你的实战经验太低了，不能施用内功。） \n");
         if( !arg ) return notify_fail("你要用内功做什麽？\n");
 
         if( stringp(force = me->query_skill_mapped("force")) ) {

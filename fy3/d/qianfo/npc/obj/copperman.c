@@ -107,5 +107,6 @@ int do_touch(string arg)
                 me->add("score",300);
 
         }
+        
         return 1;
 }

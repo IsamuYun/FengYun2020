@@ -43,16 +43,19 @@ int do_dive()
 {
 	object *inv,me;
 	object bottom;
-	int i;
+	//int i;
 	string	objname;
 
 	me = this_player();
-        inv = all_inventory(me);
-        for(i=0; i<sizeof(inv); i++) {
+    /*
+	inv = all_inventory(me);
+    
+	for (i=0; i<sizeof(inv); i++) {
 		objname = (string)inv[i]->query("name");
 		if( objname != "油皮袋" && objname != "芦苇")
 			DROP_CMD->do_drop(me, inv[i]);
 	}
+	*/
 	message_vision("$N脱光了所有衣服，一个猛子扎入湖水中．\n",me);
 	bottom = load_object(__DIR__"bottom");
 	if(bottom) me->move(bottom);
