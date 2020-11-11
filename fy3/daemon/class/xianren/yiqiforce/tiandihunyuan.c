@@ -1,19 +1,26 @@
 #include <ansi.h>
 #include <combat.h>
 inherit F_CLEAN_UP;
+
 void remove_effect(object me, int amount);
+
 int perform(object me, object target)
 {
         int skill;
-        if( target != me ) return 
-        notify_fail("你只能将［天地混元］用在自己的身上。\n");
-        if( (int)me->query("force") < 500 )     return
-        notify_fail("你的内力不够。\n");
-        if( (int)me->query_temp("hunyuan") ) return 
-        notify_fail("你已经在施展［天地混元］了。\n");
-        skill = me->query_skill("yiqiforce",1);
-        if(skill < 100) return notify_fail("你的混元一气功太差了！\n");
-        skill = random(skill/2)+skill/2;
+        if ( target != me ) {
+                return notify_fail("你只能将［天地混元］用在自己的身上。\n");
+        }
+        if ( (int)me->query("force") < 500 ) {
+                return notify_fail("你的内力不够。\n");
+        }
+        if ( (int)me->query_temp("hunyuan") ) {
+                return notify_fail("你已经在施展［天地混元］了。\n");
+        }
+        skill = me->query_skill("yiqiforce", 1);
+        if (skill < 10) {
+                return notify_fail("你的混元一气功太差了！\n");
+        }
+        skill = random(skill) + skill;
         me->add("force", -100);
         message_vision( HIY
 "$N闭目运起混元一气功,整个身体被真气包围着....................\n
@@ -21,8 +28,10 @@ $N突然大叫一声...天地混元，灭天灭地.................\n" NOR, me);
         me->add_temp("apply/iron-cloth", skill);
         me->set_temp("hunyuan", 1);
         me->start_call_out( (: call_other, __FILE__, "remove_effect", me, 
-skill :), skill/5);
-        if( me->is_fighting() ) me->start_busy(3);
+skill :), skill * 10);
+        if ( me->is_fighting() ) {
+                me->start_busy(3);
+        }
         return 1;
 }
 
@@ -32,6 +41,7 @@ void remove_effect(object me, int amount)
         me->delete_temp("hunyuan");
         tell_object(me, "你的［天地混元］的功效散光了。\n");
 }
+
 int help(object me)
 {
         write(YEL"\n混元一气功："NOR"\n");

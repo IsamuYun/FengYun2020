@@ -9,11 +9,12 @@ int main(object me, string arg)
         int old_pot;
         string skill;
         int amount;
-        if( me->is_fighting() )
+        if ( me->is_fighting() ) {
                 return notify_fail("在战斗中搞研究？\n");
-        if(!arg || sscanf(arg, "%s %d", skill, pot)!=2 )
+        }
+        if ( !arg || sscanf(arg, "%s %d", skill, pot) != 2 )
                 return notify_fail("指令格式：research <技能> <点数>\n");
-        if( !(int)my_skill=me->query_skill(skill,1) )
+        if ( !(int)my_skill = me->query_skill(skill, 1) )
                 return notify_fail("你对此项技能一无所知，如何搞研究？\n");
                                                                                 
         if( !SKILL_D(skill)->valid_learn(me) ) return 0;
@@ -21,17 +22,20 @@ int main(object me, string arg)
         
 
         old_pot = (int)me->query("potential") - (int) me->query("learned_points");
-        if(pot<0)return notify_fail("至少用1点潜能\n");
-        if(pot>old_pot)return notify_fail("你没有足够的潜能\n");
-        
-        if(( me->query_skill(skill,1) *10) > me->query("score") )
-        {
-			return notify_fail("你没有足够的评价。\n");
+        if (pot < 0) {
+                return notify_fail("至少用1点潜能\n");
+        }
+        if (pot > old_pot) {
+                return notify_fail("你没有足够的潜能\n");
         }
         
-        if( me->query_skill(skill,1) > me->query("level")*15 )
+        if (( me->query_skill(skill, 1) * 10) > me->query("score") ) {
+	        return notify_fail("你没有足够的评价。\n");
+        }
+        
+        if ( me->query_skill(skill, 1) > me->query("level") * 30 )
         {
-			return notify_fail("你的等级太低了，研究不了如此高深的技能。\n");
+		return notify_fail("你的等级太低了，研究不了如此高深的技能。\n");
         }
         amount = (my_skill - 75) * SKILL_D(skill)->black_white_ness() / 100;
         amount += SKILL_D(skill)->learn_bonus() + (int)me->query_int() + me->query("level") * 2;

@@ -13,9 +13,9 @@ void create()
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */
-  "east" : "/d/fy/swind4",
-  "west" : __DIR__"pingfeng",
-]));
+                "east" : "/d/fy/swind4",
+                "west" : __DIR__"pingfeng",
+        ]));
         set("item_desc", ([
                 "sign": @TEXT
 千金楼楼规：
@@ -28,35 +28,37 @@ LONG
 TEXT
         ]) );
 
-	set("outdoors","fengyun");
-	set("no_fight",1);
-	set("no_magic",1);
-	set("NONPC",1);
+	set("outdoors", "fengyun");
+	set("no_fight", 0);
+	set("no_magic", 0);
+	set("NONPC", 1);
         set("objects", ([
-        __DIR__"npc/guinu" : 2,
-                        ]) );
-        set("coor/x",-10);
-	set("coor/y",-40);
-	set("coor/z",0);
-	set("coor/x",-10);
-	set("coor/y",-40);
-	set("coor/z",0);
+                __DIR__"npc/guinu" : 2,
+        ]) );
+        set("coor/x", -10);
+	set("coor/y", -40);
+	set("coor/z", 0);
+	set("coor/x", -10);
+	set("coor/y", -40);
+	set("coor/z", 0);
 	setup();
 }
+
 int valid_leave(object me, string dir)
 {
+        /*
         object ob;
 	object *inv;
-	int i;
-        if( dir == "west" && !(int)this_object()->query("enter_permission") && ob = present("guinu",this_object()))
+	int i = 0;
+        if ( dir == "west" && !(int)this_object()->query("enter_permission") && ob = present("guinu", this_object()))
         {
 		message_vision("$N望望天，对$n笑着说：时辰尚早，姑娘们还在睡，您．．．\n", ob, me);
-		return		notify_fail("忍耐一下吧！\n");
+		return notify_fail("忍耐一下吧！\n");
         }
-        if( dir == "west" &&  ob = present("guinu",this_object()))
+        if( dir == "west" &&  ob = present("guinu", this_object()))
         {
                 inv = all_inventory(me);
-                for(i=0; i<sizeof(inv); i++)
+                for(i=0; i < sizeof(inv); i++)
                 {
                         if((int)inv[i]->query("weapon_prop"))
 			return notify_fail(ob->name()+"向你笑道：千金楼有千金楼的楼规，您请看牌．\n");
@@ -65,31 +67,32 @@ int valid_leave(object me, string dir)
 			if((int)inv[i]->query("liquid/remaining") !=0)
 			return notify_fail(ob->name()+"向你笑道：千金楼有千金楼的楼规，您请看牌．\n");
 			if((int)inv[i]->is_container()) 
-//			if(check_container(inv[i]))
+                        //if(check_container(inv[i]))
 			return notify_fail(ob->name()+"向你笑道：千金楼有千金楼的楼规，您请看牌．\n");
 		}
-        me->set("food",0);
-        me->set("water",0);
+                //me->set("food", 0);
+                //me->set("water", 0);
         }
+        */
 	return 1;
 }
 
 int check_container(object ob)
 {
-object *inv;
-int i;
-inv = all_inventory(ob);
- for(i=0; i<sizeof(inv); i++)
- {
-                        if(inv[i]->query("weapon_prop"))
+        object *inv;
+        int i;
+        inv = all_inventory(ob);
+        for ( i=0; i < sizeof(inv); i++)
+        {
+                if(inv[i]->query("weapon_prop"))
                         return 1;
-                        if(inv[i]->query("food_remaining") != 0)
+                if(inv[i]->query("food_remaining") != 0)
                         return 1;
-                        if(inv[i]->query("liquid/remaining") !=0)
+                if(inv[i]->query("liquid/remaining") !=0)
                         return 1;
-                        if(inv[i]->is_container()) 
+                if(inv[i]->is_container()) 
                         if(check_container(inv[i]))
-                        return 1;
- }
-return 0;
+                return 1;
+        }
+        return 0;
 }
