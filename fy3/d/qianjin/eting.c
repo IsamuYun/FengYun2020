@@ -32,56 +32,65 @@ void init()
 {
 	add_action("do_pull", "pull");
 }
+
 int do_pull(string arg)
 {
-object ob;
-object sect;
-if ( !arg && arg != "carpet" && arg != "ditan" && arg != "地毯")
+        object ob;
+        object sect;
+        if ( !arg && arg != "carpet" && arg != "ditan" && arg != "地毯") {
                 return 0;
-        if( ob = present("guard", this_object()))
-        {
-        message_vision("$N对$n说：来，别瞎忙，喝！\n", ob, this_player());
-        return 1;
         }
-        if( !query("exits/down") ) {
-        message_vision("$N把地毯拉开发现了一条密道．\n", this_player());
-        if(!this_player()->query("m_success/底舱"))
-        {
-                this_player()->set("m_success/底舱",1);
-                this_player()->add("score",50);
-	message("system",HIC "\n【快乐风云】谜题任务："+this_player()->query("name")+"解开了相关谜题，获得了"HIY"【暗访底舱】"HIC"的称号。\n" NOR,users());
+                
+        if ( ob = present("guard", this_object()) ) {
+                message_vision("$N对$n说：来，别瞎忙，喝！\n", ob, this_player());
+                return 1;
+        }
 
-        }
-        set("exits/down", __DIR__"secret_room");
-	sect = find_object(__DIR__"secret_room");
-	if( ! sect)
-        sect = load_object(__DIR__"secret_room");
-	if( sect )
-        sect->set("exits/up", __FILE__);
-	call_out("close_path",15);
-        }
-        else
-        {
-       message_vision("$N把地毯拉过来掩盖住密道．\n", this_player());
-        delete("exits/down");
-        sect = find_object(__DIR__"secret_room");
-        if( ! sect)
-        sect = load_object(__DIR__"secret_room");
-	if (sect)
-        sect->delete("exits/up");
+        if ( !query("exits/down") ) {
+                message_vision("$N把地毯拉开发现了一条密道．\n", this_player());
+                if (!this_player()->query("m_success/底舱")) {
+                        this_player()->set("m_success/底舱",1);
+                        this_player()->add("score",50);
+	                message("system", HIC "\n【快乐风云】谜题任务：" + this_player()->query("name") + "解开了相关谜题，获得了"HIY"【暗访底舱】"HIC"的称号。\n" NOR, users());
+                }
+                set("exits/down", __DIR__"secret_room");
+	        sect = find_object(__DIR__"secret_room");
+	        if (!sect) {
+                        sect = load_object(__DIR__"secret_room");
+                }
+	        if (sect) {
+                        sect->set("exits/up", __FILE__);
+	                call_out("close_path", 15);
+                }
+                else {
+                        message_vision("$N把地毯拉过来掩盖住密道．\n", this_player());
+                        delete("exits/down");
+                        sect = find_object(__DIR__"secret_room");
+                        if (!sect) {
+                                sect = load_object(__DIR__"secret_room");
+                        }       
+	                if (sect) {
+                                sect->delete("exits/up");
+                        }
+                }
         }
         return 1;
 }
+
 void close_path()
 {
-	object sect;
-        if( !query("exits/down") ) return;
-                delete("exits/down");
+	if ( !query("exits/down") ) {
+                return;
+        }
+        object sect = null;
+        delete("exits/down");
         sect = find_object(__DIR__"secret_room");
-        if( ! sect)
-        sect = load_object(__DIR__"secret_room");
-        if (sect)
-        sect->delete("exits/up");
-
+        if ( !sect ) {
+                sect = load_object(__DIR__"secret_room");
+        }
+        
+        if (sect) {
+                sect->delete("exits/up");
+        }
 }
 

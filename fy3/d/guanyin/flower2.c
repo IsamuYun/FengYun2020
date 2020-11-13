@@ -13,6 +13,7 @@ LONG
         );
         set("exits", ([ /* sizeof() == 4 */
   "south" : __DIR__"valley",
+  "northdown" : __DIR__"mirror",
 	]));
         set("objects", ([
                 __DIR__"npc/qu" : 1,

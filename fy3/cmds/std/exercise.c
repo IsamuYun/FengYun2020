@@ -40,9 +40,9 @@ notify_fail("你现在的气太少了，无法产生内息运行全身经脉。\n");
         me->receive_damage("kee", kee_cost);
 		me->start_busy(1);
         // This function ranged from 1 to 15 when kee_cost = 30
-        force_gain = kee_cost * ((int)me->query_skill("force")/10
-                + (int)me->query_con() ) / 30;
-	force_gain = (force_gain + random(force_gain))/5;
+        force_gain = kee_cost * ( (int)me->query_skill("force")
+                + (int)me->query_con() );
+	force_gain = force_gain + random(force_gain);
 
         if( force_gain < 1 ) {
                 write("但是当你行功完毕，只觉得全身发麻。\n");
