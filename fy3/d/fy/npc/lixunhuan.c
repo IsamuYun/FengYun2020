@@ -73,6 +73,7 @@ void attempt_apprentice(object ob)
         return;
 
         }
+        /*
         if( random(500) || random((int)ob->query("kar")) <  25 || query("already") || ob->query("baixiaoli"))
         {
         message_vision("$N咳了两声，说道：不要开玩笑，我可不想误人子弟。\n",
@@ -80,6 +81,7 @@ void attempt_apprentice(object ob)
         ob->set("last_time_app_master_li",time());
                 return;
         }
+        */
 
         command("sigh");
         command("say 很好，" + RANK_D->query_respect(ob) + 
