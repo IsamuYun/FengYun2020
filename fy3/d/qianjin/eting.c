@@ -82,7 +82,7 @@ void close_path()
 	if ( !query("exits/down") ) {
                 return;
         }
-        object sect = null;
+        object sect;
         delete("exits/down");
         sect = find_object(__DIR__"secret_room");
         if ( !sect ) {
