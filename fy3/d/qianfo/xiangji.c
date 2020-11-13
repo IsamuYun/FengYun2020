@@ -13,7 +13,7 @@ void create()
 LONG
   );
   set("exits",([
-//            "north":__DIR__"changlang4.c",
+            "north":__DIR__"changlang4.c",
             "west" :__DIR__"guanyin.c",
                ]));
           set("objects", ([

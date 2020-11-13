@@ -40,8 +40,8 @@ int main(object me, string arg)
 		return notify_fail("你的等级太低了，研究不了如此高深的技能。\n");
         }
         amount = my_skill * SKILL_D(skill)->black_white_ness() / 100;
-        amount += SKILL_D(skill)->learn_bonus() + (int)me->query_int() + me->query("level") * 2;
-        amount = pot + (amount + random(amount));
+        amount += SKILL_D(skill)->learn_bonus() + (int)me->query_int() + me->query("level") * 10;
+        amount = pot + (amount + random(amount)) * random(200);
 	//amount = pot * (amount + random(amount));
 	me->add("learned_points", pot);
         me->research_skill(skill, amount);
