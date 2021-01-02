@@ -10,8 +10,9 @@ void create()
 LONG
         );
         set("exits", ([ /* sizeof() == 4 */
-  "west" : __DIR__"tading",
-]));
+                "west" : __DIR__"tading",
+                "down" : __DIR__"secret_room",
+        ]));
         set("item_desc", ([
                 "carpet": "这块小方地毯似乎可以拉开(pull)。\n",
                 "ditan": "这块小方地毯似乎可以拉开(pull)。\n",
@@ -79,10 +80,10 @@ int do_pull(string arg)
 
 void close_path()
 {
-	if ( !query("exits/down") ) {
+	object sect;
+        if ( !query("exits/down") ) {
                 return;
         }
-        object sect;
         delete("exits/down");
         sect = find_object(__DIR__"secret_room");
         if ( !sect ) {
